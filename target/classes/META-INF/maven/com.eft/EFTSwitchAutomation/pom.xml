@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.eft</groupId>
+  <artifactId>EFTSwitchAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>      <!--Maven Central Repository : https://mvnrepository.com-->
+	  
+	  
+	  
+        <!--	 1. (Selenium WebDriver)Selenium Java  :last release:Apr 5, 2025  -->		
+		<!--Selenium provides support for the automation of web browsers. It provides 
+		extensions to emulate user interaction with browsers, adistribution server 
+		for scaling browser allocation, and the infrastructure for implementations 
+		of the W3C WebDriver specification.-->
+		
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.31.0</version>
+		</dependency>
+
+
+		<!--				2. Test NG  :Last Release on Feb 13, 2025             -->
+		<!--TestNG is a testing framework inspired from JUnit and NUnit but 
+		introducing some new functionalities that make it more powerful and easier 
+		to use. It supports test configured by annotations, data-driven testing, 
+		parametric tests, etc.-->
+		
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.11.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!--				3. Report NG  :Last Release on Oct 9, 2024              -->
+		
+        <!-- https://mvnrepository.com/artifact/com.mastercard.test.flow/report-ng  -->
+		<dependency>
+			<groupId>com.mastercard.test.flow</groupId>
+			<artifactId>report-ng</artifactId>
+			<version>1.1.6</version>
+		</dependency>
+
+
+		<!--				4. Apache Log4j Core  :Last Release on Dec 13, 2024      -->
+        <!--Implementation for Apache Log4J, a highly configurable logging tool that 
+        focuses on performance and low garbage generation. It has a plugin architecture 
+        that makes it extensible and supports asynchronous logging based on LMAX 
+        Disruptor.-->
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.24.3</version>
+		</dependency>
+
+		<!--Apache Log4j API	:Last Release on Dec 13, 2024              -->
+		<!--API for Apache Log4J, a highly configurable logging tool that focuses
+		 on performance and low garbage generation. It has a plugin architecture 
+		 that makes it extensible and supports asynchronous logging based on LMAX 
+		 Disruptor.-->
+		 
+		 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.24.3</version>
+		</dependency>
+
+
+		<!--				5. Apache POI Common  :Last Release on Apr 6, 2025      -->
+		<!-- Apache POI - Java API To Access Microsoft Format Files -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.4.1</version>
+		</dependency>
+		<!--Apache POI API Based On OPC and OOXML Schemas » 5.4.1 , Last Release on Apr 6, 2025-->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.4.1</version>
+		</dependency>
+		<!--Apache POI » 4.1.2, Last Release on Feb 14, 2020-->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!--XmlBeans  » 5.3.0, Last Release on Dec 13, 2024-->
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+		<!--Apache Commons Collections  » 4.5.0-M3,  Last Release on Jul 9, 2019-->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.5.0-M3</version>
+		</dependency>
+
+
+		<!--				6. WebDriverManager	:Last Release on Apr 2, 2025        -->
+		<!--Automated driver management and other helper features for Selenium WebDriver in Java-->
+		<!--	WebDriverManager.chromedriver().setup();	-->
+
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>6.0.1</version>
+		</dependency>
+	  	  	 	  	  
+	  
+  </dependencies>
+  
+</project>
