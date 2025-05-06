@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import base.TestBase;
+import utils.popupWindwHandlr;
 
 
 public class LoginTest extends TestBase {	
+	
 	@Test()
 	public static void LoginFunc() throws NumberFormatException, InterruptedException {
 		
@@ -22,6 +24,23 @@ public class LoginTest extends TestBase {
 		driver.findElement(By.className(locs.getProperty("login_button"))).click();
 		Thread.sleep(Integer.parseInt(locs.getProperty("sleep_1")));
 			
+		
+		//handling the alert window popup 💡
+		int alert_active = popupWindwHandlr.alertHandler();
+		
+		//printing the test status
+		if(alert_active==0) {
+			String LogoutText = driver.findElement(By.xpath("//a[@href='../../index.jsp']")).getText();
+			System.out.println(LogoutText);
+			driver.findElement(By.xpath("//a[@href='../../index.jsp']")).click();	
+			String actual = "LOGOUT";
+			if(LogoutText.equals(actual)) {
+			System.out.println("*******Login test-positive success and clicked on button :"+LogoutText +"*****");
+			}
+		}else if(alert_active==1) {
+			System.out.println("******Login test-negative success(Login failed!!)*******");
+			//driver.findElement(By.xpath("//a[@href='../../index.jsp']")); --> if u want to fail the test case.
+		}
 
 	}
 
