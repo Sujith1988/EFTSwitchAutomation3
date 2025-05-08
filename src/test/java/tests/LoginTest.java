@@ -3,10 +3,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import base.TestBase;
+import utils.ExcelUtils;
 import utils.popupWindwHandlr;
 
 public class LoginTest extends TestBase {	
-	@Test(dataProvider = "userCredentialsFromInternalArray", dataProviderClass = TestBase.class)
+	@Test(dataProvider = "userCredentialFromExternalFile", dataProviderClass = ExcelUtils.class)
 	public static void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException {
 		
 		// The actual login fuction testing
