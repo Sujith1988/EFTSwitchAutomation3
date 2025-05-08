@@ -3,7 +3,6 @@ package utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -11,13 +10,17 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.testng.annotations.DataProvider;
 
-public class ExcelUtils {
+public class ExcelDataFetch_Template {
+
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		//Constructor to call the function getData() at the object init.
+		ExcelDataFetch_Template read = new ExcelDataFetch_Template();
+		read.getData("devTestLogin");
+	}
+
 	
-	@DataProvider(name = "userCredentialFromExternalFile")
-	public String[][] getData(Method m) throws EncryptedDocumentException, IOException {
-		String excelSheetName = m.getName();  System.out.println(excelSheetName);
+	public String[][] getData(String excelSheetName) throws EncryptedDocumentException, IOException {
 		
 		//excel sheet loading fron the excel work book into a sheet object as input file stream data(bit data) to format further into string -
 		File f = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\LoginTestData.xlsx");

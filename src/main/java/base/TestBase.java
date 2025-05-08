@@ -65,7 +65,7 @@ public class TestBase {
 		
 		
 		
-		//data driven testing using the testNG annotation
+		//data driven testing using the testNG annotation. dataProvider aray setup
 		@DataProvider(name = "userCredentialsFromInternalArray")
 		public Object[][] createData1() {
 			return new Object[][] {
