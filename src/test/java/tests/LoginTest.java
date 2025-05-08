@@ -2,17 +2,15 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.TestBase;
 import utils.popupWindwHandlr;
 
 public class LoginTest extends TestBase {	
-	@Test()
-	public static void LoginFunc() throws NumberFormatException, InterruptedException {
-		
-		String usrN = "admin";
-	    String passW = "useradmin";
+	@Test(dataProvider = "userCredentialsFromInternalArray")
+	public static void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException {
 		
 		// The actual login fuction testing
 		WebElement username = driver.findElement(By.id(usr));
@@ -41,5 +39,16 @@ public class LoginTest extends TestBase {
 		}
 
 	}
+	
+	//data driven testing using the testNG annotation
+	@DataProvider(name = "userCredentialsFromInternalArray")
+	public Object[][] createData1() {
+		return new Object[][] {
+			{ "admin", "useradmin1"},
+			{ "admin1", "useradmin"},
+			{ "admin", "useradmin"}  
+		};
+	}
+
 
 };
