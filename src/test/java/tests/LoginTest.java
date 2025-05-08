@@ -7,25 +7,23 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import utils.popupWindwHandlr;
 
-
 public class LoginTest extends TestBase {	
-	
 	@Test()
 	public static void LoginFunc() throws NumberFormatException, InterruptedException {
 		
 		String usrN = "admin";
-		String passW = "useradmin";
+	    String passW = "useradmin";
 		
 		// The actual login fuction testing
-		WebElement username = driver.findElement(By.id(locs.getProperty("usr_name")));
+		WebElement username = driver.findElement(By.id(usr));
 		username.sendKeys(usrN);
-		driver.findElement(By.id(locs.getProperty("pas_word"))).sendKeys(passW);
-		Thread.sleep(Integer.parseInt(locs.getProperty("sleep_2")));
-		driver.findElement(By.className(locs.getProperty("login_button"))).click();
-		Thread.sleep(Integer.parseInt(locs.getProperty("sleep_1")));
+		driver.findElement(By.id(psw)).sendKeys(passW);
+		Thread.sleep(slp_2);
+		driver.findElement(By.className(btn)).click();
+		Thread.sleep(slp_1);
 			
 		
-		//handling the alert window popup 💡
+		//handling the alert window popup 💡	
 		int alert_active = popupWindwHandlr.alertHandler();
 		
 		//printing the test status
