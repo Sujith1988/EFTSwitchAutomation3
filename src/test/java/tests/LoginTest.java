@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import utils.ExcelUtils;
 import utils.popupWindwHandlr;
-
+import dataprovider.DataProviderArraySetup;
 public class LoginTest extends TestBase {	
-	@Test(dataProvider = "userCredentialFromExternalFile", dataProviderClass = ExcelUtils.class)
+	@Test(dataProvider = "userCredentialsFromInternalArray", dataProviderClass = DataProviderArraySetup.class)
 	public static void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException {
 		
 		// The actual login fuction testing
