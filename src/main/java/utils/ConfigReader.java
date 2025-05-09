@@ -8,8 +8,8 @@ public class ConfigReader {
 
 	public static Properties props = new Properties();
 	public static FileReader fr;
-	public static String brw;
-	public static String url;
+	public  String brw;
+	public  String url;
 
 	public ConfigReader() throws IOException {
 		String user_dir = System.getProperty("user.dir");		
