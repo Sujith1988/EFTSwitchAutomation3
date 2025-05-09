@@ -29,10 +29,9 @@ public class TestBase {
 			ConfigReader conf =new ConfigReader();
 			LocatorReader loc =new LocatorReader();		
 			this.slp_2 = loc.slp_2;
-			this.usr = loc.usr;
-			this.psw = loc.psw;
-			this.btn = loc.btn;
-			
+			usr = loc.usr;
+			psw = loc.psw;
+			btn = loc.btn;
 			if (conf.brw.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();				
