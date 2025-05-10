@@ -20,6 +20,7 @@ public class Login extends TestBase {
 		slp_1 = Integer.parseInt(LocatorReader.props.getProperty("sleep_1"));
 	};
 
+	//initialization usually happen before the constucotor run. So must be initialised explicitly.
 	public int slp_2 = Integer.parseInt(LocatorReader.props.getProperty("sleep_2", "10"));
 
 	public String usr = LocatorReader.props.getProperty("usr_name");

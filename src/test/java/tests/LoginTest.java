@@ -31,9 +31,9 @@ public class LoginTest extends TestBase {
 		
 		//Logout and printing the test status
 		if(alert_active==0) {
-			String LogoutText = hom.getButtonText("logout_btn");
+			String LogoutText = hom.getButtonText();
 			System.out.println(LogoutText);
-			hom.clickButton("logout_btn");	    //Thread.sleep(slp_1);
+			hom.clickButton();	    //Thread.sleep(slp_1);
 			String actual = hom.actualText;
 			
 			
