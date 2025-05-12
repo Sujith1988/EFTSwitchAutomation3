@@ -2,7 +2,7 @@ package dataprovider;
 
 import org.testng.annotations.DataProvider;
 
-public class DataProviderArraySetup {
+public class DataProviderArraySetupTemplate {
 
 	//data driven testing using the testNG annotation. dataProvider aray setup
 	@DataProvider(name = "userCredentialsFromInternalArray")
