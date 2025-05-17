@@ -28,9 +28,10 @@ public class ExcelDataProvider {
    System.out.println("xcelFileLocation :"+path +" & shtName :"+sheet1);
         ExcelUtils excel = new ExcelUtils(path, sheet1);
         int rows = excel.getRowCount();
-        Object[][] data = new Object[rows - 1][2]; // Skipping header
+        System.out.println(rows);
+        Object[][] data = new Object[rows][2]; // Skipping header
 
-        for (int i = 1; i < rows; i++) {
+        for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // Username
             data[i - 1][1] = excel.getCellData(i, 1); // Password
         }
@@ -44,10 +45,10 @@ public class ExcelDataProvider {
     	System.out.println(sheet2);
         ExcelUtils excel = new ExcelUtils(path, sheet2);
         int rows = excel.getRowCount();
-        Object[][] data = new Object[rows - 1][9]; // Skipping header
+        Object[][] data = new Object[rows][9]; // Skipping header
 System.out.println(rows);
         if (rows != 0) {        	        
-        for (int i = 1; i < rows; i++) {
+        for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // first name
             data[i - 1][1] = excel.getCellData(i, 1); // last name
             data[i - 1][2] = excel.getCellData(i, 2); // emaol id.

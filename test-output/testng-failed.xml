@@ -5,11 +5,11 @@
     <classes>
       <class name="tests.UserRegistrationTest">
         <methods>
-          <include name="adduser"/>
+          <include name="adduser" invocation-numbers="0 1"/>
           <include name="adminlogin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyUser" invocation-numbers="0 1"/>
+          <include name="verifyUser"/>
         </methods>
       </class> <!-- tests.UserRegistrationTest -->
     </classes>
