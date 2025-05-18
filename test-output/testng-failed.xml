@@ -9,7 +9,6 @@
           <include name="adminlogin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyUser"/>
         </methods>
       </class> <!-- tests.UserRegistrationTest -->
     </classes>

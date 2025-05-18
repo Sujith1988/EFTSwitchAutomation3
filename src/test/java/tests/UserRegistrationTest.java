@@ -1,6 +1,7 @@
 package tests;
 import java.io.IOException;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
@@ -21,7 +22,7 @@ public class UserRegistrationTest extends TestBase {
     
     
     /*--------New users adding as per the data from xcelSheet--------*/
-	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin")
+	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1)
 	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
 				Home h = new Home();
@@ -51,6 +52,10 @@ public class UserRegistrationTest extends TestBase {
 		//handling the alert window popup 💡	
 		int alert_active = popupWindwHandlr.alertHandler();	
 		System.out.println("users added as per the exel data :"+alert_active);
+		
+		SoftAssert soft = new SoftAssert();
+		soft.assertEquals("haia", "hai", "Soft assert failed");
+		soft.assertAll();
 		}
 		else {
 			System.out.println("error in loading add user page");
@@ -60,7 +65,7 @@ public class UserRegistrationTest extends TestBase {
 	
 	
 	  /*--------Users deleting as per the data from the xcelSheet--------*/
-	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adduser") 
+	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 2) 
 	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
 			Home h = new Home();
 	        UserRegistration u = new UserRegistration();  

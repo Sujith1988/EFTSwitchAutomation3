@@ -25,7 +25,7 @@ public class ExcelDataProvider {
 
     @DataProvider(name = "loginData")
     public Object[][] getLoginData() {
-   System.out.println("xcelFileLocation :"+path +" & shtName :"+sheet1);
+   System.out.println("xcelFileLocation : "+path +" & shtName :"+sheet1);
         ExcelUtils excel = new ExcelUtils(path, sheet1);
         int rows = excel.getRowCount();
         System.out.println(rows);
