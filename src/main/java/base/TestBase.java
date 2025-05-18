@@ -20,7 +20,7 @@ public class TestBase {
 	public static WebDriver driver;
 	
 	//@BeforeTest ->for non datadriven testing only
-	@BeforeClass
+	@BeforeTest
 	public void setUp() throws IOException, InterruptedException {
 
 		if (driver == null) {
@@ -53,7 +53,7 @@ public class TestBase {
 	
 	
 	//@AfterTest ->for non datadriven testing only
-		@AfterClass
+		@AfterTest
 		public void tearDown() throws InterruptedException {
 			driver.quit();
 			driver=null;  

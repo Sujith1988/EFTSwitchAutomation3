@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/reportngClass.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/reportngClass.js"></script>
+  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="js/json-min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.tablesorter').tablesorter({sortList: [[0,0]]});
+	});
+  </script>
+</head>
+<body onload="doParse(); return false;" onkeypress="collapseExpand();">
+<div class="well well-large">
+	<b>Test Info</>
+	<table class="table">
+	  <tr>
+	    <th>Test Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Test name</span>
+			</div>
+	    </th>
+	    <th id="testNameId">screenshot</th> 
+	  </tr>
+	  <tr>
+	    <th>Test Class : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassId')"/>
+	    		<span class="tooltiptextCustom">Copy full path Class name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Class name</span>
+			</div>
+	    </th> 
+	    <th id="testClassId">tests.LoginTest</th>
+	    <th id="testClassNameId" hidden="true">LoginTest</th>
+	  </tr>
+	  <tr>
+	    <th>Suite Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite name</span>
+			</div>
+		</th>
+	    <th id="suiteNameId">Suite</th>
+	  </tr>
+	  <tr>
+	    <th>Suite XML : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite full path name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite file name</span>
+			</div>
+	    </th> 
+	  	<th id="suiteXMLId">F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation\src\test\resources\suits\custom-report-login.xml</th>
+	  	<th id="suiteXMLNameId" hidden="true">custom-report-login.xml</th>
+	  </tr>
+	  	  <tr>
+	    <th>Total Time : </th>
+	    <th></th>
+	    <th>00:00:22</th> 
+	  </tr>
+	  <tr>
+	    <th>Total Steps : </th>
+	   	<th></th>
+	    <th>1</th> 
+	  </tr>
+	  <tr>
+	    <th>Status : </th>
+	    <th></th>
+	    <th><font color="red">FAIL</font></th> 
+	  </tr>
+	</table>
+</div>
+<div class="well well-large">
+	<div class="row">
+		<div class="col-xs-12">
+	        <div class="text-right">
+	            <button id="hideResults" type="button" class="btn-danger" onclick="collapseExpand(this);" onkeypress="collapseExpand(this);" class="btn pull-right" title="Click or Press Any key to collapse/expand All Failed Tests and Configuration Methods">Show Only Failures</button>
+	        </div>
+	    </div>
+	</div>
+	<table class="tablesorter" border="1">
+		<thead>
+		<tr>
+		<th class="headerTime">Time</th>
+		<th class="headerTime" width="12%">Info</th>
+		<th class="headerTime" width="88%">Test</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+				
+				
+												
+											<tr>
+	<td class="time">1747582990140</td>
+	<td class="header failed" colspan="4" onClick="toggleElement('4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450','block');changeSingleIcon('span-4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
+	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1747582990140</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>LoginFunc</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>2.528s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"admina", "useradmina"</span><br>
+				<div class="noCollapse" id="4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450" style="display: block;">
+												the method failed & status are : LoginFunc, 2
+												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/LoginFuncSun.May.18.21.13.12.IST.2025.png'>Screen Shot</a>
+									<a href="javascript:toggleElement('exception-4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
+&nbsp; (Session info: chrome=136.0.7103.114)<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [593a7f7cd0e853f448b89ebc063295d3, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57662/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 593a7f7cd0e853f448b89ebc063295d3</b></a><br/>
+		<div class="stackTrace" id="exception-4e8cfa7e-7a17-4ffc-8fd1-354b7aaf2450">
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
+					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
+					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
+					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
+					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
+					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
+					pages.Home.getElement(Home.java:20)<br/>
+					pages.Home.getButtonText(Home.java:31)<br/>
+					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
+					org.testng.TestRunner.run(TestRunner.java:616)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
+					org.testng.TestNG.run(TestNG.java:1079)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
+						</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1747582982941</td>
+	<td class="header failed" colspan="4" onClick="toggleElement('38a6c527-d20f-44a5-b604-7c9a2b04006f','block');changeSingleIcon('span-38a6c527-d20f-44a5-b604-7c9a2b04006f');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
+	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-38a6c527-d20f-44a5-b604-7c9a2b04006f' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1747582982941</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>LoginFunc</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>3.138s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"admin1", "useradmin"</span><br>
+				<div class="noCollapse" id="38a6c527-d20f-44a5-b604-7c9a2b04006f" style="display: block;">
+												the method failed & status are : LoginFunc, 2
+												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/LoginFuncSun.May.18.21.13.06.IST.2025.png'>Screen Shot</a>
+									<a href="javascript:toggleElement('exception-38a6c527-d20f-44a5-b604-7c9a2b04006f','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
+&nbsp; (Session info: chrome=136.0.7103.114)<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [593a7f7cd0e853f448b89ebc063295d3, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57662/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 593a7f7cd0e853f448b89ebc063295d3</b></a><br/>
+		<div class="stackTrace" id="exception-38a6c527-d20f-44a5-b604-7c9a2b04006f">
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
+					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
+					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
+					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
+					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
+					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
+					pages.Home.getElement(Home.java:20)<br/>
+					pages.Home.getButtonText(Home.java:31)<br/>
+					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
+					org.testng.TestRunner.run(TestRunner.java:616)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
+					org.testng.TestNG.run(TestNG.java:1079)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
+						</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1747582986928</td>
+	<td class="header failed" colspan="4" onClick="toggleElement('f3187d7f-7433-4885-8a7d-018b7ec2d281','block');changeSingleIcon('span-f3187d7f-7433-4885-8a7d-018b7ec2d281');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
+	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-f3187d7f-7433-4885-8a7d-018b7ec2d281' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1747582986928</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>LoginFunc</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>2.973s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"admin", "useadmin1"</span><br>
+				<div class="noCollapse" id="f3187d7f-7433-4885-8a7d-018b7ec2d281" style="display: block;">
+												the method failed & status are : LoginFunc, 2
+												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/LoginFuncSun.May.18.21.13.09.IST.2025.png'>Screen Shot</a>
+									<a href="javascript:toggleElement('exception-f3187d7f-7433-4885-8a7d-018b7ec2d281','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
+&nbsp; (Session info: chrome=136.0.7103.114)<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [593a7f7cd0e853f448b89ebc063295d3, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57662/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 593a7f7cd0e853f448b89ebc063295d3</b></a><br/>
+		<div class="stackTrace" id="exception-f3187d7f-7433-4885-8a7d-018b7ec2d281">
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
+					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
+					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
+					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
+					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
+					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
+					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
+					pages.Home.getElement(Home.java:20)<br/>
+					pages.Home.getButtonText(Home.java:31)<br/>
+					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
+					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
+					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
+					org.testng.TestRunner.run(TestRunner.java:616)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
+					org.testng.TestNG.run(TestNG.java:1079)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
+						</div>
+		</td>
+	</div>
+</tr>
+						
+				
+												<tr>
+			<td class="time">1747582993163</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('fa7cd169-81ee-48d6-8653-ec10fe848dfa','block');changeSingleIcon('span-fa7cd169-81ee-48d6-8653-ec10fe848dfa');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-fa7cd169-81ee-48d6-8653-ec10fe848dfa' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1747582993163</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>LoginFunc</span><br>
+			<span class="description"><b>Description: </b></span><br>
+							<span class="duration"><b>Duration: </b>3.612s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"admin", "useradmin"</span><br>
+				<div class="stackTrace" id="fa7cd169-81ee-48d6-8653-ec10fe848dfa" style="display: block;">
+					</td>
+	</div>
+</tr>
+					  
+	</tbody>
+	</table>
+</div>
+</body>
+</html>

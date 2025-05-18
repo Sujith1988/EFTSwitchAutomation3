@@ -123,8 +123,36 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>6.0.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.github.sdrss/reportng -->
+		<dependency>
+			<groupId>com.github.sdrss</groupId>
+			<artifactId>reportng</artifactId>
+			<version>2.7.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	  	  	 	  	  
 	  
   </dependencies>
+  
+   <build>
+  <plugins>
+      <!-- Surefire Plugin for running TestNG tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          <systemPropertyVariables>
+            <org.uncommons.reportng.logOutputReport>true</org.uncommons.reportng.logOutputReport>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   
 </project>
