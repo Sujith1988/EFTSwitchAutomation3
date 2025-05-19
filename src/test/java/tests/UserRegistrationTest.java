@@ -13,7 +13,7 @@ import utils.popupWindwHandlr;
 public class UserRegistrationTest extends TestBase {
 	
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test
+    @Test(groups = "reggrsn1")
     public static void adminlogin() throws IOException, InterruptedException {
     	Login log = new Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
@@ -65,7 +65,7 @@ public class UserRegistrationTest extends TestBase {
 	
 	
 	  /*--------Users deleting as per the data from the xcelSheet--------*/
-	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 2) 
+	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1") 
 	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
 			Home h = new Home();
 	        UserRegistration u = new UserRegistration();  
@@ -78,9 +78,14 @@ public class UserRegistrationTest extends TestBase {
 	String actualPageHeader = u.actPagHeader_viewUser();
 	if (pagHeadr.equals(actualPageHeader)) {	
 			u.deletUser(usrName);	     Thread.sleep(log.slp_2);		
-			int alert_active = popupWindwHandlr.alertHandler();	
-			System.out.println("users deleted as per the exel data :"+alert_active);
+			String alert_active = popupWindwHandlr.alertHandler1();	
+			System.out.println("users treated as per the exel data :"+alert_active);
+			
+			//manually failing the test to check onfailure listener
+			SoftAssert soft = new SoftAssert();
+			soft.assertEquals("haia", "hai", "Soft assert failed");
+			soft.assertAll();
+										
 	}
-  }
-	
+  }	
 }

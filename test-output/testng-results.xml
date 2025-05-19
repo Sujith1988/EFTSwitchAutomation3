@@ -1,871 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="6" ignored="0" total="11" passed="3" failed="2" skipped="0">
+<testng-results ignored="2" total="5" passed="1" failed="2" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[the method failed & status are : verifyUser, 2]]>
+    </line>
+    <line>
+      <![CDATA[<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.17.59.IST.2025.png'>Screen Shot</a>]]>
+    </line>
+    <line>
+      <![CDATA[the method failed & status are : verifyUser, 2]]>
+    </line>
+    <line>
+      <![CDATA[<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.18.02.IST.2025.png'>Screen Shot</a>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-05-18T21:18:15 IST" name="Default suite" finished-at="2025-05-18T21:19:11 IST" duration-ms="55161">
+  <suite started-at="2025-05-19T10:17:48 IST" name="Suite" finished-at="2025-05-19T10:18:03 IST" duration-ms="15226">
     <groups>
+      <group name="reggrsn1">
+        <method signature="UserRegistrationTest.adminlogin()[pri:0, instance:tests.UserRegistrationTest@bd4dc25]" name="adminlogin" class="tests.UserRegistrationTest"/>
+        <method signature="UserRegistrationTest.verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.UserRegistrationTest@bd4dc25]" name="verifyUser" class="tests.UserRegistrationTest"/>
+      </group> <!-- reggrsn1 -->
     </groups>
-    <test started-at="2025-05-18T21:18:15 IST" name="Default test" finished-at="2025-05-18T21:19:11 IST" duration-ms="55161">
-      <class name="tests.UserRegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:16 IST" name="setUp" finished-at="2025-05-18T21:18:20 IST" duration-ms="4543" status="PASS">
+    <test started-at="2025-05-19T10:17:48 IST" name="reggression" finished-at="2025-05-19T10:18:03 IST" duration-ms="15226">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@fa49800]" started-at="2025-05-19T10:17:48 IST" name="setUp" finished-at="2025-05-19T10:17:50 IST" duration-ms="2385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="adminlogin()[pri:0, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:20 IST" name="adminlogin" finished-at="2025-05-18T21:18:21 IST" duration-ms="925" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminlogin -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:23 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:28 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5234" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[css]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:28 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:33 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5346" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[css]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:33 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:38 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5224" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[css]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:38 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:43 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5067" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[css]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:43 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:48 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5077" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cs123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234566.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith1]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:49 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:54 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5159" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cs123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234566.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith1]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method retried="true" signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:54 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:18:59 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5057" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cs123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234566.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith1]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:18:59 IST" name="adduser" data-provider="usersData" finished-at="2025-05-18T21:19:04 IST" depends-on-methods="tests.UserRegistrationTest.adminlogin" duration-ms="5112" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cs123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234566.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith1]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Soft assert failed expected [hai] but found [haia]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Soft assert failed expected [hai] but found [haia]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at tests.UserRegistrationTest.adduser(UserRegistrationTest.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adduser -->
-        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:19:04 IST" name="verifyUser" data-provider="usersData" finished-at="2025-05-18T21:19:07 IST" duration-ms="3120" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[css]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[123456.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUser -->
-        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:19:07 IST" name="verifyUser" data-provider="usersData" finished-at="2025-05-18T21:19:10 IST" duration-ms="3067" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sujith456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cs123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[sujith@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1234566.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[jith1]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[userjith]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[useradmin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.UserRegistrationTest@279fedbd]" started-at="2025-05-18T21:19:10 IST" name="tearDown" finished-at="2025-05-18T21:19:11 IST" duration-ms="348" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@fa49800]" started-at="2025-05-19T10:18:02 IST" name="tearDown" finished-at="2025-05-19T10:18:03 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.UserRegistrationTest">
+        <test-method signature="adminlogin()[pri:0, instance:tests.UserRegistrationTest@bd4dc25]" started-at="2025-05-19T10:17:50 IST" name="adminlogin" finished-at="2025-05-19T10:17:54 IST" duration-ms="3723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminlogin -->
+        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.UserRegistrationTest@bd4dc25]" started-at="2025-05-19T10:17:55 IST" name="verifyUser" data-provider="usersData" finished-at="2025-05-19T10:17:59 IST" duration-ms="3601" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[css]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Soft assert failed expected [hai] but found [haia]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Soft assert failed expected [hai] but found [haia]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.UserRegistrationTest.verifyUser(UserRegistrationTest.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[the method failed & status are : verifyUser, 2]]>
+            </line>
+            <line>
+              <![CDATA[<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.17.59.IST.2025.png'>Screen Shot</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyUser -->
+        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.UserRegistrationTest@bd4dc25]" started-at="2025-05-19T10:17:59 IST" name="verifyUser" data-provider="usersData" finished-at="2025-05-19T10:18:02 IST" duration-ms="3144" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cs123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234566.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Soft assert failed expected [hai] but found [haia]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Soft assert failed expected [hai] but found [haia]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tests.UserRegistrationTest.verifyUser(UserRegistrationTest.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[the method failed & status are : verifyUser, 2]]>
+            </line>
+            <line>
+              <![CDATA[<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.18.02.IST.2025.png'>Screen Shot</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyUser -->
       </class> <!-- tests.UserRegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- reggression -->
+  </suite> <!-- Suite -->
 </testng-results>

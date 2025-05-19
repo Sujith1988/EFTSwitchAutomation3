@@ -16,5 +16,21 @@ public class popupWindwHandlr extends TestBase {
 			return 0;
 		}
 		return 1;
-	}					
+	}	
+	
+	
+	public static String alertHandler1() {
+		String a;
+		// 🔔 Alert Handling Block 🔔🔔🔔
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert found: " + alert.getText());
+			alert.accept();
+			System.out.println("Alert accepted successfully.");
+		} catch (org.openqa.selenium.NoAlertPresentException e) {
+			System.out.println("No alert found");
+			return a= "alert not found";
+		}
+		return a= "alert accepted";
+	}	
 }

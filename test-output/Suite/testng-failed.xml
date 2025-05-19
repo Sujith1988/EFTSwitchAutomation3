@@ -5,15 +5,20 @@
     <listener class-name="listeners.screenShotCapturing"/>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="screenshot(failed)">
+  <test thread-count="5" name="reggression(failed)">
+    <groups>
+      <run>
+        <include name="reggrsn1"/>
+      </run>
+    </groups>
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.UserRegistrationTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="LoginFunc" invocation-numbers="0 1 2"/>
+          <include name="verifyUser" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.UserRegistrationTest -->
     </classes>
-  </test> <!-- screenshot(failed) -->
+  </test> <!-- reggression(failed) -->
 </suite> <!-- Failed suite [Suite] -->
