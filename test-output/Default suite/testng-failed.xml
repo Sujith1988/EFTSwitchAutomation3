@@ -9,6 +9,7 @@
           <include name="adminlogin"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="verifyUser" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- tests.UserRegistrationTest -->
     </classes>

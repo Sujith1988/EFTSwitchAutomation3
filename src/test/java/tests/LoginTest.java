@@ -10,7 +10,7 @@ import pages.Login;
 public class LoginTest extends TestBase {	
 	
 	/*---------Login Test scenario, +ve and -ve test cases*/
-	@Test(dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class, groups = "reggrsn1")
 	public void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException, IOException  {		
 		// POM -- Login page (class object-instance created and constructor invoked)
 		Login log = new Login();	

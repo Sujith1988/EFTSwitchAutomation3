@@ -2,23 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="listeners.screenShotCapturing"/>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="listeners.DefaultReporting"/>
   </listeners>
-  <test thread-count="5" name="reggression(failed)">
-    <groups>
-      <run>
-        <include name="reggrsn1"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="Reporter-log(failed)">
     <classes>
-      <class name="tests.UserRegistrationTest">
+      <class name="tests.LoginTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyUser" invocation-numbers="0 1"/>
+          <include name="LoginFunc" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- tests.UserRegistrationTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
-  </test> <!-- reggression(failed) -->
+  </test> <!-- Reporter-log(failed) -->
 </suite> <!-- Failed suite [Suite] -->

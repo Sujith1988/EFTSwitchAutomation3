@@ -22,7 +22,7 @@ public class UserRegistrationTest extends TestBase {
     
     
     /*--------New users adding as per the data from xcelSheet--------*/
-	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1)
+	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1, groups = "reggrsn1")
 	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
 				Home h = new Home();

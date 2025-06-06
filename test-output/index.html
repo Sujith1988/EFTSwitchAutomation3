@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation\src\test\resources\suits\reggression-test.xml</span>
+                    <span>F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2\src\test\resources\suits\default-login.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,12 +103,17 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.UserRegistrationTest" class="method navigator-link" hash-for-method="verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin)">verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="LoginFunc(admina, useradmina)">LoginFunc(admina, useradmina)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.UserRegistrationTest" class="method navigator-link" hash-for-method="verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin)">verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="LoginFunc(admin, useadmin1)">LoginFunc(admin, useadmin1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="LoginFunc(admin1, useradmin)">LoginFunc(admin1, useradmin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,7 +127,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.UserRegistrationTest" class="method navigator-link" hash-for-method="adminlogin">adminlogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="LoginFunc(admin, useradmin)">LoginFunc(admin, useradmin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,34 +145,108 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.UserRegistrationTest</span>
+              <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin)">
-                  </a> <!-- verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin) -->
-                  <span class="method-name">verifyUser</span>
-                  <span class="parameters">(Sujith123,css,sujith@gmail.com,123456.0,jith,userjith,userjith,admin,useradmin)</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	Soft assert failed expected [hai] but found [haia]
-	at tests.UserRegistrationTest.verifyUser(UserRegistrationTest.java:86)
+                  <a name="LoginFunc(admina, useradmina)">
+                  </a> <!-- LoginFunc(admina, useradmina) -->
+                  <span class="method-name">LoginFunc</span>
+                  <span class="parameters">(admina,useradmina)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24a213f3be7efdc5212609f82b195d86, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49808/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24a213f3be7efdc5212609f82b195d86
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.Home.getElement(Home.java:20)
+	at pages.Home.getButtonText(Home.java:31)
+	at tests.LoginTest.LoginFunc(LoginTest.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 29 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin)">
-                  </a> <!-- verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin) -->
-                  <span class="method-name">verifyUser</span>
-                  <span class="parameters">(Sujith456,cs123,sujith@gmail.com,1234566.0,jith1,userjith,userjith,admin,useradmin)</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	Soft assert failed expected [hai] but found [haia]
-	at tests.UserRegistrationTest.verifyUser(UserRegistrationTest.java:86)
+                  <a name="LoginFunc(admin, useadmin1)">
+                  </a> <!-- LoginFunc(admin, useadmin1) -->
+                  <span class="method-name">LoginFunc</span>
+                  <span class="parameters">(admin,useadmin1)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24a213f3be7efdc5212609f82b195d86, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49808/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24a213f3be7efdc5212609f82b195d86
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.Home.getElement(Home.java:20)
+	at pages.Home.getButtonText(Home.java:31)
+	at tests.LoginTest.LoginFunc(LoginTest.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 29 stack frames
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginFunc(admin1, useradmin)">
+                  </a> <!-- LoginFunc(admin1, useradmin) -->
+                  <span class="method-name">LoginFunc</span>
+                  <span class="parameters">(admin1,useradmin)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24a213f3be7efdc5212609f82b195d86, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49808}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49808/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24a213f3be7efdc5212609f82b195d86
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pages.Home.getElement(Home.java:20)
+	at pages.Home.getButtonText(Home.java:31)
+	at tests.LoginTest.LoginFunc(LoginTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -176,14 +255,15 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.UserRegistrationTest</span>
+              <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="adminlogin">
-                  </a> <!-- adminlogin -->
-                  <span class="method-name">adminlogin</span>
+                  <a name="LoginFunc(admin, useradmin)">
+                  </a> <!-- LoginFunc(admin, useradmin) -->
+                  <span class="method-name">LoginFunc</span>
+                  <span class="parameters">(admin,useradmin)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,7 +271,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation\src\test\resources\suits\reggression-test.xml</span>
+            <span class="header-content">F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2\src\test\resources\suits\default-login.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,20 +279,13 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;listeners.screenShotCapturing&quot;/&gt;
-    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.DefaultReporting&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;reggression&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;reggrsn1&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Reporter-log&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
-      &lt;class name=&quot;tests.UserRegistrationTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- reggression --&gt;
+  &lt;/test&gt; &lt;!-- Reporter-log --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -224,7 +297,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">reggression (2 classes)</span>
+                <span class="test-name">Reporter-log (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,11 +311,7 @@
               <span class="test-group-name">reggrsn1</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">adminlogin</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyUser</span>
+                <span class="method-in-group-name">LoginFunc</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -262,19 +331,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'adminlogin')
-data.setCell(0, 2, 'tests.UserRegistrationTest')
-data.setCell(0, 3, 3723);
+data.setCell(0, 1, 'LoginFunc')
+data.setCell(0, 2, 'tests.LoginTest')
+data.setCell(0, 3, 3612);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUser')
-data.setCell(1, 2, 'tests.UserRegistrationTest')
-data.setCell(1, 3, 3601);
+data.setCell(1, 1, 'LoginFunc')
+data.setCell(1, 2, 'tests.LoginTest')
+data.setCell(1, 3, 2502);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyUser')
-data.setCell(2, 2, 'tests.UserRegistrationTest')
-data.setCell(2, 3, 3144);
+data.setCell(2, 1, 'LoginFunc')
+data.setCell(2, 2, 'tests.LoginTest')
+data.setCell(2, 3, 2397);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'LoginFunc')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 2380);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -291,44 +364,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin)</span>
+              <span class="reporter-method-name">LoginFunc(admin, useradmin)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">the method failed & status are : verifyUser, 2</span>
-                <span class="reporter-method-output"><a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.17.59.IST.2025.png'>Screen Shot</a></span>
+                <span class="reporter-method-output">the method and status are : LoginFunc, 1</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin)</span>
+              <span class="reporter-method-name">LoginFunc(admina, useradmina)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">the method failed & status are : verifyUser, 2</span>
-                <span class="reporter-method-output"><a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation/screenshot/verifyUserMon.May.19.10.18.02.IST.2025.png'>Screen Shot</a></span>
+                <span class="reporter-method-output">the method failed & status are : LoginFunc, 2</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">LoginFunc(admin, useadmin1)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">the method failed & status are : LoginFunc, 2</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">LoginFunc(admin1, useradmin)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">the method failed & status are : LoginFunc, 2</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.UserRegistrationTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">adduser</span>
-                <br/>
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">LoginFunc</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -342,31 +407,31 @@ return data;
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.UserRegistrationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">adminlogin</span>
-                <span class="method-start">2479 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginFunc(admin1, useradmin)</span>
+                <span class="method-start">9422 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyUser(Sujith123, css, sujith@gmail.com, 123456.0, jith, userjith, userjith, admin, useradmin)</span>
-                <span class="method-start">7875 ms</span>
+                <span class="method-name">LoginFunc(admin, useadmin1)</span>
+                <span class="method-start">13058 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyUser(Sujith456, cs123, sujith@gmail.com, 1234566.0, jith1, userjith, userjith, admin, useradmin)</span>
-                <span class="method-start">11646 ms</span>
+                <span class="method-name">LoginFunc(admina, useradmina)</span>
+                <span class="method-start">15448 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">LoginFunc(admin, useradmin)</span>
+                <span class="method-start">17850 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14926 ms</span>
+                <span class="method-start">20368 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
