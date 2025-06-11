@@ -114,13 +114,13 @@ public class Home extends TestBase{
 	
 	//----Destination Group----
 	public void clickonDestinationGrp() {
-		getElement("card_grp&bin").click();
+		getElement("destination_group").click();
 	}	
 	public void clickonViewDestinationGrp() {
-		getElement("view_card_grp&bin").click();
+		getElement("destination_group_view").click();
 	}	
 	public void clickonAddDestinationGrp() {
-		getElement("add_card_grp").click();
+		getElement("destination_group_add").click();
 	}
 	
 	
