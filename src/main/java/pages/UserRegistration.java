@@ -27,66 +27,63 @@ public class UserRegistration extends TestBase{
 // -----------Add user page actions---------------
 	public String pageHeader_addUser() {
 		return getElement("pag_header_add_usr").getText();
-	}
-	
+	}	
 	public String actPagHeader_addUser() {
 		return getLocator("actual_pag_header_add_usr");
 	}
+	
+	
 	 
 	public void firstName(String key) {
 		getElement("frst_name").sendKeys(key);
-	}
-	
+	}	
 	public void lastName(String key) {
 		getElement("last_name").sendKeys(key);
 	}
-	
 	public void emailID(String key) {
 		driver.findElement(By.xpath(getLocator("user_email"))).sendKeys(key);
-	}
-	
+	}	
 	public void phonNum(String key) {
 		getElement("ph_no").sendKeys(key);
-	}
-	
+	}	
 	public void userRole() {
 		getElement("usr_rol").click();
 	}
-	
 	public void roleOption() {
 		getElement("selct_rol_admn").click();
 	}
-	
 	public void userName(String key) {
 		getElement("user_name").sendKeys(key);
 	}
-	
 	public void pass(String key) {
 		getElement("usr_pswd").sendKeys(key);
 	}
-	
 	public void confirmPass(String key) {
 		getElement("cnfrm_pswd").sendKeys(key);
 	}
 	
+	
 	public void saveUserConf() {
 		getElement("sav_btn").click();
-	}
-	
+	}	
 	public void deletUserConf() {
 		getElement("cancl_btn").click();
 	}
+
+	
+	
 	
 // ------------View user page actions---------------
 	
 	public String pageHeader_viewUser() {
 		return getElement("pag_header_view_usr").getText();
-	}
-	
+	}	
 	public String actPagHeader_viewUser() {
 		return getLocator("actual_pag_header_view_usr");
 	}
 	
+	
+	/* key : jith, jith1, admin, etc. */
 	public void deletUser(String key) {						
 		// Target value to match
         String targetValue = key;

@@ -33,10 +33,12 @@ public class Login extends TestBase {
 	
 	
 	//----------Login page actions-------------
+	/* key : admin */
 	public void userNameFill(String key) {
 		driver.findElement(By.id(usr)).sendKeys(key);
 	}
 
+	/* key : useradmin */
 	public void userPassFill(String key) {
 		driver.findElement(By.id(psw)).sendKeys(key);
 	}

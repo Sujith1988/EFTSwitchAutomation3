@@ -52,20 +52,27 @@ public class UserRegistrationTest extends TestBase {
 		//handling the alert window popup 💡	
 		int alert_active = popupWindwHandlr.alertHandler();	
 		System.out.println("users added as per the exel data :"+alert_active);
-		
-		SoftAssert soft = new SoftAssert();
-		soft.assertEquals("haia", "hai", "Soft assert failed");
-		soft.assertAll();
+			
 		}
 		else {
 			System.out.println("error in loading add user page");
-		}					
+		}
+		
 	}  
+	
+	@Test(priority = 2)
+	static void failit() {
+		SoftAssert soft = new SoftAssert();
+		soft.assertEquals("haia", "hai", "Soft assert failed");
+		soft.assertAll();
+	}
+	
+	
 	
 	
 	
 	  /*--------Users deleting as per the data from the xcelSheet--------*/
-	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1") 
+	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 3, groups = "reggrsn1") 
 	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
 			Home h = new Home();
 	        UserRegistration u = new UserRegistration();  
@@ -81,11 +88,18 @@ public class UserRegistrationTest extends TestBase {
 			String alert_active = popupWindwHandlr.alertHandler1();	
 			System.out.println("users treated as per the exel data :"+alert_active);
 			
-			//manually failing the test to check onfailure listener
-			SoftAssert soft = new SoftAssert();
-			soft.assertEquals("haia", "hai", "Soft assert failed");
-			soft.assertAll();
+			
 										
 	}
   }	
+	
+	 //manually failing the test to check onfailure listener
+	   @Test(priority = 4)
+	   static void failTest() {
+		   SoftAssert soft = new SoftAssert();
+			soft.assertEquals("maia", "hik", "Soft assert failed");
+			soft.assertAll();
+	   }
+		
+	   
 }

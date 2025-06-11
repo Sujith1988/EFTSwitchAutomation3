@@ -7,7 +7,7 @@ import dataprovider.ExcelDataProvider;
 import pages.Home;
 import pages.Login;
 
-public class LoginTest extends TestBase {	
+public class a_LoginTest extends TestBase {	
 	
 	/*---------Login Test scenario, +ve and -ve test cases*/
 	@Test(dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class, groups = "reggrsn1")

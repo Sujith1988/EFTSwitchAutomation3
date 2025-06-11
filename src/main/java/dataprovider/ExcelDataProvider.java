@@ -12,14 +12,23 @@ public class ExcelDataProvider {
 	public  String path = "";
 	public  String sheet1 = "";
 	public  String sheet2 = "";
+	public  String sheet3 = "";
+	public  String sheet4 = "";
+	public  String sheet5 = "";
 	public ExcelDataProvider() throws IOException {
 		UserRegistration u =new UserRegistration();
 		String path1 = u.getLocator("xcellFilePath");
 		String sht1 = u.getLocator("xcellSheetTabName1");
 		String sht2 = u.getLocator("xcellSheetTabName2");
+		String sht3 = u.getLocator("xcellSheetTabName3");
+		String sht4 = u.getLocator("xcellSheetTabName4");
+		String sht5 = u.getLocator("xcellSheetTabName5");
 		this.path = System.getProperty("user.dir")+path1;
 		this.sheet1 = sht1;
 		this.sheet2 = sht2;
+		this.sheet3 = sht3;
+		this.sheet4 = sht4;
+		this.sheet5 = sht5;
 	   }
 	
 
@@ -38,6 +47,8 @@ public class ExcelDataProvider {
         excel.closeExcel();
         return data;
     }
+    
+    
     
     @DataProvider(name = "usersData")
     public Object[][] getusersDetails() {
@@ -63,4 +74,82 @@ System.out.println(rows);
         excel.closeExcel();
         return data; 
     }
+    
+    
+    
+    @DataProvider(name = "sysConfData")
+    public Object[][] getsysConfDetails() {
+    	System.out.println(path);
+    	System.out.println(sheet3);
+        ExcelUtils excel = new ExcelUtils(path, sheet3);
+        int rows = excel.getRowCount();
+        Object[][] data = new Object[rows][8]; // Skipping header
+System.out.println(rows);
+        if (rows != 0) {        	        
+        for (int i = 1; i <= rows; i++) {
+            data[i - 1][0] = excel.getCellData(i, 0); // paramName
+            data[i - 1][1] = excel.getCellData(i, 1); // tr
+            data[i - 1][2] = excel.getCellData(i, 2); // td
+            data[i - 1][3] = excel.getCellData(i, 3); // tdEditbtn
+            data[i - 1][4] = excel.getCellData(i, 4); // tdDelbtn
+            data[i - 1][5] = excel.getCellData(i, 5); // paramKey
+            data[i - 1][6] = excel.getCellData(i, 6); // paramValue  
+            data[i - 1][7] = excel.getCellData(i, 7); // paramStatus
+        }                	
+        }
+        excel.closeExcel();
+        return data; 
+    }
+    
+    
+    
+    
+    
+    
+    @DataProvider(name = "RCData")
+    public Object[][] getRCDetails() {
+    	System.out.println(path);
+    	System.out.println(sheet4);
+        ExcelUtils excel = new ExcelUtils(path, sheet4);
+        int rows = excel.getRowCount();
+        Object[][] data = new Object[rows][4]; // Skipping header
+System.out.println(rows);
+        if (rows != 0) {        	        
+        for (int i = 1; i <= rows; i++) {
+            data[i - 1][0] = excel.getCellData(i, 0); // paramName
+            data[i - 1][1] = excel.getCellData(i, 1); // tr
+            data[i - 1][2] = excel.getCellData(i, 2); // td
+            data[i - 1][3] = excel.getCellData(i, 3); // tdEditbtn
+            
+        }                	
+        }
+        excel.closeExcel();
+        return data; 
+    }
+    
+    
+    
+    @DataProvider(name = "DGData")
+    public Object[][] getDGDetails() {
+    	System.out.println(path);
+    	System.out.println(sheet5);
+        ExcelUtils excel = new ExcelUtils(path, sheet5);
+        int rows = excel.getRowCount();
+        Object[][] data = new Object[rows][5]; // Skipping header
+System.out.println(rows);
+        if (rows != 0) {        	        
+        for (int i = 1; i <= rows; i++) {
+            data[i - 1][0] = excel.getCellData(i, 0); // paramName
+            data[i - 1][1] = excel.getCellData(i, 1); // tr
+            data[i - 1][2] = excel.getCellData(i, 2); // td
+            data[i - 1][3] = excel.getCellData(i, 3); // tdEditbtn
+            data[i - 1][4] = excel.getCellData(i, 4); // DGName
+            
+        }                	
+        }
+        excel.closeExcel();
+        return data; 
+    }
+    
+    
 }
