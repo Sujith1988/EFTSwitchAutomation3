@@ -6,7 +6,7 @@
 	</listeners>
   <test thread-count="5" name="reggression">	
     <classes>
-      <class name="tests.a_LoginTest"/>
+      <class name="tests.A_LoginTest"/>
     </classes>
   </test> <!-- reggression -->
 </suite> <!-- Suite -->

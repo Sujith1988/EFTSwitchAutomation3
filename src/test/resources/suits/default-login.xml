@@ -6,7 +6,7 @@
 	</listeners>
   <test thread-count="5" name="Reporter-log">	
     <classes>
-      <class name="tests.a_LoginTest"/>
+      <class name="tests.A_LoginTest"/>
     </classes>
   </test> <!-- screenshot -->
 </suite> <!-- Suite -->

@@ -9,9 +9,9 @@ import base.TestBase;
 import utils.LocatorReader;
 import utils.SortingRowOfTable;
 
-public class a_SystemConfig extends TestBase{
+public class C_SystemConfig extends TestBase{
 	
-	  public a_SystemConfig() throws IOException {
+	  public C_SystemConfig() throws IOException {
 			 LocatorReader loc =new LocatorReader();
 		   }
 		  

@@ -10,9 +10,9 @@ import base.TestBase;
 import utils.LocatorReader;
 import utils.SortingRowOfTable;
 
-public class c_RoutingCatagory extends TestBase{
+public class D_RoutingCatagory extends TestBase{
 
-	public c_RoutingCatagory() throws IOException {
+	public D_RoutingCatagory() throws IOException {
 		 LocatorReader loc =new LocatorReader();
 	   }
 	  

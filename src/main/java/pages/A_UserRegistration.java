@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 import base.TestBase;
 import utils.LocatorReader;
 
-public class UserRegistration extends TestBase{
-	  public UserRegistration() throws IOException {
+public class A_UserRegistration extends TestBase{
+	  public A_UserRegistration() throws IOException {
 		 LocatorReader loc =new LocatorReader();
 	   }
 	  
