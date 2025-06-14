@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import base.TestBase;
 import utils.LocatorReader;
 
-public class Home extends TestBase{			
-	  public Home() throws IOException {
+public class B_Home extends TestBase{			
+	  public B_Home() throws IOException {
 		LocatorReader loc =new LocatorReader();
 	  }	   
 	  
@@ -138,5 +138,18 @@ public class Home extends TestBase{
     }
 	
 	
+	
+	//----Routes----
+		public void clickRouting() {
+			getElement("routing_conf").click();
+	    }	
+		public void clickAddRoute() {
+			getElement("add_routing_conf").click();
+	    }
+		public void clickViewEditRoute() {
+			getElement("view_routing_conf").click();
+	    }
+		
+		
 	
 }

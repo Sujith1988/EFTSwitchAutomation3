@@ -10,9 +10,9 @@ import base.TestBase;
 import utils.LocatorReader;
 import utils.SortingRowOfTable;
 
-public class e_DestinationGroup extends TestBase {
+public class F_DestinationGroup extends TestBase {
 
-	public e_DestinationGroup() throws IOException {
+	public F_DestinationGroup() throws IOException {
 		 LocatorReader loc =new LocatorReader();
 	   }
 	  

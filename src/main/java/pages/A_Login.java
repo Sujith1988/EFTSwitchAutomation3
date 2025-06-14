@@ -3,12 +3,12 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import base.TestBase;
 import utils.LocatorReader;
-public class Login extends TestBase {
+public class A_Login extends TestBase {
 	public int wnd_delay = 10;
 	public int pag_delay = 10;
 	public int slp_1 = 10;
 
-	public Login() throws IOException {
+	public A_Login() throws IOException {
 		LocatorReader loc = new LocatorReader();
 
 		wnd_delay = Integer.parseInt(LocatorReader.props.getProperty("windo_timeout"));

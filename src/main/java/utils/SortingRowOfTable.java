@@ -27,9 +27,10 @@ public WebElement getElement(String loctr) {
 
 	public static void editDeleteTableRowElements(String key, String tr, String td, String tdbtn) {						
 		// Target value to match
-     String targetValue = key;
+     String targetValue = getLocator(key);
      boolean isMatchFound = false;
-
+     System.out.println("what to search!!!!!!!!! : " +targetValue);
+     
      // Get all rows in the tbody of the table
      List<WebElement> rows = driver.findElements(By.xpath(getLocator(tr)));//tbody/tr -> similar to View User page
 
@@ -38,7 +39,7 @@ public WebElement getElement(String loctr) {
          // Get the first column (td) of the current row
          WebElement firstColumn = row.findElement(By.xpath(getLocator(td)));  //td[1] -> similar to View User page
          String cellText = firstColumn.getText().trim();        
-         
+         System.out.println("search result!!!!!!!  :" +cellText);
          
          // Check if it matches the target value
          if (cellText.equalsIgnoreCase(targetValue)) {

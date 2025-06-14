@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.Login;
+import pages.A_Login;
 
 public class TestBase {
 	public static WebDriver driver;
@@ -28,7 +28,7 @@ public class TestBase {
 			ConfigReader conf =new ConfigReader();		
 			
 			// POM -- Login page (class object-instance created and constructor invoked)
-			Login log = new Login();
+			A_Login log = new A_Login();
 			
 			if (conf.brw.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();

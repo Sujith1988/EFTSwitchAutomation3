@@ -6,19 +6,19 @@ import org.testng.annotations.Test;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.Home;
-import pages.Login;
-import pages.c_RoutingCatagory;
-import pages.e_DestinationGroup;
+import pages.B_Home;
+import pages.A_Login;
+import pages.D_RoutingCatagory;
+import pages.F_DestinationGroup;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 
-public class DGTest extends TestBase{
+public class F_DGTest extends TestBase{
 	
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(priority = 1)
     public static void adminlogin() throws IOException, InterruptedException {
-    	Login log = new Login();	
+    	A_Login log = new A_Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
     }
     
@@ -29,11 +29,11 @@ public class DGTest extends TestBase{
 	@Test(dataProvider = "DGData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1")
 	public static void editDG(String paramName, String tr, String td, String tdEditbtn, String DGName) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				Home h = new Home();
+				B_Home h = new B_Home();
 		// POM -- Routing Catagory page (class object-instance created and constructor invoked)
-				e_DestinationGroup dg = new e_DestinationGroup();
+				F_DestinationGroup dg = new F_DestinationGroup();
 	    // POM -- Login page (class object-instance created and constructor invoked)
-		        Login log = new Login();
+		        A_Login log = new A_Login();
 		       
 		// View Sys. Conf:-  Edit/Delete configurations testing
 		h.clickHome();
