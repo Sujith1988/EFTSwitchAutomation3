@@ -4,16 +4,16 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import utils.popupWindwHandlr;
 import dataprovider.ExcelDataProvider;
-import pages.Home;
-import pages.Login;
+import pages.B_Home;
+import pages.A_Login;
 
-public class a_LoginTest extends TestBase {	
+public class A_LoginTest extends TestBase {	
 	
 	/*---------Login Test scenario, +ve and -ve test cases*/
 	@Test(dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class, groups = "reggrsn1")
 	public void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException, IOException  {		
 		// POM -- Login page (class object-instance created and constructor invoked)
-		Login log = new Login();	
+		A_Login log = new A_Login();	
 				
 		// The actual login fuction testing
 		log.userNameFill(usrN);
@@ -25,7 +25,7 @@ public class a_LoginTest extends TestBase {
 					
 		try {
 			// POM -- home page (class object-instance created and constructor invoked)
-			Home hom = new Home();
+			B_Home hom = new B_Home();
 			// Logout and printing the test status
 			String LogoutText = hom.getButtonText();
 			System.out.println(LogoutText);

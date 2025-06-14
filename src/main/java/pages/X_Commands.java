@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import base.TestBase;
 import utils.LocatorReader;
 
-public class b_Commands extends TestBase {
+public class X_Commands extends TestBase {
 
-	public b_Commands() throws IOException {
+	public X_Commands() throws IOException {
 		 LocatorReader loc =new LocatorReader();
 	   }
 	  

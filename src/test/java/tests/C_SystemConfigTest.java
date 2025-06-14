@@ -7,18 +7,18 @@ import org.testng.asserts.SoftAssert;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.Home;
-import pages.Login;
-import pages.a_SystemConfig;
+import pages.B_Home;
+import pages.A_Login;
+import pages.C_SystemConfig;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 
-public class SystemConfigTest extends TestBase{
+public class C_SystemConfigTest extends TestBase{
 
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(priority = 1)
     public static void adminlogin() throws IOException, InterruptedException {
-    	Login log = new Login();	
+    	A_Login log = new A_Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
     }
 
@@ -29,11 +29,11 @@ public class SystemConfigTest extends TestBase{
 	@Test(dataProvider = "sysConfData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1")
 	public static void editSysConf(String paramName, String tr, String td, String tdEditbtn, String tdDelbtn, String paramKey, String paramValue, String paramStatus) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				Home h = new Home();
+				B_Home h = new B_Home();
 		// POM -- System Conf page (class object-instance created and constructor invoked)
-				a_SystemConfig sys = new a_SystemConfig();
+				C_SystemConfig sys = new C_SystemConfig();
 	    // POM -- Login page (class object-instance created and constructor invoked)
-		        Login log = new Login();
+		        A_Login log = new A_Login();
 		       
 		// View Sys. Conf:-  Edit/Delete configurations testing
 		h.clickHome();

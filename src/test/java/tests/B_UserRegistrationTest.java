@@ -5,17 +5,17 @@ import org.testng.asserts.SoftAssert;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.Home;
-import pages.Login;
-import pages.UserRegistration;
+import pages.B_Home;
+import pages.A_Login;
+import pages.A_UserRegistration;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
-public class UserRegistrationTest extends TestBase {
+public class B_UserRegistrationTest extends TestBase {
 	
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(groups = "reggrsn1")
     public static void adminlogin() throws IOException, InterruptedException {
-    	Login log = new Login();	
+    	A_Login log = new A_Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
     }
 	
@@ -25,11 +25,11 @@ public class UserRegistrationTest extends TestBase {
 	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1, groups = "reggrsn1")
 	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				Home h = new Home();
+				B_Home h = new B_Home();
 		// POM -- UserRegistration page (class object-instance created and constructor invoked)
-		        UserRegistration u = new UserRegistration();
+		        A_UserRegistration u = new A_UserRegistration();
 	    // POM -- UserRegistration page (class object-instance created and constructor invoked)
-		        Login log = new Login();
+		        A_Login log = new A_Login();
 		       
 		// add user fuction testing
 		h.clickHome();
@@ -74,9 +74,9 @@ public class UserRegistrationTest extends TestBase {
 	  /*--------Users deleting as per the data from the xcelSheet--------*/
 	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 3, groups = "reggrsn1") 
 	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
-			Home h = new Home();
-	        UserRegistration u = new UserRegistration();  
-	        Login log = new Login();
+			B_Home h = new B_Home();
+	        A_UserRegistration u = new A_UserRegistration();  
+	        A_Login log = new A_Login();
 	// verify user fuction testing
 	h.clickHome();  	
 	h.clickUserLink();    Thread.sleep(log.slp_2);
