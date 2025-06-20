@@ -45,6 +45,7 @@ public WebElement getElement(String loctr) {
          if (cellText.equalsIgnoreCase(targetValue)) {
              System.out.println("Match found--> ExelData= "+targetValue +", td-cellText= "+cellText);
              isMatchFound = true;
+             System.out.println("joiiii: "+ row.findElement(By.xpath(getLocator(tdbtn))));
              row.findElement(By.xpath(getLocator(tdbtn))).click(); //td[x]/button             
              break;
          }

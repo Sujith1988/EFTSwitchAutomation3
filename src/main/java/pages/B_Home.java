@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import base.TestBase;
 import utils.LocatorReader;
+import utils.ScrollUtil;
 
 public class B_Home extends TestBase{			
 	  public B_Home() throws IOException {
@@ -21,6 +22,17 @@ public class B_Home extends TestBase{
 	  }
 	//--------------------------------------------------------
 	  	  
+	  
+	  
+	//-------------------Scrolls-----------------
+		
+	  // scroll upto the element of the page
+	public void scrollToanElementInHome(String var) {
+		ScrollUtil.scrollToAnElement(driver,getElement(var));
+	}
+	//----------------------------------------------
+	
+		
 	
 	  
 /* --------Logout button text verification--------- */
@@ -151,5 +163,33 @@ public class B_Home extends TestBase{
 	    }
 		
 		
+		
+		//----Node app----
+		public void clickNodeapp() {
+			getElement("Nodeapp_nav").click();
+	    }	
+		public void clickAddNodeapp() {
+			getElement("add_Nodeapp_nav").click();
+	    }
+		public void clickViewEditNodeapp() {
+			getElement("view_Nodeapp_nav").click();
+	    }
+		public void clickViewNodeConnections() {
+			getElement("view_NodeConnection_nav").click();
+	    }
+		
+		
+		
+		
+		//----Interchange----
+		public void clickInterchange() {
+			getElement("intrchng_nav").click();
+		}
+		public void clickaddInterchange() {
+			getElement("addintrchng_nav").click();
+		}
+		public void clickviewInterchange() {
+			getElement("viewintrchng_nav").click();
+		}
 	
 }

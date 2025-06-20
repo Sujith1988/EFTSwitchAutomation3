@@ -18,6 +18,7 @@ public class ExcelDataProvider {
 	public  String sheet6 = "";
 	public  String sheet7 = "";
 	public  String sheet8 = "";
+	public  String sheet9 = "";
 	public ExcelDataProvider() throws IOException {
 		A_UserRegistration u =new A_UserRegistration();
 		String path1 = u.getLocator("xcellFilePath");
@@ -29,6 +30,7 @@ public class ExcelDataProvider {
 		String sht6 = u.getLocator("xcellSheetTabName6");
 		String sht7 = u.getLocator("xcellSheetTabName7");
 		String sht8 = u.getLocator("xcellSheetTabName8");
+		String sht9 = u.getLocator("xcellSheetTabName9");
 		this.path = System.getProperty("user.dir")+path1;
 		this.sheet1 = sht1;
 		this.sheet2 = sht2;
@@ -38,6 +40,7 @@ public class ExcelDataProvider {
 		this.sheet6 = sht6;
 		this.sheet7 = sht7;
 		this.sheet8 = sht8;
+		this.sheet9 = sht9;
 	   }
 	
 
@@ -237,6 +240,27 @@ System.out.println(rows);
             data[i - 1][1] = excel.getCellData(i, 1); // tr1
             data[i - 1][2] = excel.getCellData(i, 2); // td1
             data[i - 1][3] = excel.getCellData(i, 3); // tdEidtbtnCG
+           
+        }                	
+        }
+        excel.closeExcel();
+        return data; 
+    }
+
+    
+    @DataProvider(name = "alphaData")
+    public Object[][] getAlphaDetails() {
+    	System.out.println(path);
+    	System.out.println(sheet9);
+        ExcelUtils excel = new ExcelUtils(path, sheet9);
+        int rows = excel.getRowCount();
+        Object[][] data = new Object[rows][2]; // Skipping header
+System.out.println(rows);
+        if (rows != 0) {        	        
+        for (int i = 1; i <= rows; i++) {
+            data[i - 1][0] = excel.getCellData(i, 0); // alphanode name
+            data[i - 1][1] = excel.getCellData(i, 1); // alphanode port
+            
            
         }                	
         }

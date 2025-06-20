@@ -1,54 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-14T17:55:34 IST" name="Default suite" finished-at="2025-06-14T17:56:11 IST" duration-ms="37086">
+  <suite started-at="2025-06-20T11:42:56 IST" name="Default suite" finished-at="2025-06-20T11:48:18 IST" duration-ms="322489">
     <groups>
       <group name="reggrsn1">
-        <method signature="K_RoutesTest.editRoutes(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.K_RoutesTest@451001e5]" name="editRoutes" class="tests.K_RoutesTest"/>
+        <method signature="L_CommandsTest.commandsTests()[pri:2, instance:tests.L_CommandsTest@2b40ff9c]" name="commandsTests" class="tests.L_CommandsTest"/>
       </group> <!-- reggrsn1 -->
+      <group name="functionTesting">
+        <method signature="L_CommandsTest.commandsFunTests()[pri:3, instance:tests.L_CommandsTest@2b40ff9c]" name="commandsFunTests" class="tests.L_CommandsTest"/>
+      </group> <!-- functionTesting -->
     </groups>
-    <test started-at="2025-06-14T17:55:34 IST" name="Default test" finished-at="2025-06-14T17:56:11 IST" duration-ms="37086">
-      <class name="tests.K_RoutesTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.K_RoutesTest@451001e5]" started-at="2025-06-14T17:55:34 IST" name="setUp" finished-at="2025-06-14T17:55:39 IST" duration-ms="5212" status="PASS">
+    <test started-at="2025-06-20T11:42:56 IST" name="Default test" finished-at="2025-06-20T11:48:18 IST" duration-ms="322489">
+      <class name="tests.L_CommandsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:42:56 IST" name="setUp" finished-at="2025-06-20T11:43:08 IST" duration-ms="12449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="adminlogin()[pri:1, instance:tests.K_RoutesTest@451001e5]" started-at="2025-06-14T17:55:39 IST" name="adminlogin" finished-at="2025-06-14T17:55:40 IST" duration-ms="354" status="PASS">
+        <test-method signature="adminlogin()[pri:1, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:43:08 IST" name="adminlogin" finished-at="2025-06-20T11:43:09 IST" duration-ms="308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminlogin -->
-        <test-method signature="editRoutes(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.K_RoutesTest@451001e5]" started-at="2025-06-14T17:55:42 IST" name="editRoutes" data-provider="RouteData" finished-at="2025-06-14T17:56:11 IST" duration-ms="29164" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CG_value2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[route_tr]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[route_td]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[route_tdbtn]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="commandsTests()[pri:2, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:43:09 IST" name="commandsTests" finished-at="2025-06-20T11:47:12 IST" duration-ms="243427" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editRoutes -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.K_RoutesTest@451001e5]" started-at="2025-06-14T17:56:11 IST" name="tearDown" finished-at="2025-06-14T17:56:11 IST" duration-ms="393" status="PASS">
+        </test-method> <!-- commandsTests -->
+        <test-method signature="commandsFunTests()[pri:3, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:47:12 IST" name="commandsFunTests" finished-at="2025-06-20T11:48:18 IST" duration-ms="65436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commandsFunTests -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:48:18 IST" name="tearDown" finished-at="2025-06-20T11:48:18 IST" duration-ms="789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.K_RoutesTest -->
+      </class> <!-- tests.L_CommandsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
