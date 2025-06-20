@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.K_RoutesTest">
+      <class name="tests.L_CommandsTest">
         <methods>
-          <include name="editRoutes" invocation-numbers="0"/>
+          <include name="commandsFunTests"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="commandsTests"/>
         </methods>
-      </class> <!-- tests.K_RoutesTest -->
+      </class> <!-- tests.L_CommandsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
