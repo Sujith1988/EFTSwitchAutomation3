@@ -1,39 +1,1158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="19" total="54" passed="35" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T11:42:56 IST" name="Default suite" finished-at="2025-06-20T11:48:18 IST" duration-ms="322489">
+  <suite started-at="2025-06-23T14:12:53 IST" name="Suite" finished-at="2025-06-23T14:29:23 IST" duration-ms="990447">
     <groups>
       <group name="reggrsn1">
-        <method signature="L_CommandsTest.commandsTests()[pri:2, instance:tests.L_CommandsTest@2b40ff9c]" name="commandsTests" class="tests.L_CommandsTest"/>
+        <method signature="E_CardGroupTest.addCG()[pri:2, instance:tests.E_CardGroupTest@7b7fdc8]" name="addCG" class="tests.E_CardGroupTest"/>
+        <method signature="J_InterchangesTest.addNodeApp()[pri:2, instance:tests.J_InterchangesTest@28b46423]" name="addNodeApp" class="tests.J_InterchangesTest"/>
+        <method signature="D_RCTest.addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" name="addRC" class="tests.D_RCTest"/>
+        <method signature="G_AlphaNodeTest.addTestAlphaNode()[pri:2, instance:tests.G_AlphaNodeTest@6a57ae10]" name="addTestAlphaNode" class="tests.G_AlphaNodeTest"/>
+        <method signature="B_UserRegistrationTest.adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.B_UserRegistrationTest@1c852c0f]" name="adduser" class="tests.B_UserRegistrationTest"/>
+        <method signature="B_UserRegistrationTest.adminlogin()[pri:0, instance:tests.B_UserRegistrationTest@1c852c0f]" name="adminlogin" class="tests.B_UserRegistrationTest"/>
+        <method signature="L_CommandsTest.commandsTests()[pri:2, instance:tests.L_CommandsTest@3b79fd76]" name="commandsTests" class="tests.L_CommandsTest"/>
+        <method signature="E_CardGroupTest.editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" name="editCG" class="tests.E_CardGroupTest"/>
+        <method signature="F_DGTest.editDG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.F_DGTest@51c693d]" name="editDG" class="tests.F_DGTest"/>
+        <method signature="D_RCTest.editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" name="editRC" class="tests.D_RCTest"/>
+        <method signature="K_RoutesTest.editRoutes(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.K_RoutesTest@7fc4780b]" name="editRoutes" class="tests.K_RoutesTest"/>
+        <method signature="C_SystemConfigTest.editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" name="editSysConf" class="tests.C_SystemConfigTest"/>
+        <method signature="G_AlphaNodeTest.editTestAlphaNode()[pri:3, instance:tests.G_AlphaNodeTest@6a57ae10]" name="editTestAlphaNode" class="tests.G_AlphaNodeTest"/>
+        <method signature="I_NodeAppTest.testingNodeApp()[pri:2, instance:tests.I_NodeAppTest@766653e6]" name="testingNodeApp" class="tests.I_NodeAppTest"/>
+        <method signature="B_UserRegistrationTest.verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.B_UserRegistrationTest@1c852c0f]" name="verifyUser" class="tests.B_UserRegistrationTest"/>
       </group> <!-- reggrsn1 -->
-      <group name="functionTesting">
-        <method signature="L_CommandsTest.commandsFunTests()[pri:3, instance:tests.L_CommandsTest@2b40ff9c]" name="commandsFunTests" class="tests.L_CommandsTest"/>
-      </group> <!-- functionTesting -->
+      <group name="conf">
+        <method signature="D_RCTest.addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" name="addRC" class="tests.D_RCTest"/>
+        <method signature="F_DGTest.editDG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.F_DGTest@51c693d]" name="editDG" class="tests.F_DGTest"/>
+        <method signature="K_RoutesTest.editRoutes(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.K_RoutesTest@7fc4780b]" name="editRoutes" class="tests.K_RoutesTest"/>
+        <method signature="C_SystemConfigTest.editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" name="editSysConf" class="tests.C_SystemConfigTest"/>
+      </group> <!-- conf -->
     </groups>
-    <test started-at="2025-06-20T11:42:56 IST" name="Default test" finished-at="2025-06-20T11:48:18 IST" duration-ms="322489">
+    <test started-at="2025-06-23T14:12:53 IST" name="reggression" finished-at="2025-06-23T14:29:23 IST" duration-ms="990447">
       <class name="tests.L_CommandsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:42:56 IST" name="setUp" finished-at="2025-06-20T11:43:08 IST" duration-ms="12449" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="adminlogin()[pri:1, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:43:08 IST" name="adminlogin" finished-at="2025-06-20T11:43:09 IST" duration-ms="308" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminlogin -->
-        <test-method signature="commandsTests()[pri:2, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:43:09 IST" name="commandsTests" finished-at="2025-06-20T11:47:12 IST" duration-ms="243427" status="PASS">
+        <test-method signature="commandsTests()[pri:2, instance:tests.L_CommandsTest@3b79fd76]" started-at="2025-06-23T14:25:11 IST" name="commandsTests" finished-at="2025-06-23T14:29:22 IST" duration-ms="250999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- commandsTests -->
-        <test-method signature="commandsFunTests()[pri:3, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:47:12 IST" name="commandsFunTests" finished-at="2025-06-20T11:48:18 IST" duration-ms="65436" status="PASS">
+      </class> <!-- tests.L_CommandsTest -->
+      <class name="tests.G_AlphaNodeTest">
+        <test-method signature="addTestAlphaNode()[pri:2, instance:tests.G_AlphaNodeTest@6a57ae10]" started-at="2025-06-23T14:21:14 IST" name="addTestAlphaNode" finished-at="2025-06-23T14:21:50 IST" duration-ms="36081" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- commandsFunTests -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.L_CommandsTest@2b40ff9c]" started-at="2025-06-20T11:48:18 IST" name="tearDown" finished-at="2025-06-20T11:48:18 IST" duration-ms="789" status="PASS">
+        </test-method> <!-- addTestAlphaNode -->
+        <test-method signature="editTestAlphaNode()[pri:3, instance:tests.G_AlphaNodeTest@6a57ae10]" started-at="2025-06-23T14:21:50 IST" name="editTestAlphaNode" finished-at="2025-06-23T14:22:20 IST" duration-ms="29406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editTestAlphaNode -->
+      </class> <!-- tests.G_AlphaNodeTest -->
+      <class name="tests.K_RoutesTest">
+        <test-method signature="editRoutes(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.K_RoutesTest@7fc4780b]" started-at="2025-06-23T14:24:37 IST" name="editRoutes" data-provider="RouteData" finished-at="2025-06-23T14:25:11 IST" duration-ms="34342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MasterCard]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[route_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[route_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[route_tdbtn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRoutes -->
+      </class> <!-- tests.K_RoutesTest -->
+      <class name="tests.I_NodeAppTest">
+        <test-method signature="testingNodeApp()[pri:2, instance:tests.I_NodeAppTest@766653e6]" started-at="2025-06-23T14:22:20 IST" name="testingNodeApp" finished-at="2025-06-23T14:23:49 IST" duration-ms="88978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingNodeApp -->
+      </class> <!-- tests.I_NodeAppTest -->
+      <class name="tests.J_InterchangesTest">
+        <test-method signature="addNodeApp()[pri:2, instance:tests.J_InterchangesTest@28b46423]" started-at="2025-06-23T14:23:49 IST" name="addNodeApp" finished-at="2025-06-23T14:24:37 IST" duration-ms="48275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNodeApp -->
+      </class> <!-- tests.J_InterchangesTest -->
+      <class name="tests.B_UserRegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:12:53 IST" name="setUp" finished-at="2025-06-23T14:13:03 IST" duration-ms="10357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="adminlogin()[pri:0, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:13:03 IST" name="adminlogin" finished-at="2025-06-23T14:13:04 IST" duration-ms="580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminlogin -->
+        <test-method signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:13:09 IST" name="adduser" data-provider="usersData" finished-at="2025-06-23T14:13:17 IST" depends-on-methods="tests.B_UserRegistrationTest.adminlogin" duration-ms="7803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[css]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adduser -->
+        <test-method signature="adduser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:13:17 IST" name="adduser" data-provider="usersData" finished-at="2025-06-23T14:13:25 IST" depends-on-methods="tests.B_UserRegistrationTest.adminlogin" duration-ms="7744" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cs123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234566.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adduser -->
+        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:13:25 IST" name="verifyUser" data-provider="usersData" finished-at="2025-06-23T14:13:30 IST" duration-ms="4451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[css]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUser -->
+        <test-method signature="verifyUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:13:30 IST" name="verifyUser" data-provider="usersData" finished-at="2025-06-23T14:13:35 IST" duration-ms="5252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujith456]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cs123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sujith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234566.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jith1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[userjith]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[useradmin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.B_UserRegistrationTest@1c852c0f]" started-at="2025-06-23T14:29:22 IST" name="tearDown" finished-at="2025-06-23T14:29:23 IST" duration-ms="659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.L_CommandsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.B_UserRegistrationTest -->
+      <class name="tests.D_RCTest">
+        <test-method signature="editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:15:12 IST" name="editRC" data-provider="RCData" finished-at="2025-06-23T14:15:24 IST" duration-ms="12454" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ATMRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rout_cat_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rout_cat_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RC_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRC -->
+        <test-method signature="editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:15:24 IST" name="editRC" data-provider="RCData" finished-at="2025-06-23T14:15:37 IST" duration-ms="12686" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EvertecCredRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rout_cat_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rout_cat_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RC_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRC -->
+        <test-method signature="editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:15:37 IST" name="editRC" data-provider="RCData" finished-at="2025-06-23T14:15:50 IST" duration-ms="13215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MdsRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rout_cat_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rout_cat_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RC_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRC -->
+        <test-method signature="editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:15:50 IST" name="editRC" data-provider="RCData" finished-at="2025-06-23T14:16:03 IST" duration-ms="12666" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NaiguataRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rout_cat_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rout_cat_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RC_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRC -->
+        <test-method signature="editRC(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:03 IST" name="editRC" data-provider="RCData" finished-at="2025-06-23T14:16:16 IST" duration-ms="12803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VisaRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rout_cat_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rout_cat_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[RC_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editRC -->
+        <test-method signature="addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:16 IST" name="addRC" data-provider="RCData1" finished-at="2025-06-23T14:16:23 IST" duration-ms="7110" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ATMRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spare]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRC -->
+        <test-method signature="addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:23 IST" name="addRC" data-provider="RCData1" finished-at="2025-06-23T14:16:30 IST" duration-ms="7449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EvertecCredRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spare]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRC -->
+        <test-method signature="addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:30 IST" name="addRC" data-provider="RCData1" finished-at="2025-06-23T14:16:38 IST" duration-ms="7463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MdsRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spare]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRC -->
+        <test-method signature="addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:38 IST" name="addRC" data-provider="RCData1" finished-at="2025-06-23T14:16:45 IST" duration-ms="7559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NaiguataRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spare]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRC -->
+        <test-method signature="addRC(java.lang.String,java.lang.String)[pri:3, instance:tests.D_RCTest@a82c5f1]" started-at="2025-06-23T14:16:45 IST" name="addRC" data-provider="RCData1" finished-at="2025-06-23T14:16:53 IST" duration-ms="7683" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VisaRC]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spare]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRC -->
+      </class> <!-- tests.D_RCTest -->
+      <class name="tests.C_SystemConfigTest">
+        <test-method signature="editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" started-at="2025-06-23T14:13:35 IST" name="editSysConf" data-provider="sysConfData" finished-at="2025-06-23T14:13:55 IST" duration-ms="19368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API Port]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sysconf_table_rows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sysconf_table_firstcolumn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sysconf_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sysconf_del_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[param_apiport]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9001.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[param_status_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editSysConf -->
+        <test-method signature="editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" started-at="2025-06-23T14:13:55 IST" name="editSysConf" data-provider="sysConfData" finished-at="2025-06-23T14:14:13 IST" duration-ms="18882" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Host Name]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sysconf_table_rows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sysconf_table_firstcolumn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sysconf_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sysconf_del_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[parm_hostName]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[APTLENOVO]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[param_status_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editSysConf -->
+        <test-method signature="editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" started-at="2025-06-23T14:14:14 IST" name="editSysConf" data-provider="sysConfData" finished-at="2025-06-23T14:14:33 IST" duration-ms="19053" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HTML Trace Path]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sysconf_table_rows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sysconf_table_firstcolumn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sysconf_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sysconf_del_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[param_html_tracepath]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[C:\Pravega\Traces]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[param_status_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editSysConf -->
+        <test-method signature="editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" started-at="2025-06-23T14:14:33 IST" name="editSysConf" data-provider="sysConfData" finished-at="2025-06-23T14:14:52 IST" duration-ms="19226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IP]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sysconf_table_rows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sysconf_table_firstcolumn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sysconf_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sysconf_del_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[param_ipaddress]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[192.168.52.207]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[param_status_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editSysConf -->
+        <test-method signature="editSysConf(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.C_SystemConfigTest@37fb0bed]" started-at="2025-06-23T14:14:52 IST" name="editSysConf" data-provider="sysConfData" finished-at="2025-06-23T14:15:12 IST" duration-ms="19613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Trace File Location]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sysconf_table_rows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sysconf_table_firstcolumn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sysconf_edit_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sysconf_del_btn-colmn_on_pickedRow]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[param_tracefilepath]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[C:\Pravega\Pravega_Switch\logs]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[param_status_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editSysConf -->
+      </class> <!-- tests.C_SystemConfigTest -->
+      <class name="tests.E_CardGroupTest">
+        <test-method signature="addCG()[pri:2, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:16:53 IST" name="addCG" finished-at="2025-06-23T14:17:09 IST" duration-ms="15854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCG -->
+        <test-method signature="editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:17:09 IST" name="editCG" data-provider="CGData" finished-at="2025-06-23T14:17:50 IST" duration-ms="40631" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CMSCardGroup]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cardGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cardGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cardGrp_td_Viewbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123456.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[bin_tr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[bin_td]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bin_td_edit_btn]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[bin_td_del-btn]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[cardGrp_td_Editbtn]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[RC_option_ATMRC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCG -->
+        <test-method signature="editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:17:50 IST" name="editCG" data-provider="CGData" finished-at="2025-06-23T14:18:30 IST" duration-ms="40452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MasterCard]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cardGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cardGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cardGrp_td_Viewbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123457.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[bin_tr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[bin_td]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bin_td_edit_btn]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[bin_td_del-btn]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[cardGrp_td_Editbtn]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[RC_option_MdsRC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCG -->
+        <test-method signature="editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:18:30 IST" name="editCG" data-provider="CGData" finished-at="2025-06-23T14:19:11 IST" duration-ms="40252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MasterCardCR]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cardGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cardGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cardGrp_td_Viewbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123458.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[bin_tr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[bin_td]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bin_td_edit_btn]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[bin_td_del-btn]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[cardGrp_td_Editbtn]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[RC_option_EvertecCredRC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCG -->
+        <test-method signature="editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:19:11 IST" name="editCG" data-provider="CGData" finished-at="2025-06-23T14:19:51 IST" duration-ms="40015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Naiguata]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cardGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cardGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cardGrp_td_Viewbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123459.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[bin_tr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[bin_td]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bin_td_edit_btn]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[bin_td_del-btn]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[cardGrp_td_Editbtn]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[RC_option_NaiguataRC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCG -->
+        <test-method signature="editCG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.E_CardGroupTest@7b7fdc8]" started-at="2025-06-23T14:19:51 IST" name="editCG" data-provider="CGData" finished-at="2025-06-23T14:20:32 IST" duration-ms="41677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Visa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cardGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cardGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cardGrp_td_Viewbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123460.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[bin_tr]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[bin_td]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bin_td_edit_btn]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[bin_td_del-btn]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[cardGrp_td_Editbtn]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[RC_option_VisaRC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCG -->
+      </class> <!-- tests.E_CardGroupTest -->
+      <class name="tests.F_DGTest">
+        <test-method signature="editDG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.F_DGTest@51c693d]" started-at="2025-06-23T14:20:33 IST" name="editDG" data-provider="DGData" finished-at="2025-06-23T14:20:46 IST" duration-ms="13574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AtmDg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[destGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[destGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[destGrp_tdbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[AtmDg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDG -->
+        <test-method signature="editDG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.F_DGTest@51c693d]" started-at="2025-06-23T14:20:46 IST" name="editDG" data-provider="DGData" finished-at="2025-06-23T14:21:00 IST" duration-ms="13806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PosDesGr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[destGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[destGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[destGrp_tdbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[PosDesGr]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDG -->
+        <test-method signature="editDG(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.F_DGTest@51c693d]" started-at="2025-06-23T14:21:00 IST" name="editDG" data-provider="DGData" finished-at="2025-06-23T14:21:14 IST" duration-ms="14175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CMSDG]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[destGrp_tr]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[destGrp_td]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[destGrp_tdbtn]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[CMSDG]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editDG -->
+      </class> <!-- tests.F_DGTest -->
+    </test> <!-- reggression -->
+  </suite> <!-- Suite -->
 </testng-results>

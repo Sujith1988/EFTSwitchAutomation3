@@ -29,7 +29,7 @@
 	    		<span class="tooltiptextCustom">Copy Test name</span>
 			</div>
 	    </th>
-	    <th id="testNameId">screenshot</th> 
+	    <th id="testNameId">reggression</th> 
 	  </tr>
 	  <tr>
 	    <th>Test Class : </th>
@@ -43,8 +43,8 @@
 	    		<span class="tooltiptextCustom">Copy Class name</span>
 			</div>
 	    </th> 
-	    <th id="testClassId">tests.LoginTest</th>
-	    <th id="testClassNameId" hidden="true">LoginTest</th>
+	    <th id="testClassId">tests.B_UserRegistrationTest<br>tests.C_SystemConfigTest<br>tests.D_RCTest<br>tests.E_CardGroupTest<br>tests.F_DGTest<br>tests.G_AlphaNodeTest<br>tests.I_NodeAppTest<br>tests.J_InterchangesTest<br>tests.K_RoutesTest<br>tests.L_CommandsTest<br></th>
+	    <th id="testClassNameId" hidden="true">B_UserRegistrationTest<br>C_SystemConfigTest<br>D_RCTest<br>E_CardGroupTest<br>F_DGTest<br>G_AlphaNodeTest<br>I_NodeAppTest<br>J_InterchangesTest<br>K_RoutesTest<br>L_CommandsTest<br></th>
 	  </tr>
 	  <tr>
 	    <th>Suite Name : </th>
@@ -68,23 +68,23 @@
 	    		<span class="tooltiptextCustom">Copy Suite file name</span>
 			</div>
 	    </th> 
-	  	<th id="suiteXMLId">F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2\src\test\resources\suits\custom-report-login.xml</th>
-	  	<th id="suiteXMLNameId" hidden="true">custom-report-login.xml</th>
+	  	<th id="suiteXMLId">F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2\src\test\resources\suits\reggression-test.xml</th>
+	  	<th id="suiteXMLNameId" hidden="true">reggression-test.xml</th>
 	  </tr>
 	  	  <tr>
 	    <th>Total Time : </th>
 	    <th></th>
-	    <th>00:00:20</th> 
+	    <th>00:16:30</th> 
 	  </tr>
 	  <tr>
 	    <th>Total Steps : </th>
 	   	<th></th>
-	    <th>1</th> 
+	    <th>15</th> 
 	  </tr>
 	  <tr>
 	    <th>Status : </th>
 	    <th></th>
-	    <th><font color="red">FAIL</font></th> 
+	    <th><font color="green">PASS</font></th> 
 	  </tr>
 	</table>
 </div>
@@ -109,269 +109,767 @@
 				
 				
 												
-											<tr>
-	<td class="time">1749181648323</td>
-	<td class="header failed" colspan="4" onClick="toggleElement('660e1142-8734-4d38-9079-8a90a2c9b50e','block');changeSingleIcon('span-660e1142-8734-4d38-9079-8a90a2c9b50e');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
-	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-660e1142-8734-4d38-9079-8a90a2c9b50e' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1749181648323</td>
-	<td class="methodTest">
-		<span class="description"><b>Method: </b>LoginFunc</span><br>
-			<span class="description"><b>Description: </b></span><br>
-						<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
-				<span class="duration"><b>Duration: </b>2.504s</span><br>
-	</td>
-	<td class="result">
-					<i>Method arguments: </i><span class="arguments">"admina", "useradmina"</span><br>
-				<div class="noCollapse" id="660e1142-8734-4d38-9079-8a90a2c9b50e" style="display: block;">
-												the method failed & status are : LoginFunc, 2
-												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2/screenshot/LoginFuncFri.Jun.06.09.17.30.IST.2025.png'>Screen Shot</a>
-									<a href="javascript:toggleElement('exception-660e1142-8734-4d38-9079-8a90a2c9b50e','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
-&nbsp; (Session info: chrome=137.0.7151.56)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [f5cca5db6c80a1e2ed3e3cedbfbb646f, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49645/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: f5cca5db6c80a1e2ed3e3cedbfbb646f</b></a><br/>
-		<div class="stackTrace" id="exception-660e1142-8734-4d38-9079-8a90a2c9b50e">
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
-					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
-					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
-					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
-					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
-					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
-					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
-					pages.Home.getElement(Home.java:20)<br/>
-					pages.Home.getButtonText(Home.java:31)<br/>
-					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
-					org.testng.TestRunner.run(TestRunner.java:616)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
-					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
-					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
-						</div>
-		</td>
-	</div>
-</tr>
-					<tr>
-	<td class="time">1749181642640</td>
-	<td class="header failed" colspan="4" onClick="toggleElement('528bdc4a-8173-4096-a5b5-cdd2d7e78387','block');changeSingleIcon('span-528bdc4a-8173-4096-a5b5-cdd2d7e78387');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
-	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-528bdc4a-8173-4096-a5b5-cdd2d7e78387' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1749181642640</td>
-	<td class="methodTest">
-		<span class="description"><b>Method: </b>LoginFunc</span><br>
-			<span class="description"><b>Description: </b></span><br>
-						<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
-				<span class="duration"><b>Duration: </b>2.641s</span><br>
-	</td>
-	<td class="result">
-					<i>Method arguments: </i><span class="arguments">"admin1", "useradmin"</span><br>
-				<div class="noCollapse" id="528bdc4a-8173-4096-a5b5-cdd2d7e78387" style="display: block;">
-												the method failed & status are : LoginFunc, 2
-												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2/screenshot/LoginFuncFri.Jun.06.09.17.25.IST.2025.png'>Screen Shot</a>
-									<a href="javascript:toggleElement('exception-528bdc4a-8173-4096-a5b5-cdd2d7e78387','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
-&nbsp; (Session info: chrome=137.0.7151.56)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [f5cca5db6c80a1e2ed3e3cedbfbb646f, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49645/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: f5cca5db6c80a1e2ed3e3cedbfbb646f</b></a><br/>
-		<div class="stackTrace" id="exception-528bdc4a-8173-4096-a5b5-cdd2d7e78387">
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
-					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
-					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
-					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
-					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
-					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
-					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
-					pages.Home.getElement(Home.java:20)<br/>
-					pages.Home.getButtonText(Home.java:31)<br/>
-					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
-					org.testng.TestRunner.run(TestRunner.java:616)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
-					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
-					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
-						</div>
-		</td>
-	</div>
-</tr>
-					<tr>
-	<td class="time">1749181645655</td>
-	<td class="header failed" colspan="4" onClick="toggleElement('a8ad3a0e-0587-486a-bad2-31f98bf6dfae','block');changeSingleIcon('span-a8ad3a0e-0587-486a-bad2-31f98bf6dfae');" title="Click to expand/collapse" style="cursor: pointer;">
-	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
-	<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-a8ad3a0e-0587-486a-bad2-31f98bf6dfae' class="glyphicon glyphicon-menu-down"></span></div>
-	</td>
-	</tr>
-<tr>
-	<td class="time">1749181645655</td>
-	<td class="methodTest">
-		<span class="description"><b>Method: </b>LoginFunc</span><br>
-			<span class="description"><b>Description: </b></span><br>
-						<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
-				<span class="duration"><b>Duration: </b>2.432s</span><br>
-	</td>
-	<td class="result">
-					<i>Method arguments: </i><span class="arguments">"admin", "useadmin1"</span><br>
-				<div class="noCollapse" id="a8ad3a0e-0587-486a-bad2-31f98bf6dfae" style="display: block;">
-												the method failed & status are : LoginFunc, 2
-												<a href='F:\eclipse workspaces\1. Automation Frameworks Tutorial Maven\EFTSwitchAutomation2/screenshot/LoginFuncFri.Jun.06.09.17.28.IST.2025.png'>Screen Shot</a>
-									<a href="javascript:toggleElement('exception-a8ad3a0e-0587-486a-bad2-31f98bf6dfae','block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;../../index.jsp&apos;]&quot;}<br/>
-&nbsp; (Session info: chrome=137.0.7151.56)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
-Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.13&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [f5cca5db6c80a1e2ed3e3cedbfbb646f, findElement {value=//a[@href=&apos;../../index.jsp&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49645}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49645/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: f5cca5db6c80a1e2ed3e3cedbfbb646f</b></a><br/>
-		<div class="stackTrace" id="exception-a8ad3a0e-0587-486a-bad2-31f98bf6dfae">
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>
-					java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>
-					java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>
-					org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br/>
-					org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br/>
-					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br/>
-					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br/>
-					org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br/>
-					org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br/>
-					org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br/>
-					pages.Home.getElement(Home.java:20)<br/>
-					pages.Home.getButtonText(Home.java:31)<br/>
-					tests.LoginTest.LoginFunc(LoginTest.java:30)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
-					java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br/>
-					java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>
-					java.base/java.lang.reflect.Method.invoke(Method.java:569)<br/>
-					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br/>
-					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br/>
-					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)<br/>
-					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br/>
-					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br/>
-					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br/>
-					java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br/>
-					org.testng.TestRunner.privateRun(TestRunner.java:741)<br/>
-					org.testng.TestRunner.run(TestRunner.java:616)<br/>
-					org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br/>
-					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br/>
-					org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br/>
-					org.testng.SuiteRunner.run(SuiteRunner.java:312)<br/>
-					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
-					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
-					org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br/>
-					org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br/>
-					org.testng.TestNG.runSuites(TestNG.java:1112)<br/>
-					org.testng.TestNG.run(TestNG.java:1079)<br/>
-					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
-					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br/>
-					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br/>
-						</div>
-		</td>
-	</div>
-</tr>
-						
+				
 				
 												<tr>
-			<td class="time">1749181651144</td>
-			<td class="header passed" colspan="4" onClick="toggleElement('40ad3d42-fbb6-4d46-b1f4-b2265f457bd0','block');changeSingleIcon('span-40ad3d42-fbb6-4d46-b1f4-b2265f457bd0');" title="Click to expand/collapse" style="cursor: pointer;">
-			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.LoginTest</div>
-			<div style="float:right;">@Test @ with DataProvider : ["loginData"] &nbsp;&nbsp;<span id='span-40ad3d42-fbb6-4d46-b1f4-b2265f457bd0' class="glyphicon glyphicon-menu-down"></span></div>
+			<td class="time">1750668189434</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('100e9dfc-34b1-41c2-9bfa-0abbdd420680','block');changeSingleIcon('span-100e9dfc-34b1-41c2-9bfa-0abbdd420680');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.B_UserRegistrationTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["usersData"] &nbsp;&nbsp;<span id='span-100e9dfc-34b1-41c2-9bfa-0abbdd420680' class="glyphicon glyphicon-menu-down"></span></div>
 			</td>
 			</tr>
 			<tr>
-	<td class="time">1749181651144</td>
+	<td class="time">1750668189434</td>
 	<td class="methodTest">
-		<span class="description"><b>Method: </b>LoginFunc</span><br>
+		<span class="description"><b>Method: </b>adduser</span><br>
 			<span class="description"><b>Description: </b></span><br>
-						<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
-				<span class="duration"><b>Duration: </b>5.866s</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>7.803s</span><br>
 	</td>
 	<td class="result">
-					<i>Method arguments: </i><span class="arguments">"admin", "useradmin"</span><br>
-				<div class="stackTrace" id="40ad3d42-fbb6-4d46-b1f4-b2265f457bd0" style="display: block;">
+					<i>Method arguments: </i><span class="arguments">"Sujith123", "css", "sujith@gmail.com", "123456.0", "jith", "userjith", "userjith", "admin", "useradmin"</span><br>
+				<div class="stackTrace" id="100e9dfc-34b1-41c2-9bfa-0abbdd420680" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668197294</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('152f483b-fc26-4dd8-87ef-92b996013f5f','block');changeSingleIcon('span-152f483b-fc26-4dd8-87ef-92b996013f5f');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.B_UserRegistrationTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["usersData"] &nbsp;&nbsp;<span id='span-152f483b-fc26-4dd8-87ef-92b996013f5f' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668197294</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>adduser</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>7.744s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Sujith456", "cs123", "sujith@gmail.com", "1234566.0", "jith1", "userjith", "userjith", "admin", "useradmin"</span><br>
+				<div class="stackTrace" id="152f483b-fc26-4dd8-87ef-92b996013f5f" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668183674</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('7280a9c3-e3d1-4ca8-b456-488681e008d8','block');changeSingleIcon('span-7280a9c3-e3d1-4ca8-b456-488681e008d8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.B_UserRegistrationTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-7280a9c3-e3d1-4ca8-b456-488681e008d8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668183674</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>adminlogin</span><br>
+			<span class="description"><b>Description: </b></span><br>
+						<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>0.580s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="7280a9c3-e3d1-4ca8-b456-488681e008d8" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668205686</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('f3fbb985-b40f-4a66-9cee-c9bc079025c8','block');changeSingleIcon('span-f3fbb985-b40f-4a66-9cee-c9bc079025c8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.B_UserRegistrationTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["usersData"] &nbsp;&nbsp;<span id='span-f3fbb985-b40f-4a66-9cee-c9bc079025c8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668205686</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>verifyUser</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>4.451s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Sujith123", "css", "sujith@gmail.com", "123456.0", "jith", "userjith", "userjith", "admin", "useradmin"</span><br>
+				<div class="stackTrace" id="f3fbb985-b40f-4a66-9cee-c9bc079025c8" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668210146</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d0cda8bf-4f30-4a2f-873c-49315c5953ad','block');changeSingleIcon('span-d0cda8bf-4f30-4a2f-873c-49315c5953ad');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.B_UserRegistrationTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["usersData"] &nbsp;&nbsp;<span id='span-d0cda8bf-4f30-4a2f-873c-49315c5953ad' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668210146</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>verifyUser</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>5.252s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Sujith456", "cs123", "sujith@gmail.com", "1234566.0", "jith1", "userjith", "userjith", "admin", "useradmin"</span><br>
+				<div class="stackTrace" id="d0cda8bf-4f30-4a2f-873c-49315c5953ad" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668292427</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('6c928833-86e9-483e-8f14-e5ee1fa2c60f','block');changeSingleIcon('span-6c928833-86e9-483e-8f14-e5ee1fa2c60f');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.C_SystemConfigTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["sysConfData"] &nbsp;&nbsp;<span id='span-6c928833-86e9-483e-8f14-e5ee1fa2c60f' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668292427</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editSysConf</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>19.613s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Trace File Location", "sysconf_table_rows", "sysconf_table_firstcolumn", "sysconf_edit_btn-colmn_on_pickedRow", "sysconf_del_btn-colmn_on_pickedRow", "param_tracefilepath", "C:\Pravega\Pravega_Switch\logs", "param_status_1"</span><br>
+				<div class="stackTrace" id="6c928833-86e9-483e-8f14-e5ee1fa2c60f" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668235093</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8211d845-e7f3-4994-b235-210df957ec6d','block');changeSingleIcon('span-8211d845-e7f3-4994-b235-210df957ec6d');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.C_SystemConfigTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["sysConfData"] &nbsp;&nbsp;<span id='span-8211d845-e7f3-4994-b235-210df957ec6d' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668235093</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editSysConf</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>18.882s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Host Name", "sysconf_table_rows", "sysconf_table_firstcolumn", "sysconf_edit_btn-colmn_on_pickedRow", "sysconf_del_btn-colmn_on_pickedRow", "parm_hostName", "APTLENOVO", "param_status_1"</span><br>
+				<div class="stackTrace" id="8211d845-e7f3-4994-b235-210df957ec6d" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668273113</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8efd5d37-b52a-4ad8-bd81-eeb56694b829','block');changeSingleIcon('span-8efd5d37-b52a-4ad8-bd81-eeb56694b829');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.C_SystemConfigTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["sysConfData"] &nbsp;&nbsp;<span id='span-8efd5d37-b52a-4ad8-bd81-eeb56694b829' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668273113</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editSysConf</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>19.226s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"IP", "sysconf_table_rows", "sysconf_table_firstcolumn", "sysconf_edit_btn-colmn_on_pickedRow", "sysconf_del_btn-colmn_on_pickedRow", "param_ipaddress", "192.168.52.207", "param_status_1"</span><br>
+				<div class="stackTrace" id="8efd5d37-b52a-4ad8-bd81-eeb56694b829" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668215704</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('67c2e498-e1e4-4d99-b417-e94fdb53e253','block');changeSingleIcon('span-67c2e498-e1e4-4d99-b417-e94fdb53e253');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.C_SystemConfigTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["sysConfData"] &nbsp;&nbsp;<span id='span-67c2e498-e1e4-4d99-b417-e94fdb53e253' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668215704</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editSysConf</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>19.368s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"API Port", "sysconf_table_rows", "sysconf_table_firstcolumn", "sysconf_edit_btn-colmn_on_pickedRow", "sysconf_del_btn-colmn_on_pickedRow", "param_apiport", "9001.0", "param_status_1"</span><br>
+				<div class="stackTrace" id="67c2e498-e1e4-4d99-b417-e94fdb53e253" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668254013</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('f7fed9a5-1ac5-4f55-bb98-4ec19c8ddfbe','block');changeSingleIcon('span-f7fed9a5-1ac5-4f55-bb98-4ec19c8ddfbe');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.C_SystemConfigTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["sysConfData"] &nbsp;&nbsp;<span id='span-f7fed9a5-1ac5-4f55-bb98-4ec19c8ddfbe' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668254013</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editSysConf</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>19.053s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"HTML Trace Path", "sysconf_table_rows", "sysconf_table_firstcolumn", "sysconf_edit_btn-colmn_on_pickedRow", "sysconf_del_btn-colmn_on_pickedRow", "param_html_tracepath", "C:\Pravega\Traces", "param_status_1"</span><br>
+				<div class="stackTrace" id="f7fed9a5-1ac5-4f55-bb98-4ec19c8ddfbe" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668324977</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('2401b816-7b7a-47a3-9386-e7df001595af','block');changeSingleIcon('span-2401b816-7b7a-47a3-9386-e7df001595af');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData"] &nbsp;&nbsp;<span id='span-2401b816-7b7a-47a3-9386-e7df001595af' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668324977</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>12.686s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"EvertecCredRC", "rout_cat_tr", "rout_cat_td", "RC_edit_btn-colmn_on_pickedRow"</span><br>
+				<div class="stackTrace" id="2401b816-7b7a-47a3-9386-e7df001595af" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668398403</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('692cda5c-c311-4aa8-888d-b9ecd1a9ba0c','block');changeSingleIcon('span-692cda5c-c311-4aa8-888d-b9ecd1a9ba0c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData1"] &nbsp;&nbsp;<span id='span-692cda5c-c311-4aa8-888d-b9ecd1a9ba0c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668398403</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>7.559s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"NaiguataRC", "spare"</span><br>
+				<div class="stackTrace" id="692cda5c-c311-4aa8-888d-b9ecd1a9ba0c" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668350888</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('1138dba5-b9e1-4d7a-ba0a-1be400294648','block');changeSingleIcon('span-1138dba5-b9e1-4d7a-ba0a-1be400294648');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData"] &nbsp;&nbsp;<span id='span-1138dba5-b9e1-4d7a-ba0a-1be400294648' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668350888</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>12.666s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"NaiguataRC", "rout_cat_tr", "rout_cat_td", "RC_edit_btn-colmn_on_pickedRow"</span><br>
+				<div class="stackTrace" id="1138dba5-b9e1-4d7a-ba0a-1be400294648" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668376370</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('89a396c5-f767-4e13-8f68-765ac5757e01','block');changeSingleIcon('span-89a396c5-f767-4e13-8f68-765ac5757e01');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData1"] &nbsp;&nbsp;<span id='span-89a396c5-f767-4e13-8f68-765ac5757e01' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668376370</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>7.110s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"ATMRC", "spare"</span><br>
+				<div class="stackTrace" id="89a396c5-f767-4e13-8f68-765ac5757e01" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668383484</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('914e3d57-5fea-4623-80e8-e5508bb55925','block');changeSingleIcon('span-914e3d57-5fea-4623-80e8-e5508bb55925');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData1"] &nbsp;&nbsp;<span id='span-914e3d57-5fea-4623-80e8-e5508bb55925' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668383484</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>7.449s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"EvertecCredRC", "spare"</span><br>
+				<div class="stackTrace" id="914e3d57-5fea-4623-80e8-e5508bb55925" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668405967</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('ae85e054-9265-4dac-bf2f-25789be6f1c8','block');changeSingleIcon('span-ae85e054-9265-4dac-bf2f-25789be6f1c8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData1"] &nbsp;&nbsp;<span id='span-ae85e054-9265-4dac-bf2f-25789be6f1c8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668405967</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>7.683s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"VisaRC", "spare"</span><br>
+				<div class="stackTrace" id="ae85e054-9265-4dac-bf2f-25789be6f1c8" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668337666</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('2516dbcd-4ffe-44c5-9161-eaf42d629c8e','block');changeSingleIcon('span-2516dbcd-4ffe-44c5-9161-eaf42d629c8e');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData"] &nbsp;&nbsp;<span id='span-2516dbcd-4ffe-44c5-9161-eaf42d629c8e' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668337666</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>13.215s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"MdsRC", "rout_cat_tr", "rout_cat_td", "RC_edit_btn-colmn_on_pickedRow"</span><br>
+				<div class="stackTrace" id="2516dbcd-4ffe-44c5-9161-eaf42d629c8e" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668390936</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('4dba2059-de53-41c9-a0cb-3230c219469a','block');changeSingleIcon('span-4dba2059-de53-41c9-a0cb-3230c219469a');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData1"] &nbsp;&nbsp;<span id='span-4dba2059-de53-41c9-a0cb-3230c219469a' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668390936</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>7.463s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"MdsRC", "spare"</span><br>
+				<div class="stackTrace" id="4dba2059-de53-41c9-a0cb-3230c219469a" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668312519</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('4e9f8477-de93-405c-b13c-94b52ffaa802','block');changeSingleIcon('span-4e9f8477-de93-405c-b13c-94b52ffaa802');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData"] &nbsp;&nbsp;<span id='span-4e9f8477-de93-405c-b13c-94b52ffaa802' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668312519</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>12.454s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"ATMRC", "rout_cat_tr", "rout_cat_td", "RC_edit_btn-colmn_on_pickedRow"</span><br>
+				<div class="stackTrace" id="4e9f8477-de93-405c-b13c-94b52ffaa802" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668363558</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('f923d890-51b8-4463-85c4-2046c3b999f8','block');changeSingleIcon('span-f923d890-51b8-4463-85c4-2046c3b999f8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.D_RCTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RCData"] &nbsp;&nbsp;<span id='span-f923d890-51b8-4463-85c4-2046c3b999f8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668363558</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRC</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>12.803s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"VisaRC", "rout_cat_tr", "rout_cat_td", "RC_edit_btn-colmn_on_pickedRow"</span><br>
+				<div class="stackTrace" id="f923d890-51b8-4463-85c4-2046c3b999f8" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668470431</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('a5360f29-be3c-4c30-b99d-1ed7e9b250b6','block');changeSingleIcon('span-a5360f29-be3c-4c30-b99d-1ed7e9b250b6');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["CGData"] &nbsp;&nbsp;<span id='span-a5360f29-be3c-4c30-b99d-1ed7e9b250b6' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668470431</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>40.452s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"MasterCard", "cardGrp_tr", "cardGrp_td", "cardGrp_td_Viewbtn", "123457.0", "bin_tr", "bin_td", "bin_td_edit_btn", "bin_td_del-btn", "cardGrp_td_Editbtn", "RC_option_MdsRC"</span><br>
+				<div class="stackTrace" id="a5360f29-be3c-4c30-b99d-1ed7e9b250b6" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668429797</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('32839fac-3662-4f68-b503-2414b402b209','block');changeSingleIcon('span-32839fac-3662-4f68-b503-2414b402b209');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["CGData"] &nbsp;&nbsp;<span id='span-32839fac-3662-4f68-b503-2414b402b209' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668429797</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>40.631s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"CMSCardGroup", "cardGrp_tr", "cardGrp_td", "cardGrp_td_Viewbtn", "123456.0", "bin_tr", "bin_td", "bin_td_edit_btn", "bin_td_del-btn", "cardGrp_td_Editbtn", "RC_option_ATMRC"</span><br>
+				<div class="stackTrace" id="32839fac-3662-4f68-b503-2414b402b209" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668413656</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('fb732c73-bc9e-4898-983d-471a740c96db','block');changeSingleIcon('span-fb732c73-bc9e-4898-983d-471a740c96db');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-fb732c73-bc9e-4898-983d-471a740c96db' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668413656</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>15.854s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="fb732c73-bc9e-4898-983d-471a740c96db" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668510885</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('e9add813-6290-462c-b9a1-963e234433f6','block');changeSingleIcon('span-e9add813-6290-462c-b9a1-963e234433f6');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["CGData"] &nbsp;&nbsp;<span id='span-e9add813-6290-462c-b9a1-963e234433f6' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668510885</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>40.252s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"MasterCardCR", "cardGrp_tr", "cardGrp_td", "cardGrp_td_Viewbtn", "123458.0", "bin_tr", "bin_td", "bin_td_edit_btn", "bin_td_del-btn", "cardGrp_td_Editbtn", "RC_option_EvertecCredRC"</span><br>
+				<div class="stackTrace" id="e9add813-6290-462c-b9a1-963e234433f6" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668551143</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8e78c455-0efb-4414-bbb6-5ed92fe7461f','block');changeSingleIcon('span-8e78c455-0efb-4414-bbb6-5ed92fe7461f');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["CGData"] &nbsp;&nbsp;<span id='span-8e78c455-0efb-4414-bbb6-5ed92fe7461f' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668551143</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>40.015s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Naiguata", "cardGrp_tr", "cardGrp_td", "cardGrp_td_Viewbtn", "123459.0", "bin_tr", "bin_td", "bin_td_edit_btn", "bin_td_del-btn", "cardGrp_td_Editbtn", "RC_option_NaiguataRC"</span><br>
+				<div class="stackTrace" id="8e78c455-0efb-4414-bbb6-5ed92fe7461f" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668591162</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('584c8a82-3829-416b-ae96-1b941b34cb6c','block');changeSingleIcon('span-584c8a82-3829-416b-ae96-1b941b34cb6c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.E_CardGroupTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["CGData"] &nbsp;&nbsp;<span id='span-584c8a82-3829-416b-ae96-1b941b34cb6c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668591162</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editCG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>41.677s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"Visa", "cardGrp_tr", "cardGrp_td", "cardGrp_td_Viewbtn", "123460.0", "bin_tr", "bin_td", "bin_td_edit_btn", "bin_td_del-btn", "cardGrp_td_Editbtn", "RC_option_VisaRC"</span><br>
+				<div class="stackTrace" id="584c8a82-3829-416b-ae96-1b941b34cb6c" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668660471</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d9c47f1d-f82a-4ae1-8664-ac3b69d87dea','block');changeSingleIcon('span-d9c47f1d-f82a-4ae1-8664-ac3b69d87dea');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.F_DGTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["DGData"] &nbsp;&nbsp;<span id='span-d9c47f1d-f82a-4ae1-8664-ac3b69d87dea' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668660471</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editDG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>14.175s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"CMSDG", "destGrp_tr", "destGrp_td", "destGrp_tdbtn", "CMSDG"</span><br>
+				<div class="stackTrace" id="d9c47f1d-f82a-4ae1-8664-ac3b69d87dea" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668646660</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('9295407a-5b18-44c5-94f9-07c735514e4f','block');changeSingleIcon('span-9295407a-5b18-44c5-94f9-07c735514e4f');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.F_DGTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["DGData"] &nbsp;&nbsp;<span id='span-9295407a-5b18-44c5-94f9-07c735514e4f' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668646660</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editDG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>13.806s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"PosDesGr", "destGrp_tr", "destGrp_td", "destGrp_tdbtn", "PosDesGr"</span><br>
+				<div class="stackTrace" id="9295407a-5b18-44c5-94f9-07c735514e4f" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668633080</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('6d13c1bb-b77f-49d3-869d-56f34233183b','block');changeSingleIcon('span-6d13c1bb-b77f-49d3-869d-56f34233183b');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.F_DGTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["DGData"] &nbsp;&nbsp;<span id='span-6d13c1bb-b77f-49d3-869d-56f34233183b' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668633080</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editDG</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>13.574s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"AtmDg", "destGrp_tr", "destGrp_td", "destGrp_tdbtn", "AtmDg"</span><br>
+				<div class="stackTrace" id="6d13c1bb-b77f-49d3-869d-56f34233183b" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668674651</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d28e05c0-9f71-4d0b-8e73-adad835c282c','block');changeSingleIcon('span-d28e05c0-9f71-4d0b-8e73-adad835c282c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.G_AlphaNodeTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-d28e05c0-9f71-4d0b-8e73-adad835c282c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668674651</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addTestAlphaNode</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>36.081s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="d28e05c0-9f71-4d0b-8e73-adad835c282c" style="display: block;">
+					</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1750668710739</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('02fb6266-d17a-4517-a94d-1c5b0142d6d0','block');changeSingleIcon('span-02fb6266-d17a-4517-a94d-1c5b0142d6d0');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.G_AlphaNodeTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-02fb6266-d17a-4517-a94d-1c5b0142d6d0' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668710739</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editTestAlphaNode</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>29.406s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="02fb6266-d17a-4517-a94d-1c5b0142d6d0" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668740151</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('e2634654-0b94-49d2-a672-3d7403c12f78','block');changeSingleIcon('span-e2634654-0b94-49d2-a672-3d7403c12f78');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.I_NodeAppTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-e2634654-0b94-49d2-a672-3d7403c12f78' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668740151</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>testingNodeApp</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>88.978s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="e2634654-0b94-49d2-a672-3d7403c12f78" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668829132</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('b6bdcc02-bc15-4713-8ff2-e4da292a62c8','block');changeSingleIcon('span-b6bdcc02-bc15-4713-8ff2-e4da292a62c8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.J_InterchangesTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-b6bdcc02-bc15-4713-8ff2-e4da292a62c8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668829132</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>addNodeApp</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>48.275s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="b6bdcc02-bc15-4713-8ff2-e4da292a62c8" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668877621</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('7af1a519-0c4a-45db-a62f-bb2a2cf67d09','block');changeSingleIcon('span-7af1a519-0c4a-45db-a62f-bb2a2cf67d09');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.K_RoutesTest</div>
+			<div style="float:right;">@Test @ with DataProvider : ["RouteData"] &nbsp;&nbsp;<span id='span-7af1a519-0c4a-45db-a62f-bb2a2cf67d09' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668877621</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>editRoutes</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1,conf</font></span><br>
+				<span class="duration"><b>Duration: </b>34.342s</span><br>
+	</td>
+	<td class="result">
+					<i>Method arguments: </i><span class="arguments">"MasterCard", "route_tr", "route_td", "route_tdbtn"</span><br>
+				<div class="stackTrace" id="7af1a519-0c4a-45db-a62f-bb2a2cf67d09" style="display: block;">
+					</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1750668911981</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('946e119f-cea0-467b-b81b-50d47f4a410e','block');changeSingleIcon('span-946e119f-cea0-467b-b81b-50d47f4a410e');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>tests.L_CommandsTest</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-946e119f-cea0-467b-b81b-50d47f4a410e' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1750668911981</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>commandsTests</span><br>
+			<span class="description"><b>Description: </b></span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+					<span class="description"><b>Groups: </b><font color='green'>reggrsn1</font></span><br>
+				<span class="duration"><b>Duration: </b>250.999s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="946e119f-cea0-467b-b81b-50d47f4a410e" style="display: block;">
 					</td>
 	</div>
 </tr>

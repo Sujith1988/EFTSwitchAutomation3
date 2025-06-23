@@ -10,9 +10,10 @@ public class ArrayDataProvider {
 		public Object[][] createData1() {
 			return new Object[][] {
 				{ "ATMRC", "spare"},
-				{ "EvertecCred", "spare"},
+				{ "EvertecCredRC", "spare"},
 				{ "MdsRC", "spare"},  
-				{ "NaiguataRC", "spare"}  
+				{ "NaiguataRC", "spare"},
+				{ "VisaRC", "spare"}
 			};
 		}
 		

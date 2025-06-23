@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.B_Home;
+import pages.A_Home;
 import pages.A_Login;
 import pages.C_SystemConfig;
 import utils.adminLoginCommon;
@@ -26,10 +26,10 @@ public class C_SystemConfigTest extends TestBase{
 //, retryAnalyzer = utils.Retry.class
 
 /*--------Deleting the fields from the Sys.Conf. from View-Conf. Page and adding new Conf. using Add-Conf page--------*/
-	@Test(dataProvider = "sysConfData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1")
+	@Test(groups = {"reggrsn1", "conf"}, dataProvider = "sysConfData", dataProviderClass = ExcelDataProvider.class, priority = 2)
 	public static void editSysConf(String paramName, String tr, String td, String tdEditbtn, String tdDelbtn, String paramKey, String paramValue, String paramStatus) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- System Conf page (class object-instance created and constructor invoked)
 				C_SystemConfig sys = new C_SystemConfig();
 	    // POM -- Login page (class object-instance created and constructor invoked)

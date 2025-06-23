@@ -95,13 +95,18 @@ public class E_CardGroup extends TestBase {
 	public void editCGbtn(String paramName, String tr, String td, String tdbtn) {							
 		 SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td, tdbtn);			
 	}
+	// BIN Edit edit button click
+	public void editBINbtn(String paramNameX, String tr, String td, String tdbtn) {							
+		String paramName = paramNameX.toString().replace(".0", "");
+		SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td, tdbtn);			
+	}
 	
 		
 										
 	
-			// scroll upto the element "//a[@class='btn btn-primary']" to the bottom of the page
-			public  void scrollToBinBtn() {
-				ScrollUtil.scrollToAnElement(driver, getElement("addBinbtn"));
+			// scroll upto the element of the page
+			public  void scrollToBinBtn(String key) {
+				ScrollUtil.scrollToAnElement(driver, getElement(key));
 			}
 	
 	
@@ -110,14 +115,7 @@ public class E_CardGroup extends TestBase {
 				ScrollUtil.scrollToBottom(driver);
 			}
 			
-			// scroll to the top of the page
-			public  void scrollToTop(WebDriver driver) {
-				JavascriptExecutor js = (JavascriptExecutor) driver;      
-				js.executeScript("window.scrollTo(0, 0);");
-			}
-			public  void scrolltop() {
-				ScrollUtil.scrollToTop(driver);
-			}
+
 	
 			
 		/*---------------For complete BIN setup-------------------*/	
@@ -138,9 +136,10 @@ public class E_CardGroup extends TestBase {
 			
 	
 		//add new BIN configuration
-		public void binConfFun(String key1, String key2, String key3, String key4, String key5) {
+		public void binConfFun(String paramName2, String key2, String key3, String key4, String key5) {
 		getElement("addBinbtn").click();
-		getElement("input_Bin").sendKeys(getLocator(key1));
+		String key1 = paramName2.toString().replace(".0", "");
+		getElement("input_Bin").sendKeys(key1);
 		getElement("input_Descript").sendKeys(getLocator(key2));
 		getElement("input_PanLen").sendKeys(getLocator(key3));
 		getElement("input_BinLen").sendKeys(getLocator(key4));	

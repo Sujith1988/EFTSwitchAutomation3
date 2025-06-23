@@ -8,7 +8,7 @@ import base.TestBase;
 import dataprovider.ExcelDataProvider;
 import pages.A_Login;
 import pages.K_Routes;
-import pages.B_Home;
+import pages.A_Home;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 
@@ -23,10 +23,10 @@ public class K_RoutesTest extends TestBase {
     
     
     
-    @Test(priority = 2, dataProvider = "RouteData", dataProviderClass = ExcelDataProvider.class, groups = "reggrsn1")
+    @Test(groups = {"reggrsn1", "conf"}, priority = 2, dataProvider = "RouteData", dataProviderClass = ExcelDataProvider.class)
     public static void editRoutes(String paramName, String tr, String td, String tdbtn) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Card Group page (class object-instance created and constructor invoked)
 				K_Routes rt = new K_Routes();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -44,6 +44,7 @@ public class K_RoutesTest extends TestBase {
 				String pagHeadr = rt.pageHeader_addRoutes();
 				String actualPageHeader = rt.actPagHeader_addRoutes();
 				if (pagHeadr.equals(actualPageHeader)) {	
+					System.out.println("Entered the Page : " +pagHeadr);
 					
 					rt.selectparamsAddRoute("dropdown_route_dg", "option_routes_dg3");
 					rt.selectparamsAddRoute("dropdown_route_cg", "option_routes_cg2");
@@ -58,7 +59,7 @@ public class K_RoutesTest extends TestBase {
 		        
 		        
 		
-		     // View Route:-  view//edit Route for testing
+		     // View Route:-  view//edit Route for testing -> Update and Delete
 				h.clickHome();
 				rt.scrollToRoutConf(); 
 				h.clickRouting();	    Thread.sleep(log.slp_2);			
@@ -103,9 +104,9 @@ public class K_RoutesTest extends TestBase {
 					rt.routeConfSavBtn();
 					Thread.sleep(2000);
 					popupWindwHandlr.alertHandler();
-				}
-				
-				
-				
+				}												
 	}
+                                     
+    
+    
 }

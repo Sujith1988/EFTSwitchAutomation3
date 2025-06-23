@@ -5,16 +5,19 @@ import org.testng.asserts.SoftAssert;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.B_Home;
+import pages.A_Home;
 import pages.A_Login;
-import pages.A_UserRegistration;
+import pages.B_UserRegistration;
+import pages.G_AlphaNode;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
-public class B_UserRegistrationTest extends TestBase {
+public class B_UserRegistrationTest extends TestBase {	
+        
 	
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(groups = "reggrsn1")
     public static void adminlogin() throws IOException, InterruptedException {
+    	
     	A_Login log = new A_Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
     }
@@ -22,12 +25,12 @@ public class B_UserRegistrationTest extends TestBase {
     
     
     /*--------New users adding as per the data from xcelSheet--------*/
-	@Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1, groups = "reggrsn1")
+	@Test(groups = "reggrsn1", dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1)
 	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- UserRegistration page (class object-instance created and constructor invoked)
-		        A_UserRegistration u = new A_UserRegistration();
+		        B_UserRegistration u = new B_UserRegistration();
 	    // POM -- UserRegistration page (class object-instance created and constructor invoked)
 		        A_Login log = new A_Login();
 		       
@@ -72,10 +75,10 @@ public class B_UserRegistrationTest extends TestBase {
 	
 	
 	  /*--------Users deleting as per the data from the xcelSheet--------*/
-	   @Test(dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 3, groups = "reggrsn1") 
+	   @Test(groups = "reggrsn1", dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 3) 
 	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
-			B_Home h = new B_Home();
-	        A_UserRegistration u = new A_UserRegistration();  
+			A_Home h = new A_Home();
+	        B_UserRegistration u = new B_UserRegistration();  
 	        A_Login log = new A_Login();
 	// verify user fuction testing
 	h.clickHome();  	
@@ -97,7 +100,7 @@ public class B_UserRegistrationTest extends TestBase {
 	   @Test(priority = 4)
 	   static void failTest() {
 		   SoftAssert soft = new SoftAssert();
-			soft.assertEquals("maia", "hik", "Soft assert failed");
+			soft.assertEquals("mla", "hik", "Soft assert failed");
 			soft.assertAll();
 	   }
 		

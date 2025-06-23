@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
 import pages.A_Login;
-import pages.B_Home;
+import pages.A_Home;
 import pages.E_CardGroup;
 import utils.SqlConnectUtil;
 import utils.adminLoginCommon;
@@ -26,10 +26,10 @@ public class E_CardGroupTest extends TestBase {
     
     
     
-    @Test(priority = 2, groups = "reggrsn1")
+    @Test(groups = "reggrsn1", priority = 2)
     public static void addCG() throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Card Group page (class object-instance created and constructor invoked)
 				E_CardGroup cg = new E_CardGroup();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -62,7 +62,7 @@ public class E_CardGroupTest extends TestBase {
 					 calling from here for ease of understanding*/
 					
 					//click on 'Edit CG' on the selected 'CG'
-					cg.editCGbtn("sample_cg","tr11","td11","cardGrp_td_Editbtn");
+					cg.editCGbtn("TestCG1","tr11","td11","cardGrp_td_Editbtn");
 					Thread.sleep(2000);	
 						
 					//delete the CG
@@ -79,11 +79,11 @@ public class E_CardGroupTest extends TestBase {
     
     
     /*--------Deleting the fields from the CG. from View-CG. Page and adding new fields using Add-CG page--------*/
-	@Test(dataProvider = "CGData", dataProviderClass = ExcelDataProvider.class, priority = 3, groups = "reggrsn1")
+	@Test(groups = {"reggrsn1"}, dataProvider = "CGData", dataProviderClass = ExcelDataProvider.class, priority = 3)
 	public static void editCG(String paramName1, String tr1, String td1, String tdViewbtnCG, String paramName2, String tr2, String td2, String tdEditbtnBIN, String tdDeletebtnBIN, String tdEditbtnCG, String RC) throws IOException, InterruptedException {					
 		
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Card Group page (class object-instance created and constructor invoked)
 				E_CardGroup cg = new E_CardGroup();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -101,42 +101,53 @@ public class E_CardGroupTest extends TestBase {
 			
 			
 			//click on table1-'view BIN' on the selected 'CG' and scroll down upto bin-button
+			driver.manage().window().maximize();
+			Thread.sleep(log.slp_2);
+			
 			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
-			Thread.sleep(log.slp_2);	
-			cg.scrollToBinBtn();    //cg.scrollToBottom(driver);
+			Thread.sleep(log.slp_2);
+			
+			cg.scrollToBinBtn("addBinbtn");    //cg.scrollToBottom(driver);
 			Thread.sleep(log.slp_2);	
 			
 			//add a BIN using the 'Bin' button and add the BIN-configurations
-			cg.binConfFun(paramName2,"bin_descr","pan_len","bin_len",RC);   Thread.sleep(2000);			
-			cg.clickonRCSelctr();    Thread.sleep(2000);	
-			cg.RCoptions(RC);        Thread.sleep(2000);	
+			cg.binConfFun(paramName2,"bin_descr","pan_len","bin_len",RC);   
+			Thread.sleep(2000);
+			cg.clickonRCSelctr();    
+			Thread.sleep(2000);
+			cg.RCoptions(RC);
+			Thread.sleep(2000);
+			cg.scrollbotom();
+			Thread.sleep(2000);
 			cg.binConfSav();
 			Thread.sleep(2000);
 			popupWindwHandlr.alertHandler();
 			Thread.sleep(2000);
 			
-			//click on table1-'view BIN' on the selected 'CG' and scroll down to bottom
+			//click on table1-'view BIN' on the selected 'CG' and scroll down to the element
 			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
 			Thread.sleep(log.slp_2);	
-			cg.scrollbotom();       // cg.scrollToBottom1(driver);
+			cg.scrollToBinBtn("addBinbtn");      // cg.scrollToBottom1(driver);
 			Thread.sleep(log.slp_2);
 			
 			//click on the table2-'Edit BIN' button on the selected 'CG' and update
-			cg.editCGbtn(paramName2,tr2,td2,tdEditbtnBIN);
+			cg.editBINbtn(paramName2,tr2,td2,tdEditbtnBIN);
+			Thread.sleep(2000);
+			cg.scrollbotom();
 			Thread.sleep(2000);
 			cg.updateBin();
 			Thread.sleep(2000);
 			popupWindwHandlr.alertHandler();
 			Thread.sleep(2000);
 			
-			//click on table1-'view BIN' on the selected 'CG' and scroll down to bottom
+			//click on table1-'view BIN' on the selected 'CG' and scroll down to element
 			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
 			Thread.sleep(log.slp_2);	
-			cg.scrollbotom();      // cg.scrollToBottom1(driver);
+			cg.scrollToBinBtn("addBinbtn");      // cg.scrollToBottom1(driver);
 			Thread.sleep(log.slp_2);
 			
 			//click on the table2-'Delete BIN' button on the selected 'CG'
-			cg.editCGbtn(paramName2,tr2,td2,tdDeletebtnBIN);
+			cg.editBINbtn(paramName2,tr2,td2,tdDeletebtnBIN);
 			Thread.sleep(2000);			
 			popupWindwHandlr.alertHandler();
 			Thread.sleep(2000);
@@ -195,7 +206,7 @@ public class E_CardGroupTest extends TestBase {
 	
 	
 	//Complete BIN settings Removal from the database tables
-	@Test(priority = 4)
+	@Test(groups = "conf", priority = 4)
 	public static void truncateDBTablesOfBins() throws SQLException {
 		//utils	-> SqlConnectUtil -> to remove all the correct bin values from all the CGs	
 		SqlConnectUtil.binTableevacuate();
@@ -208,11 +219,11 @@ public class E_CardGroupTest extends TestBase {
 	
 	
 	//Complete BIN setting for the CGs -  'CMS', 'MDS', 'MasterCardCR', 'Naiguata', 'Visa'
-	@Test(priority = 5, dataProvider = "BINData", dataProviderClass = ExcelDataProvider.class)
+	@Test(groups = "conf", priority = 5, dataProvider = "BINData", dataProviderClass = ExcelDataProvider.class)
 	public static void binConfigurationCMSCardGroup(String paramName1, String tr1, String td1, String tdViewbtnCG, String bin, String bin_descr, String pan_len, String bin_len, String RC) throws IOException, InterruptedException {
 		
 		// POM -- home page (class object-instance created and constructor invoked)
-		B_Home h = new B_Home();
+		A_Home h = new A_Home();
 		// POM -- Card Group page (class object-instance created and constructor invoked)
 		E_CardGroup cg = new E_CardGroup();
 		// POM -- Login page (class object-instance created and constructor invoked)
@@ -233,7 +244,7 @@ public class E_CardGroupTest extends TestBase {
      			//click on table1-'view BIN' on the selected 'CG' and scroll down upto bin-button
      			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
      			Thread.sleep(log.slp_2);	
-     			cg.scrollToBinBtn();         //cg.scrollToBottom(driver);
+     			cg.scrollToBinBtn("addBinbtn");         //cg.scrollToBottom(driver);
      			Thread.sleep(log.slp_2);	
      			
      			//add a BIN using the 'Bin' button and add the BIN-configurations

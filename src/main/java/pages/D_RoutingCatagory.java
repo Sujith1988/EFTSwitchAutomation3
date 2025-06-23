@@ -51,7 +51,8 @@ public class D_RoutingCatagory extends TestBase{
 		         td  : sysconf_table_firstcolumn     
 		       tdbtn : RC_edit_btn-colmn_on_pickedRow   */ 		        	
 	   public void clickonViewRCEditbtn(String paramName, String tr, String td, String tdbtn) {				
-			SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td, tdbtn);
+			
+		   SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td, tdbtn);
 		}
 	
 		   

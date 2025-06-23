@@ -50,7 +50,8 @@ public class C_SystemConfig extends TestBase{
 		
 			
 		/* key : The value of the parameters selected above */
-		public void selectparamValue(String paramValue) {
+		public void selectparamValue(String paramValueX) {
+			String paramValue = paramValueX.toString().replace(".0", "");
 			getElement("select_param_value").sendKeys(paramValue);
 		}
 		
@@ -94,7 +95,8 @@ public class C_SystemConfig extends TestBase{
 		 		         tr  : sysconf_table_rows
 		 		         td  : sysconf_table_firstcolumn     
 		 		       tdbtn : sysconf_edit_btn-colmn_on_pickedRow, sysconf_del_btn-colmn_on_pickedRow   */ 		        	
-			   public void clickonViewSysConfEditbtn(String paramName, String tr, String td, String tdbtn) {				
+			   public void clickonViewSysConfEditbtn(String paramName, String tr, String td, String tdbtn) {
+//				   System.out.println("This to search : "+paramName);
 					SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td,  tdbtn);
 				}
 			   

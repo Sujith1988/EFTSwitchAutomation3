@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.DataProvider;
 
-import pages.A_UserRegistration;
+import pages.B_UserRegistration;
 import utils.ExcelUtils;
 import utils.LocatorReader;
 
@@ -20,7 +20,7 @@ public class ExcelDataProvider {
 	public  String sheet8 = "";
 	public  String sheet9 = "";
 	public ExcelDataProvider() throws IOException {
-		A_UserRegistration u =new A_UserRegistration();
+		B_UserRegistration u =new B_UserRegistration();
 		String path1 = u.getLocator("xcellFilePath");
 		String sht1 = u.getLocator("xcellSheetTabName1");
 		String sht2 = u.getLocator("xcellSheetTabName2");

@@ -1,20 +1,18 @@
 package tests;
 
 import java.io.IOException;
-
-import org.apache.poi.hssf.record.PageBreakRecord.Break;
 import org.testng.annotations.Test;
 
 import base.TestBase;
 import pages.A_Login;
-import pages.B_Home;
+import pages.A_Home;
 import pages.L_Commands;
 import utils.adminLoginCommon;
 
 public class L_CommandsTest extends TestBase {
 
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(priority = 1)
+    @Test(priority = 1, groups = "functionTesting")
     public static void adminlogin() throws IOException, InterruptedException {
     	A_Login log = new A_Login();	
     	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
@@ -98,12 +96,13 @@ public class L_CommandsTest extends TestBase {
     
     
     
+   
     
     
    /*--------Common function for both the regression and function testing-------*/
     static String sendCommands(String cmdOption, String intrfaceOption, String intrchngOption) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Application Commands page (class object-instance created and constructor invoked)
 				L_Commands cm = new L_Commands();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -125,7 +124,7 @@ public class L_CommandsTest extends TestBase {
 				String actualPageHeader = cm.actPagHeader_applicationCommands();
 				String txt = "cmnd page not accessible";
 				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Testing the loop entry page header");
+					System.out.println("Entered the Page : " +pagHeadr);
 					
 					
 					//select command

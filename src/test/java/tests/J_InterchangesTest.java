@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import dataprovider.ArrayDataProvider;
 import pages.A_Login;
-import pages.B_Home;
+import pages.A_Home;
 import pages.J_Interchanges;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
@@ -28,7 +28,7 @@ public class J_InterchangesTest extends TestBase{
     @Test(priority = 2, groups = "reggrsn1")
     public static void addNodeApp() throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Interchange page (class object-instance created and constructor invoked)
 				J_Interchanges in = new J_Interchanges();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -52,7 +52,7 @@ public class J_InterchangesTest extends TestBase{
 				String pagHeadr = in.pageHeader_addInterchange();
 				String actualPageHeader = in.actPagHeader_addInterchange();
 				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Testing the loop entry page header");
+					System.out.println("Entered the Page : " +pagHeadr);
 															
 					
 					//select the interface for the interchange
@@ -184,7 +184,7 @@ public class J_InterchangesTest extends TestBase{
     @Test(priority = 3, groups = "conf", dataProvider = "IntrchngData", dataProviderClass = ArrayDataProvider.class)
     public static void addNodeApp(String a1, String a2, String a3, String a4, String a5, String a6, String a7, String a8) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Interchange page (class object-instance created and constructor invoked)
 				J_Interchanges in = new J_Interchanges();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -208,7 +208,7 @@ public class J_InterchangesTest extends TestBase{
 				String pagHeadr = in.pageHeader_addInterchange();
 				String actualPageHeader = in.actPagHeader_addInterchange();
 				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Testing the loop entry page header");
+					System.out.println("Entered the Page : " +pagHeadr);
 															
 					
 					//select the interface for the interchange

@@ -27,7 +27,8 @@ public WebElement getElement(String loctr) {
 
 	public static void editDeleteTableRowElements(String key, String tr, String td, String tdbtn) {						
 		// Target value to match
-     String targetValue = getLocator(key);
+//     String targetValue = getLocator(key);
+		String targetValue = key;
      boolean isMatchFound = false;
      System.out.println("what to search!!!!!!!!! : " +targetValue);
      

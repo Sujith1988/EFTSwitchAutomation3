@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.L_CommandsTest">
+      <class name="tests.J_InterchangesTest">
         <methods>
-          <include name="commandsFunTests"/>
+          <include name="addNodeApp" invocation-numbers="1"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="commandsTests"/>
         </methods>
-      </class> <!-- tests.L_CommandsTest -->
+      </class> <!-- tests.J_InterchangesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

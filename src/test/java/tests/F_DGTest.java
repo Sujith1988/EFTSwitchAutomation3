@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
-import pages.B_Home;
+import pages.A_Home;
 import pages.A_Login;
 import pages.D_RoutingCatagory;
 import pages.F_DestinationGroup;
@@ -26,10 +26,10 @@ public class F_DGTest extends TestBase{
     
     
     /*--------Deleting the fields from the DG. from View-DG. Page and adding new fields using Add-DG page--------*/
-	@Test(dataProvider = "DGData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1")
+	@Test(groups = {"reggrsn1", "conf"}, dataProvider = "DGData", dataProviderClass = ExcelDataProvider.class, priority = 2)
 	public static void editDG(String paramName, String tr, String td, String tdEditbtn, String DGName) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Routing Catagory page (class object-instance created and constructor invoked)
 				F_DestinationGroup dg = new F_DestinationGroup();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -45,13 +45,17 @@ public class F_DGTest extends TestBase{
 			
 			//Edit
 			dg.clickonViewDGEditbtn(paramName,tr,td,tdEditbtn);   
-			dg.clickonDGUpdatebtn();              Thread.sleep(log.slp_2);			
-			popupWindwHandlr.alertHandler();     Thread.sleep(log.slp_2);
+			dg.clickonDGUpdatebtn();              
+			Thread.sleep(log.slp_2);			
+			popupWindwHandlr.alertHandler();     
+			Thread.sleep(log.slp_2);
 			
 			//Delete
 			dg.clickonViewDGEditbtn(paramName,tr,td,tdEditbtn); 
-			dg.clickonDGDeletebtn();              Thread.sleep(log.slp_2);			
-			popupWindwHandlr.alertHandler();     Thread.sleep(log.slp_2);
+			dg.clickonDGDeletebtn();              
+			Thread.sleep(log.slp_2);			
+			popupWindwHandlr.alertHandler();     
+			Thread.sleep(log.slp_2);
 			
 		}
 		else {  System.out.println("error in loading View Sys Conf page");   }
@@ -65,8 +69,10 @@ public class F_DGTest extends TestBase{
 				if (pagHeadr1.equals(actualPageHeader1)) {
 					
 					//Add
-					dg.destnatinGruop(DGName);        Thread.sleep(log.slp_2);
-					dg.clickonDestinationGroupSavebtn();       Thread.sleep(log.slp_2);					             		
+					dg.destnatinGruop(DGName);        
+					Thread.sleep(log.slp_2);
+					dg.clickonDestinationGroupSavebtn();      
+					Thread.sleep(log.slp_2);					             		
 					popupWindwHandlr.alertHandler();
 				}
 				else  System.out.println("error in loading add Add Sys Conf page");   

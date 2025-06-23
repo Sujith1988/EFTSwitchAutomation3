@@ -12,8 +12,17 @@
 		  </run>
 	  </groups>
     <classes>
-      <class name="tests.A_LoginTest"/>
       <class name="tests.B_UserRegistrationTest"/>
+      <class name="tests.C_SystemConfigTest"/>
+      <class name="tests.D_RCTest"/>
+      <class name="tests.E_CardGroupTest"/>
+      <class name="tests.F_DGTest"/>
+      <class name="tests.G_AlphaNodeTest"/>
+      <class name="tests.I_NodeAppTest"/>
+      <class name="tests.J_InterchangesTest"/>
+      <class name="tests.K_RoutesTest"/>
+      <class name="tests.L_CommandsTest"/>
+<!--      <class name="tests.M_ISOmsgs_FunctionTests"/>-->
     </classes>
   </test> <!-- reggression -->
 </suite> <!-- Suite -->

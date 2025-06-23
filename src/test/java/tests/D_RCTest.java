@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import dataprovider.ArrayDataProvider;
 import dataprovider.ExcelDataProvider;
-import pages.B_Home;
+import pages.A_Home;
 import pages.A_Login;
 import pages.D_RoutingCatagory;
 import utils.adminLoginCommon;
@@ -25,10 +25,10 @@ public class D_RCTest extends TestBase{
     
     
     /*--------Deleting the fields from the RC. from View-RC. Page and adding new fields using Add-RC page--------*/
-	@Test(dataProvider = "RCData", dataProviderClass = ExcelDataProvider.class, priority = 2, groups = "reggrsn1")
+	@Test(groups = "reggrsn1", dataProvider = "RCData", dataProviderClass = ExcelDataProvider.class, priority = 2)
 	public static void editRC(String paramName, String tr, String td, String tdEditbtn) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Routing Catagory page (class object-instance created and constructor invoked)
 				D_RoutingCatagory rc = new D_RoutingCatagory();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -36,16 +36,22 @@ public class D_RCTest extends TestBase{
 		       
 		// View Sys. Conf:-  Edit/Delete configurations testing
 		h.clickHome();
-		h.clickonRoutingCatagory();	    Thread.sleep(log.slp_2);			
-		h.clickonViewRoutingCatagory();     Thread.sleep(log.slp_2);	
+		Thread.sleep(log.slp_2);
+		h.clickonRoutingCatagory();
+		Thread.sleep(log.slp_2);			
+		h.clickonViewRoutingCatagory();     
+		Thread.sleep(log.slp_2);	
 		String pagHeadr = rc.pageHeader_viewRC();
 		String actualPageHeader = rc.actPagHeader_viewRC();
 		if (pagHeadr.equals(actualPageHeader)) {
 			
-			//Edit
+			//Edit button click and update
 			rc.clickonViewRCEditbtn(paramName,tr,td,tdEditbtn);
-			rc.clickonRCUpdatebtn();              Thread.sleep(log.slp_2);			
-			popupWindwHandlr.alertHandler();     Thread.sleep(log.slp_2);
+			Thread.sleep(log.slp_2);
+			rc.clickonRCUpdatebtn();
+			Thread.sleep(log.slp_2);
+			popupWindwHandlr.alertHandler();     
+			Thread.sleep(log.slp_2);
 			
 			//Delete
 			rc.clickonViewRCEditbtn(paramName,tr,td,tdEditbtn);Thread.sleep(log.slp_2);	
@@ -60,18 +66,23 @@ public class D_RCTest extends TestBase{
 	
 	
 	// Add
-	@Test(priority = 3, dataProvider = "RCData1", dataProviderClass = ArrayDataProvider.class)
+	@Test(groups = {"reggrsn1", "conf"}, priority = 3, dataProvider = "RCData1", dataProviderClass = ArrayDataProvider.class)
 	public static void addRC(String rcName, String spare) throws IOException, InterruptedException {
-		B_Home h               = new B_Home();
+		A_Home h               = new A_Home();
 		D_RoutingCatagory rc = new D_RoutingCatagory();
 		A_Login log            = new A_Login();
 		
 		h.clickHome();
-		h.clickonRoutingCatagory();	    Thread.sleep(log.slp_2);			
-		h.clickonAddRoutingCatagory();     Thread.sleep(log.slp_2);
+		Thread.sleep(log.slp_2);
+		h.clickonRoutingCatagory();	   
+		Thread.sleep(log.slp_2);			
+		h.clickonAddRoutingCatagory();     
+		Thread.sleep(log.slp_2);
 		rc.routingCatagory(rcName);
+		Thread.sleep(log.slp_2);
 		rc.clickonroutingCatagorySavebtn();
-		
+		popupWindwHandlr.alertHandler();     
+		Thread.sleep(log.slp_2);
 	}
 
 }

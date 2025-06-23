@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import dataprovider.ArrayDataProvider;
 import pages.A_Login;
-import pages.B_Home;
+import pages.A_Home;
 import pages.I_NodeApp;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
@@ -25,10 +25,10 @@ public class I_NodeAppTest extends TestBase {
     
     
     // regression test for the nodeapp configurations
-    @Test(priority = 2, groups = "reggrsn1")
+    @Test(priority = 2, groups = "reggrsn1", enabled = true)
     public static void testingNodeApp() throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Alpha node page (class object-instance created and constructor invoked)
 				I_NodeApp na = new I_NodeApp();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -51,9 +51,8 @@ public class I_NodeAppTest extends TestBase {
 				Thread.sleep(log.slp_2);
 				String pagHeadr = na.pageHeader_addnodeApp();
 				String actualPageHeader = na.actPagHeader_addnodeApp();
-				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Testing the loop entry page header");
-															
+				if (pagHeadr.equals(actualPageHeader)) {						
+					System.out.println("Entered the Page : " +pagHeadr);										
 					
 					//select nodeapp name for the node app
 					na.selectInputNodeappAddForm("node_form_input_selct_nodapp");
@@ -93,8 +92,9 @@ public class I_NodeAppTest extends TestBase {
 				String pagHeadr1 = na.pageHeader_viewnodeConnction();
 				String actualPageHeader1 = na.actPagHeader_viewnodeConnction();
 				System.out.println(pagHeadr1+" = "+actualPageHeader1);
-				if (pagHeadr1.equals(actualPageHeader1)) {	
-					System.out.println("Testing the loop entry page header");
+				if (pagHeadr1.equals(actualPageHeader1)) {
+					System.out.println("Entered the Page : " +pagHeadr1);
+					
 					
 					
 					//select the nodeApp for connection creation
@@ -287,10 +287,10 @@ public class I_NodeAppTest extends TestBase {
     
 	
     //Configuration adding for the nodapps
-    @Test(priority = 3, groups = "conf", dataProvider = "NodeAppData", dataProviderClass = ArrayDataProvider.class)
+    @Test(priority = 3, groups = "conf", dataProvider = "NodeAppData", dataProviderClass = ArrayDataProvider.class, enabled = true)
     public static void addNodeApp(String nodApp_name_optn, String nodApp_alpha_optn) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Alpha node page (class object-instance created and constructor invoked)
 				I_NodeApp na = new I_NodeApp();
 	    // POM -- Login page (class object-instance created and constructor invoked)
@@ -343,10 +343,10 @@ public class I_NodeAppTest extends TestBase {
     
     
     //cofigurations adding for the nodeapp connections
-    @Test(priority = 4, groups = "conf", dataProvider = "NodeAppConctnData", dataProviderClass = ArrayDataProvider.class)
+    @Test(priority = 4, groups = "conf", dataProvider = "NodeAppConctnData", dataProviderClass = ArrayDataProvider.class, enabled = true)
     public static void addNodeAppConnections(String nodCon_optn, String sap_name_nodCon, String sap_ip_nodCon, String sap_port_nodCon, String mx_no_nodCon) throws IOException, InterruptedException {					
 		// POM -- home page (class object-instance created and constructor invoked)
-				B_Home h = new B_Home();
+				A_Home h = new A_Home();
 		// POM -- Alpha node page (class object-instance created and constructor invoked)
 				I_NodeApp na = new I_NodeApp();
 	    // POM -- Login page (class object-instance created and constructor invoked)
