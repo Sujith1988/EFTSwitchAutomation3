@@ -75,16 +75,22 @@ public class G_AlphaNode extends TestBase{
 			public  void scrollToRightEnd() {
 				ScrollUtil.scrollToRight(driver);
 			}
-				
+									
+			
+		
 		// zoom out to 70% and then scroll to the right				
-		public  void zoomOutAndScrollRight() {
-			ScrollUtil.zoomOutAndScrollRightInElement(driver, driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div[2]/div/div")));
-		}
+			public  void zoomOutAndScrollRightW() {
+				ScrollUtil.zoomOutAndScrollRightInWindow(driver);
+			}
 			
-			
-			
-			
-			
+
+		// zoom out to 70% and then scroll to the right
+			public void zoomOutAndScrollRightE() {				
+				ScrollUtil.zoomOutAndScrollRightInElement(driver, getElement("scroll_bar_innr_containr"));	
+			}
+						
+						
+				
 			
 			//-----------View alpha node page actions---------------
 			public String pag_header_viewAlphaNode() {

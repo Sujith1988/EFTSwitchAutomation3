@@ -2,15 +2,20 @@ package tests;
 import java.io.IOException;
 import org.testng.annotations.Test;
 import base.TestBase;
+import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 import dataprovider.ExcelDataProvider;
-import pages.B_Home;
+import pages.A_Home;
 import pages.A_Login;
+import pages.G_AlphaNode;
 
 public class A_LoginTest extends TestBase {	
 	
+	
+							
+	
 	/*---------Login Test scenario, +ve and -ve test cases*/
-	@Test(dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class, groups = "reggrsn1")
+	@Test(groups = "login", priority = 2, dataProvider = "loginData", dataProviderClass = ExcelDataProvider.class)
 	public void LoginFunc(String usrN, String passW) throws NumberFormatException, InterruptedException, IOException  {		
 		// POM -- Login page (class object-instance created and constructor invoked)
 		A_Login log = new A_Login();	
@@ -25,7 +30,7 @@ public class A_LoginTest extends TestBase {
 					
 		try {
 			// POM -- home page (class object-instance created and constructor invoked)
-			B_Home hom = new B_Home();
+			A_Home hom = new A_Home();
 			// Logout and printing the test status
 			String LogoutText = hom.getButtonText();
 			System.out.println(LogoutText);
@@ -40,4 +45,9 @@ public class A_LoginTest extends TestBase {
 			e.printStackTrace();
 		}
 	}
+
+
+
+
+
 };

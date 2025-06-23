@@ -29,10 +29,10 @@ public class I_NodeApp extends TestBase{
 	  
 	  		//-----------Add node app page actions---------------
 			public String pageHeader_addnodeApp() {
-				return getElement("pag_header_addAlphaNode").getText();
+				return getElement("pag_header_addnodeApp").getText();
 			}	
 			public String actPagHeader_addnodeApp() {
-				return getLocator("actPagHeader_addAlphaNode");
+				return getLocator("actPagHeader_addnodeApp");
 			}
 			
 			

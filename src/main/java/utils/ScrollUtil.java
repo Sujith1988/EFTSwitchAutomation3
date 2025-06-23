@@ -1,8 +1,13 @@
 package utils;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ScrollUtil {
 
@@ -30,6 +35,7 @@ public class ScrollUtil {
 					js.executeScript("window.scrollTo(document.body.scrollWidth, 0);");
 				}
 				
+				
 				public static void zoomOutAndScrollRightInWindow(WebDriver driver) {
 				    JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -45,15 +51,14 @@ public class ScrollUtil {
 				public static void zoomOutAndScrollRightInElement(WebDriver driver, WebElement scrollableDiv) {
 				    JavascriptExecutor js = (JavascriptExecutor) driver;
 
-				    // Step 1: Find the container — adjust selector as needed (e.g., by class name or ID)
-//				    WebElement scrollableDiv = driver.findElement(By.className("panel-body"));
-
 				    // Step 2: Zoom out the container (optional)
-				    js.executeScript("arguments[0].style.zoom='75%'", scrollableDiv);
+				    js.executeScript("arguments[0].style.zoom='70%'", scrollableDiv);
+				    				
 
-				    // Step 3: Scroll to the right inside the container
+				    // Step 3: Scroll to the right end inside the container
 				    js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth;", scrollableDiv);
 				}
+																													
 
 
 }
