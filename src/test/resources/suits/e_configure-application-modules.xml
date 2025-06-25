@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="listeners.screenShotCapturing"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	</listeners>
+  <test thread-count="5" name="configuration">	
+	  <groups>
+		  <run>
+			  <include name="conf"></include>
+		  </run>
+	  </groups>
+    <classes>
+	  <class name="tests.A_LoginTest"/>
+	  <class name="tests.C_SystemConfigTest"/>
+	  <class name="tests.D_RCTest"/>
+	  <class name="tests.E_CardGroupTest"/>
+	  <class name="tests.A_LoginTest"/>
+	  <class name="tests.F_DGTest"/>
+	  <class name="tests.G_AlphaNodeTest"/>
+	  <class name="tests.I_NodeAppTest"/>
+	  <class name="tests.J_InterchangesTest"/>
+	  <class name="tests.K_RoutesTest"/>
+    </classes>
+  </test> <!-- reggression -->
+</suite> <!-- Suite -->

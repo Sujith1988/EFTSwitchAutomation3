@@ -56,7 +56,7 @@ public class G_AlphaNodeTest extends TestBase {
     /*------Edit and update,delete alpha node for testing purpose--------*/
     @Test(priority = 3, groups = "reggrsn1", enabled = true)
     public static void editTestAlphaNode() throws IOException, InterruptedException {
-    	editAlphaNode("POSAlpha_tes");
+    	editAlphaNode("POSAlpha_tst");
     }
     
    

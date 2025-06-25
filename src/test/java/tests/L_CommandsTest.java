@@ -5,20 +5,49 @@ import org.testng.annotations.Test;
 
 import base.TestBase;
 import pages.A_Login;
+import pages.G_AlphaNode;
 import pages.A_Home;
 import pages.L_Commands;
+import pages.M_TraceViewer;
 import utils.adminLoginCommon;
 
 public class L_CommandsTest extends TestBase {
+	
+	/*------page objcts creating from POM-class using function call-----------*/
+    public static A_Home home;
+    public static L_Commands cmd;
+    public static A_Login login;
+    public static M_TraceViewer trace;
+
+    // Function to call in your method:
+    public static void pomCall() throws IOException {
+    	A_Home home = new A_Home();
+    	L_Commands cmd = new L_Commands();
+    	A_Login login = new A_Login();
+    	M_TraceViewer trace = new M_TraceViewer();
+    	
+    	L_CommandsTest.home = home;
+    	L_CommandsTest.cmd = cmd;
+    	L_CommandsTest.login = login;
+    	L_CommandsTest.trace = trace;
+    }  
+  /*--------------------------------------------------------------------------*/  
+    
+   
+    
+    
+    
+    
 
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(priority = 1, groups = "functionTesting")
+    @Test(priority = 1, groups = "function")
     public static void adminlogin() throws IOException, InterruptedException {
-    	A_Login log = new A_Login();	
-    	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
+    	pomCall();	
+    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
     }
     
-        
+    
+               
    
     
   //Commands sending Regression Testing
@@ -71,7 +100,7 @@ public class L_CommandsTest extends TestBase {
     
     
   //Commands sending Testing - Function Testing
-    @Test(priority = 3, groups = "functionTesting", enabled = true)
+    @Test(priority = 3, groups = "function", enabled = true)
     public static void commandsFunTests() throws IOException, InterruptedException {
     	String txt = "";
     	
@@ -80,18 +109,26 @@ public class L_CommandsTest extends TestBase {
     	String txt1 = sendCommands("option_cmd_cmd_loggerOn", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");  	
     	txt = txt1;
     	if(txt.equalsIgnoreCase("MDS :: LOGGERON IS OK")) {
-    		/* Traceon interchange cmnd sending*/
-        	txt1 = sendCommands("option_cmd_cmd_traceOn", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");
-        	txt = txt1;
-    	}
-    	
-    	if(txt.equalsIgnoreCase("MDS :: TRACEON IS OK")) {
     		/* Connect interchange cmnd sending*/
         	txt1 = sendCommands("option_cmd_cmd_connect", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");
         	txt = txt1;
     	}
+    	   	
     	   	   	
     }
+    
+    
+    
+    
+    
+    
+    /*------Navigate to pravega logger page-------*/
+    @Test(priority = 4, groups = "function")
+    public static void navtoTraceViewer() throws IOException, InterruptedException  {   		
+    	traceViewer();
+    }
+    
+    
     
     
     
@@ -101,59 +138,53 @@ public class L_CommandsTest extends TestBase {
     
    /*--------Common function for both the regression and function testing-------*/
     static String sendCommands(String cmdOption, String intrfaceOption, String intrchngOption) throws IOException, InterruptedException {					
-		// POM -- home page (class object-instance created and constructor invoked)
-				A_Home h = new A_Home();
-		// POM -- Application Commands page (class object-instance created and constructor invoked)
-				L_Commands cm = new L_Commands();
-	    // POM -- Login page (class object-instance created and constructor invoked)
-		        A_Login log = new A_Login();
-		        
-	
-		        
+		
+    			pomCall();
+			        
 		        // Send Commands:-  
-		        Thread.sleep(log.slp_2);
-		        h.clickHome();
-		        Thread.sleep(log.slp_2);		   								
-				h.clickonBasicConf();
-				Thread.sleep(log.slp_2);
-				h.cickonCommandCenter();
-				Thread.sleep(log.slp_2);
-				h.cickonApplicationCommands();
-				Thread.sleep(log.slp_2);
-				String pagHeadr = cm.pageHeader_applicationCommands();
-				String actualPageHeader = cm.actPagHeader_applicationCommands();
+		        Thread.sleep(login.slp_2);
+		        home.clickHome();
+		        Thread.sleep(login.slp_2);		   								
+				home.clickonBasicConf();
+				Thread.sleep(login.slp_2);
+				home.cickonCommandCenter();
+				Thread.sleep(login.slp_2);
+				home.cickonApplicationCommands();
+				Thread.sleep(login.slp_2);
+				String pagHeadr = cmd.pageHeader_applicationCommands();
+				String actualPageHeader = cmd.actPagHeader_applicationCommands();
 				String txt = "cmnd page not accessible";
 				if (pagHeadr.equals(actualPageHeader)) {	
 					System.out.println("Entered the Page : " +pagHeadr);
 					
 					
 					//select command
-					cm.selectFieldCommand("select_cmd_cmd");
-					Thread.sleep(log.slp_2);
-					cm.selectFieldOptionCommand(cmdOption);//
-					Thread.sleep(log.slp_2);
+					cmd.selectFieldCommand("select_cmd_cmd");
+					Thread.sleep(login.slp_2);
+					cmd.selectFieldOptionCommand(cmdOption);//
+					Thread.sleep(login.slp_2);
 					
 					//select interface
-					cm.selectFieldCommand("select_cmd_interface");
-					Thread.sleep(log.slp_2);
-					cm.selectFieldOptionCommand(intrfaceOption);//
-					Thread.sleep(log.slp_2);
+					cmd.selectFieldCommand("select_cmd_interface");
+					Thread.sleep(login.slp_2);
+					cmd.selectFieldOptionCommand(intrfaceOption);//
+					Thread.sleep(login.slp_2);
 					
 					//select interchange
-					cm.selectFieldCommand("select_cmd_interchange");
-					Thread.sleep(log.slp_2);
-					cm.selectFieldOptionCommand(intrchngOption);//
-					Thread.sleep(log.slp_2);
+					cmd.selectFieldCommand("select_cmd_interchange");
+					Thread.sleep(login.slp_2);
+					cmd.selectFieldOptionCommand(intrchngOption);//
+					Thread.sleep(login.slp_2);
 					
 					//send command button
-					cm.sendCommandbtn();
-					Thread.sleep(log.slp_2);
+					cmd.sendCommandbtn();
+					Thread.sleep(login.slp_2);
 					
 					//console the cmd status
-					txt = cm.successTxtmsg();
-					Thread.sleep(log.slp_2);
+					txt = cmd.successTxtmsg();
+					Thread.sleep(login.slp_2);
 					System.out.println("cmd sts :" +txt);
-					Thread.sleep(log.slp_2);	
+					Thread.sleep(login.slp_2);	
 //					return txt;
 					
 				}return txt;
@@ -161,6 +192,35 @@ public class L_CommandsTest extends TestBase {
     
     //----------------------------------------------------------------------------
                                                        
-                        
+            
+    
+    
+    /*--------Navigate to the Logger page to see the request, response messages------*/
+    static void traceViewer() throws IOException, InterruptedException {					
+		
+    			pomCall();
+    			
+    			// Send Commands:-  
+		        Thread.sleep(login.slp_2);
+		        home.clickHome();
+		        Thread.sleep(login.slp_2);		   								
+				home.clickTraceViewer();
+				Thread.sleep(login.slp_2);
+				home.clickViewTrace();
+				Thread.sleep(login.slp_2);				
+				String pagHeadr = trace.pageHeader_traceViewer();
+				String actualPageHeader = trace.actPagHeader_traceViewer();
+				
+				if (pagHeadr.equals(actualPageHeader)) {	
+					System.out.println("Entered the Page : " +pagHeadr);
+					
+					trace.clickonPravegaLogger();
+					Thread.sleep(2000);
+					
+					//maximize window
+				 	driver.manage().window().maximize();
+				 	Thread.sleep(2000);
+				}
+    }
     
 }

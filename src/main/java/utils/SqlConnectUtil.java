@@ -99,5 +99,69 @@ public class SqlConnectUtil {
 			}
 
 		}
+	
+	
+	
+	
+	
+	public static void nodeAppTableevacuate() throws SQLException {
+		Connection con = DriverManager.getConnection(
+		"jdbc:sqlserver://localhost; databaseName=Aptswitch;encrypt=true;trustServerCertificate=true; user=sa; password=password@123;");
+			System.out.println("connected");
+			try {
+				Statement st = con.createStatement();
+			
+				int rowsAffectedsapnodeconnections = st.executeUpdate("DELETE FROM [Aptswitch].[dbo].[apt_sap];");					
+				System.out.println("Deleted all rows of node app sap connections from apt_alpha_sap, rows affected: " + rowsAffectedsapnodeconnections);
+				
+				int rowsAffectednodeapp = st.executeUpdate("DELETE FROM [Aptswitch].[dbo].[apt_node_applications];");		
+				System.out.println("Deleted all rows of node apps from apt_node_applications, rows affected: " + rowsAffectednodeapp);
+															
+				st.close();
+
+				// ...
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (con != null)
+					try {
+						con.close();
+						System.out.println("connection closed");
+					} catch (Exception e) {
+					}
+			}
+
+		}
+	
+	
+	
+	
+	
+	public static void interchangeTableevacuate() throws SQLException {
+		Connection con = DriverManager.getConnection(
+		"jdbc:sqlserver://localhost; databaseName=Aptswitch;encrypt=true;trustServerCertificate=true; user=sa; password=password@123;");
+			System.out.println("connected");
+			try {
+				Statement st = con.createStatement();
+			
+				int rowsAffectedInterchangeISO = st.executeUpdate("DELETE FROM [Aptswitch].[dbo].[apt_interchange] "
+						+ "where [interface] = 'ISO Adapter';"); 
+				System.out.println("Deleted the ISO Adapter interchange from apt_node_interchange, rows affected: " + rowsAffectedInterchangeISO);
+															
+				st.close();
+
+				// ...
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (con != null)
+					try {
+						con.close();
+						System.out.println("connection closed");
+					} catch (Exception e) {
+					}
+			}
+
+		}
 
 }

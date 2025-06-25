@@ -17,10 +17,11 @@ public class ScrollUtil {
 						js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", obj);                            
 				}
 				
-				// scroll to bottom of the page
+				// scroll to bottom of the page smoothly
 				public  static void scrollToBottom(WebDriver driver) {
 					JavascriptExecutor js = (JavascriptExecutor) driver;
-					js.executeScript("window.scrollTo(0, document.body.scrollHeight);");                            
+//					js.executeScript("window.scrollTo(0, document.body.scrollHeight);"); 
+					js.executeScript("window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });");					        					            					            					        					    
 				}
 				
 				// scroll to the top of the page

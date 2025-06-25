@@ -2,11 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="listeners.DefaultReporting"></listener>
+		<listener class-name="listeners.RetryAnalyser"></listener>
 	</listeners>
-  <test thread-count="5" name="Reporter-log">	
+  <test thread-count="5" name="reggression">	
+	  <groups>
+		  <run>
+			  <include name="login"></include>
+		  </run>
+	  </groups>
     <classes>
       <class name="tests.A_LoginTest"/>
     </classes>
-  </test> <!-- screenshot -->
+  </test> <!-- reggression -->
 </suite> <!-- Suite -->

@@ -8,49 +8,66 @@ import dataprovider.ExcelDataProvider;
 import pages.A_Home;
 import pages.A_Login;
 import pages.B_UserRegistration;
-import pages.G_AlphaNode;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 public class B_UserRegistrationTest extends TestBase {	
         
-	
-	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(groups = "reggrsn1")
-    public static void adminlogin() throws IOException, InterruptedException {
+	/*------page objcts creating from POM-class using function call-----------*/
+    public static A_Home home;
+    public static B_UserRegistration userReg;
+    public static A_Login login;
+
+    // Function to call in your method:
+    public static void pomCall() throws IOException {
+    	A_Home home = new A_Home();
+    	B_UserRegistration userReg = new B_UserRegistration();
+    	A_Login login = new A_Login();
     	
-    	A_Login log = new A_Login();	
-    	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
+    	B_UserRegistrationTest.home = home;
+    	B_UserRegistrationTest.userReg = userReg;
+    	B_UserRegistrationTest.login = login;
+    }  
+  /*--------------------------------------------------------------------------*/
+	
+    
+    
+    
+    
+	/*------Login as Admin user(credential from locator.props)--------*/
+    @Test(priority = 1)
+    public static void adminlogin() throws IOException, InterruptedException {   	
+    	pomCall();    		
+    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
     }
 	
     
     
+    
+    
     /*--------New users adding as per the data from xcelSheet--------*/
-	@Test(groups = "reggrsn1", dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, dependsOnMethods = "adminlogin", retryAnalyzer = utils.Retry.class,priority = 1)
+	@Test(groups = "reggrsn1", priority = 2, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, retryAnalyzer = utils.Retry.class) //dependsOnMethods = "adminlogin",
 	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
-		// POM -- home page (class object-instance created and constructor invoked)
-				A_Home h = new A_Home();
-		// POM -- UserRegistration page (class object-instance created and constructor invoked)
-		        B_UserRegistration u = new B_UserRegistration();
-	    // POM -- UserRegistration page (class object-instance created and constructor invoked)
-		        A_Login log = new A_Login();
+		pomCall();
 		       
 		// add user fuction testing
-		h.clickHome();
-		h.clickUserLink();	   Thread.sleep(log.slp_2);		
-		h.clickAddUserLink();
-		String pagHeadr = u.pageHeader_addUser();
-		String actualPageHeader = u.actPagHeader_addUser();
+		home.clickHome();
+		home.clickUserLink();	   Thread.sleep(login.slp_2);		
+		home.clickAddUserLink();
+		String pagHeadr = userReg.pageHeader_addUser();
+		String actualPageHeader = userReg.actPagHeader_addUser();
 		if (pagHeadr.equals(actualPageHeader)) {
-			u.firstName(fName);
-			u.lastName(lName);
-			u.emailID(eMail);
-			u.phonNum(phNum);
-			u.userRole();
-			u.roleOption();
-			u.userName(usrName);
-			u.pass(paswd);
-			u.confirmPass(cnfrmpaswd);	   Thread.sleep(log.slp_2);				
-			u.saveUserConf();              Thread.sleep(log.slp_2);
+			System.out.println("Entered the Page : " +pagHeadr);
+			
+			userReg.firstName(fName);
+			userReg.lastName(lName);
+			userReg.emailID(eMail);
+			userReg.phonNum(phNum);
+			userReg.userRole();
+			userReg.roleOption();
+			userReg.userName(usrName);
+			userReg.pass(paswd);
+			userReg.confirmPass(cnfrmpaswd);	   Thread.sleep(login.slp_2);				
+			userReg.saveUserConf();              Thread.sleep(login.slp_2);
 			
 		//handling the alert window popup 💡	
 		int alert_active = popupWindwHandlr.alertHandler();	
@@ -63,7 +80,11 @@ public class B_UserRegistrationTest extends TestBase {
 		
 	}  
 	
-	@Test(priority = 2)
+	
+	
+	
+	
+	@Test(priority = 3)
 	static void failit() {
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals("haia", "hai", "Soft assert failed");
@@ -74,20 +95,19 @@ public class B_UserRegistrationTest extends TestBase {
 	
 	
 	
-	  /*--------Users deleting as per the data from the xcelSheet--------*/
-	   @Test(groups = "reggrsn1", dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, priority = 3) 
-	   static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
-			A_Home h = new A_Home();
-	        B_UserRegistration u = new B_UserRegistration();  
-	        A_Login log = new A_Login();
+	/*--------Users deleting as per the data from the xcelSheet--------*/
+	@Test(groups = "reggrsn1", priority = 4, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class) 
+	static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
+			
 	// verify user fuction testing
-	h.clickHome();  	
-	h.clickUserLink();    Thread.sleep(log.slp_2);
-	h.clickViewUserLink();
-	String pagHeadr = u.pageHeader_viewUser();
-	String actualPageHeader = u.actPagHeader_viewUser();
+	home.clickHome();  	
+	home.clickUserLink();    
+	Thread.sleep(login.slp_2);
+	home.clickViewUserLink();
+	String pagHeadr = userReg.pageHeader_viewUser();
+	String actualPageHeader = userReg.actPagHeader_viewUser();
 	if (pagHeadr.equals(actualPageHeader)) {	
-			u.deletUser(usrName);	     Thread.sleep(log.slp_2);		
+			userReg.deletUser(usrName);	     Thread.sleep(login.slp_2);		
 			String alert_active = popupWindwHandlr.alertHandler1();	
 			System.out.println("users treated as per the exel data :"+alert_active);
 			
@@ -96,13 +116,17 @@ public class B_UserRegistrationTest extends TestBase {
 	}
   }	
 	
+	
+		
+	
+	
 	 //manually failing the test to check onfailure listener
-	   @Test(priority = 4)
-	   static void failTest() {
-		   SoftAssert soft = new SoftAssert();
-			soft.assertEquals("mla", "hik", "Soft assert failed");
-			soft.assertAll();
-	   }
+	 @Test(priority = 5)
+	 static void failTest() {
+		SoftAssert soft = new SoftAssert();
+		soft.assertEquals("mla", "hik", "Soft assert failed");
+		soft.assertAll();			
+	  }
 		
 	   
 }

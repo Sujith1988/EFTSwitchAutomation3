@@ -87,7 +87,7 @@ public class K_RoutesTest extends TestBase {
 				
 				
 				
-				// Add Route:-  add new Route for testing
+				// Add Route:-  add new Route as config
 				h.clickHome();
 				rt.scrollToRoutConf(); 
 				h.clickRouting();	    Thread.sleep(log.slp_2);			
@@ -99,7 +99,7 @@ public class K_RoutesTest extends TestBase {
 					rt.selectparamsAddRoute("dropdown_route_dg", "option_routes_dg3");
 					rt.selectparamsAddRoute("dropdown_route_cg", "option_routes_cg2");
 					rt.selectparamsAddRoute("dropdown_route_omega", "option_routes_omega1");
-					rt.selectparamsAddRoute("dropdown_route_rc", "option_routes_rc3");
+					rt.selectparamsAddRoute("dropdown_route_rc", "option_routes_rc1");
 					
 					rt.routeConfSavBtn();
 					Thread.sleep(2000);
