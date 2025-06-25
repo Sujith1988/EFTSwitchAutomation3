@@ -192,4 +192,19 @@ public class A_Home extends TestBase{
 			getElement("viewintrchng_nav").click();
 		}
 	
+		
+		
+		
+		//----Log Tracing----
+		public void clickTraceViewer() {
+			getElement("trace_viewer_nav").click();
+		}
+		public void clickViewTrace() {
+			getElement("trace_nav").click();
+		}
+		public void clickviewTransactionFlow() {
+			getElement("trans_flow_nav").click();
+		}
+			
+			
 }

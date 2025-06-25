@@ -5,9 +5,15 @@
 		<listener class-name="listeners.screenShotCapturing"></listener>
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	</listeners>
-  <test thread-count="5" name="screenshot">	
+  <test thread-count="5" name="function">	
+	  <groups>
+		  <run>
+			  <include name="function"></include>
+		  </run>
+	  </groups>
     <classes>
-      <class name="tests.A_LoginTest"/>
+	  <class name="tests.L_CommandsTest"/>
+      <class name="tests.M_ISOmsgs_FunctionTests"/>
     </classes>
-  </test> <!-- screenshot -->
+  </test> <!-- reggression -->
 </suite> <!-- Suite -->

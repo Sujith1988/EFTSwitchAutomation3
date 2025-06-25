@@ -30,7 +30,7 @@ public WebElement getElement(String loctr) {
 //     String targetValue = getLocator(key);
 		String targetValue = key;
      boolean isMatchFound = false;
-     System.out.println("what to search!!!!!!!!! : " +targetValue);
+//     System.out.println("what to search!!!!!!!!! : " +targetValue);
      
      // Get all rows in the tbody of the table
      List<WebElement> rows = driver.findElements(By.xpath(getLocator(tr)));//tbody/tr -> similar to View User page
@@ -40,13 +40,12 @@ public WebElement getElement(String loctr) {
          // Get the first column (td) of the current row
          WebElement firstColumn = row.findElement(By.xpath(getLocator(td)));  //td[1] -> similar to View User page
          String cellText = firstColumn.getText().trim();        
-         System.out.println("search result!!!!!!!  :" +cellText);
+//         System.out.println("search result!!!!!!!  :" +cellText);
          
          // Check if it matches the target value
          if (cellText.equalsIgnoreCase(targetValue)) {
              System.out.println("Match found--> ExelData= "+targetValue +", td-cellText= "+cellText);
              isMatchFound = true;
-             System.out.println("joiiii: "+ row.findElement(By.xpath(getLocator(tdbtn))));
              row.findElement(By.xpath(getLocator(tdbtn))).click(); //td[x]/button             
              break;
          }
