@@ -166,13 +166,42 @@ System.out.println(rows);
     
     
     
-    @DataProvider(name = "CGData")
+//    @DataProvider(name = "CGData")
+//    public Object[][] getCGDetails() {
+//    	System.out.println(path);
+//    	System.out.println(sheet6);
+//        ExcelUtils excel = new ExcelUtils(path, sheet6);
+//        int rows = excel.getRowCount();
+//        Object[][] data = new Object[rows][11]; // Skipping header
+//System.out.println(rows);
+//        if (rows != 0) {        	        
+//        for (int i = 1; i <= rows; i++) {
+//            data[i - 1][0] = excel.getCellData(i, 0); // paramName1
+//            data[i - 1][1] = excel.getCellData(i, 1); // tr1
+//            data[i - 1][2] = excel.getCellData(i, 2); // td2
+//            data[i - 1][3] = excel.getCellData(i, 3); // tdViewbtnCG  
+//            data[i - 1][4] = excel.getCellData(i, 4); // paramName2
+//            data[i - 1][5] = excel.getCellData(i, 5); // tr2
+//            data[i - 1][6] = excel.getCellData(i, 6); // td2
+//            data[i - 1][7] = excel.getCellData(i, 7); // tdEditbtnBIN 
+//            data[i - 1][8] = excel.getCellData(i, 8); // tdDeletebtnBIN
+//            data[i - 1][9] = excel.getCellData(i, 9); // tdEditbtnCG
+//            data[i - 1][10] = excel.getCellData(i, 10); // RC
+//        }                	
+//        }
+//        excel.closeExcel();
+//        return data; 
+//    }
+    
+    
+    
+    @DataProvider(name = "CGBinData")
     public Object[][] getCGDetails() {
     	System.out.println(path);
     	System.out.println(sheet6);
         ExcelUtils excel = new ExcelUtils(path, sheet6);
         int rows = excel.getRowCount();
-        Object[][] data = new Object[rows][11]; // Skipping header
+        Object[][] data = new Object[rows][14]; // Skipping header
 System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
@@ -185,8 +214,11 @@ System.out.println(rows);
             data[i - 1][6] = excel.getCellData(i, 6); // td2
             data[i - 1][7] = excel.getCellData(i, 7); // tdEditbtnBIN 
             data[i - 1][8] = excel.getCellData(i, 8); // tdDeletebtnBIN
-            data[i - 1][9] = excel.getCellData(i, 9); // tdEditbtnCG
-            data[i - 1][10] = excel.getCellData(i, 10); // RC
+            data[i - 1][9] = excel.getCellData(i, 9); // bin
+            data[i - 1][10] = excel.getCellData(i, 10); // bin_descr
+            data[i - 1][11] = excel.getCellData(i, 11); // pan_len
+            data[i - 1][12] = excel.getCellData(i, 12); // bin_len
+            data[i - 1][13] = excel.getCellData(i, 13); // RC
         }                	
         }
         excel.closeExcel();
@@ -232,7 +264,7 @@ System.out.println(rows);
     	System.out.println(sheet8);
         ExcelUtils excel = new ExcelUtils(path, sheet8);
         int rows = excel.getRowCount();
-        Object[][] data = new Object[rows][4]; // Skipping header
+        Object[][] data = new Object[rows][8]; // Skipping header
 System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
@@ -240,6 +272,10 @@ System.out.println(rows);
             data[i - 1][1] = excel.getCellData(i, 1); // tr1
             data[i - 1][2] = excel.getCellData(i, 2); // td1
             data[i - 1][3] = excel.getCellData(i, 3); // tdEidtbtnCG
+            data[i - 1][4] = excel.getCellData(i, 4); //option_routes_dg
+            data[i - 1][5] = excel.getCellData(i, 5); //option_routes_cg
+            data[i - 1][6] = excel.getCellData(i, 6); //option_routes_omega
+            data[i - 1][7] = excel.getCellData(i, 7); //option_routes_rc
            
         }                	
         }

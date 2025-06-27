@@ -7,106 +7,142 @@ import org.testng.annotations.Test;
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
 import pages.A_Login;
+import pages.J_Interchanges;
 import pages.K_Routes;
 import pages.A_Home;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 
 public class K_RoutesTest extends TestBase {
+	
+	/*------page objcts creating from POM-class using function call-----------*/
+    public static A_Home home;
+    public static K_Routes rout;
+    public static A_Login login;
+
+    // Function to call in your method:
+    public static void pomCall() throws IOException {
+    	A_Home home = new A_Home();
+    	K_Routes rout = new K_Routes();
+    	A_Login login = new A_Login();
+    	
+    	K_RoutesTest.home = home;
+    	K_RoutesTest.rout = rout;
+    	K_RoutesTest.login = login;
+    }  
+  /*--------------------------------------------------------------------------*/
+    
+    
 
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(priority = 1)
     public static void adminlogin() throws IOException, InterruptedException {
-    	A_Login log = new A_Login();	
-    	adminLoginCommon.adminLogin(log.admnUser, log.admnPass, log);
+    	pomCall();	
+    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
     }
     
     
     
+    
+    
+    // Add Route:-  add new Routes for configuration as well as for Regression testing
     @Test(groups = {"reggrsn1", "conf"}, priority = 2, dataProvider = "RouteData", dataProviderClass = ExcelDataProvider.class)
-    public static void editRoutes(String paramName, String tr, String td, String tdbtn) throws IOException, InterruptedException {					
-		// POM -- home page (class object-instance created and constructor invoked)
-				A_Home h = new A_Home();
-		// POM -- Card Group page (class object-instance created and constructor invoked)
-				K_Routes rt = new K_Routes();
-	    // POM -- Login page (class object-instance created and constructor invoked)
-		        A_Login log = new A_Login();
-		        
-		        	
-		        
-		        
-		        
-		     // Add Route:-  add new Route for testing
-				h.clickHome();
-				rt.scrollToRoutConf(); 
-				h.clickRouting();	    Thread.sleep(log.slp_2);			
-				h.clickAddRoute();     Thread.sleep(log.slp_2);	
-				String pagHeadr = rt.pageHeader_addRoutes();
-				String actualPageHeader = rt.actPagHeader_addRoutes();
-				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Entered the Page : " +pagHeadr);
-					
-					rt.selectparamsAddRoute("dropdown_route_dg", "option_routes_dg3");
-					rt.selectparamsAddRoute("dropdown_route_cg", "option_routes_cg2");
-					rt.selectparamsAddRoute("dropdown_route_omega", "option_routes_omega1");
-					rt.selectparamsAddRoute("dropdown_route_rc", "option_routes_rc3");
-					
-					rt.routeConfSavBtn();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-				}
-		        
-		        
-		        
-		
-		     // View Route:-  view//edit Route for testing -> Update and Delete
-				h.clickHome();
-				rt.scrollToRoutConf(); 
-				h.clickRouting();	    Thread.sleep(log.slp_2);			
-				h.clickViewEditRoute();     Thread.sleep(log.slp_2);	
-				String pagHeadr1 = rt.pageHeader_viewRoutes();
-				String actualPageHeader1 = rt.actPagHeader_viewRoutes();
-				if (pagHeadr1.equals(actualPageHeader1)) {											
-					rt.editRoutebtn(paramName, tr, td, tdbtn);
-					Thread.sleep(2000);
-					rt.updateRoute();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
-	
-					rt.editRoutebtn(paramName, tr, td, tdbtn);
-					Thread.sleep(2000);
-					rt.deleteRoute();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);																	
-					
-										
-				}	
-				
-				
-				
-				
-				// Add Route:-  add new Route as config
-				h.clickHome();
-				rt.scrollToRoutConf(); 
-				h.clickRouting();	    Thread.sleep(log.slp_2);			
-				h.clickAddRoute();     Thread.sleep(log.slp_2);	
-				String pagHeadr2 = rt.pageHeader_addRoutes();
-				String actualPageHeader2 = rt.actPagHeader_addRoutes();
-				if (pagHeadr2.equals(actualPageHeader2)) {	
-					
-					rt.selectparamsAddRoute("dropdown_route_dg", "option_routes_dg3");
-					rt.selectparamsAddRoute("dropdown_route_cg", "option_routes_cg2");
-					rt.selectparamsAddRoute("dropdown_route_omega", "option_routes_omega1");
-					rt.selectparamsAddRoute("dropdown_route_rc", "option_routes_rc1");
-					
-					rt.routeConfSavBtn();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-				}												
+    public static void addRoutes(String paramName, String tr, String td, String tdbtn, String option_routes_dg, String option_routes_cg, String option_routes_omega, String option_routes_rc) throws IOException, InterruptedException {					    		        			        		        		           	
+		//add route	
+    	addRouteCommon(option_routes_dg, option_routes_cg,option_routes_omega, option_routes_rc);    	   	
 	}
+    
+    
+    
+    
+    
+    // View Route:-  Update, Delete Routes for Regressin testing and then re-add
+    @Test(groups = {"reggrsn1"}, priority = 3, dataProvider = "RouteData", dataProviderClass = ExcelDataProvider.class)
+    public static void addRoutes1(String paramName, String tr, String td, String tdbtn, String option_routes_dg, String option_routes_cg, String option_routes_omega, String option_routes_rc) throws IOException, InterruptedException {					    		        			        		        		           			
+    	//update and then delete route for testing
+    	viewRouteCommon(paramName, tr, td, tdbtn);
+    	
+    	//add route			
+    	addRouteCommon(option_routes_dg, option_routes_cg,option_routes_omega, option_routes_rc);    	    	   	
+	}
+		        
+		        
+	
+     			    
                                      
     
+    
+    
+    
+    
+    /*-------------General Functions--------------------------*/
+    
+    // Add Route:-  add new Route
+    public static void addRouteCommon(String option_routes_dg, String option_routes_cg, String option_routes_omega, String option_routes_rc) throws IOException, InterruptedException {					
+    	pomCall();
+		        		        			        		        		            	
+		home.clickHome();
+		Thread.sleep(login.slp_2);
+		rout.scrollToRoutConf();
+		Thread.sleep(login.slp_2);
+		home.clickRouting();	    
+		Thread.sleep(login.slp_2);			
+		home.clickAddRoute();     
+		Thread.sleep(login.slp_2);	
+		String pagHeadr = rout.pageHeader_addRoutes();
+		String actualPageHeader = rout.actPagHeader_addRoutes();
+		if (pagHeadr.equals(actualPageHeader)) {	
+			System.out.println("Entered the Page : " +pagHeadr);
+					
+			rout.selectparamsAddRoute("dropdown_route_dg", option_routes_dg);
+			rout.selectparamsAddRoute("dropdown_route_cg", option_routes_cg);
+			rout.selectparamsAddRoute("dropdown_route_omega", option_routes_omega);
+			rout.selectparamsAddRoute("dropdown_route_rc", option_routes_rc);
+					
+					rout.routeConfSavBtn();
+					Thread.sleep(2000);
+					popupWindwHandlr.alertHandler();
+		}
+    }
+    
+    
+    
+    
+    
+    //View Route -> Update and Delete
+    public static void viewRouteCommon(String paramName, String tr, String td, String tdbtn) throws IOException, InterruptedException {					
+    	pomCall();
+		        		        			        		        		            	
+    	home.clickHome();
+    	Thread.sleep(login.slp_2);
+    	rout.scrollToRoutConf(); 
+    	home.clickRouting();	    
+    	Thread.sleep(login.slp_2);			
+    	home.clickViewEditRoute();     
+    	Thread.sleep(login.slp_2);	
+    	String pagHeadr = rout.pageHeader_viewRoutes();
+    	String actualPageHeader = rout.actPagHeader_viewRoutes();
+    	if (pagHeadr.equals(actualPageHeader)) {
+    		System.out.println("Entered the Page : " +pagHeadr);	
+    		
+    		//update
+    		rout.editRoutebtn(paramName, tr, td, tdbtn);
+    		Thread.sleep(2000);    		
+    		rout.updateRoute();
+    		Thread.sleep(2000);
+    		popupWindwHandlr.alertHandler();
+    		Thread.sleep(2000);
+    	
+    		//delete
+    		rout.editRoutebtn(paramName, tr, td, tdbtn);
+    		Thread.sleep(2000);   		
+    		rout.deleteRoute();
+    		Thread.sleep(2000);
+    		popupWindwHandlr.alertHandler();
+    		Thread.sleep(2000);																	
+    		
+    							
+    	}	
+    }
     
 }

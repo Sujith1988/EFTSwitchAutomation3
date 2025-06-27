@@ -133,30 +133,7 @@ public class E_CardGroup extends TestBase {
 			}
 			/*----------------------------------*/	
 			
-			
-	
-		//add new BIN configuration
-		public void binConfFun(String paramName2, String key2, String key3, String key4, String key5) {
-		getElement("addBinbtn").click();
-		String key1 = paramName2.toString().replace(".0", "");
-		getElement("input_Bin").sendKeys(key1);
-		getElement("input_Descript").sendKeys(getLocator(key2));
-		getElement("input_PanLen").sendKeys(getLocator(key3));
-		getElement("input_BinLen").sendKeys(getLocator(key4));	
-//		getElement("input_RC").click();
-//		getElement(key5).click();
-//		getElement("saveBinbtn").click();		
-		}
-		public void clickonRCSelctr() {			
-			getElement("input_RC").click();
-		}
-		public void RCoptions(String key5) {			
-			getElement(key5).click();
-		}
-		public void binConfSav() {			
-			getElement("saveBinbtn").click();
-		}
-		
+									
 	
 		//update the BIN-Configuration 
 		public void updateBin() {		
