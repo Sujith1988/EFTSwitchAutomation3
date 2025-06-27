@@ -20,7 +20,7 @@ public class TestBase {
 	public static WebDriver driver;
 	
 	//@BeforeTest ->for non datadriven testing only
-	@BeforeTest(groups = {"reggrsn1", "conf", "function", "login"})
+	@BeforeTest(groups = {"reggrsn1", "conf", "function-P", "function-C", "login"})
 	public void setUp() throws IOException, InterruptedException {
 
 		if (driver == null) {

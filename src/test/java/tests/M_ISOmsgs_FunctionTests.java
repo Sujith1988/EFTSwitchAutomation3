@@ -13,7 +13,7 @@ import utils.ScrollUtil;
 public class M_ISOmsgs_FunctionTests extends TestBase {
 	
 	//End to end transaction testing for the module MDS-interface
-	 @Test(priority = 1, groups = "function", enabled = true)
+	 @Test(priority = 1, groups = "function-P", enabled = true)
 	    public static void mdsInterfaceTest() throws UnknownHostException, IOException, XPostilion, InterruptedException {
 	    			    
 	    	
@@ -70,7 +70,7 @@ public class M_ISOmsgs_FunctionTests extends TestBase {
 	 
 	 
 	 	//End to end transaction testing for the module B24-interface
-	    @Test(priority = 2, groups = "function", enabled = false)
+	    @Test(priority = 2, groups = "function-P", enabled = false)
 	    public static void B24InterfaceTest() throws UnknownHostException, IOException, XPostilion, InterruptedException {
 	    	//0200 and 0420 messages firing to the ISOAdapter-interchange port 4002    	
 	    	

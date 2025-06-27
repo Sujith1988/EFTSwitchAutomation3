@@ -5,10 +5,10 @@
 		<listener class-name="listeners.screenShotCapturing"></listener>
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	</listeners>
-  <test thread-count="5" name="function">	
+  <test thread-count="5" name="function-P">	
 	  <groups>
 		  <run>
-			  <include name="function"></include>
+			  <include name="function-P"></include>
 		  </run>
 	  </groups>
     <classes>

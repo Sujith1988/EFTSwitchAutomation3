@@ -22,7 +22,7 @@
       <class name="tests.I_NodeAppTest"/>
       <class name="tests.J_InterchangesTest"/>
       <class name="tests.K_RoutesTest"/>
-      <class name="tests.L_CommandsTest"/>
+<!--      <class name="tests.L_CommandsTest"/>-->
 <!--      <class name="tests.M_ISOmsgs_FunctionTests"/>-->
     </classes>
   </test> <!-- reggression -->

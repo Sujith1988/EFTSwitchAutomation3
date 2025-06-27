@@ -40,7 +40,7 @@ public class L_CommandsTest extends TestBase {
     
 
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(priority = 1, groups = "function")
+    @Test(priority = 1, groups = {"function-C", "function-P"})
     public static void adminlogin() throws IOException, InterruptedException {
     	pomCall();	
     	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
@@ -51,7 +51,7 @@ public class L_CommandsTest extends TestBase {
    
     
   //Commands sending Regression Testing
-    @Test(priority = 2, groups = "reggrsn1", enabled = true)
+    @Test(priority = 2, groups = "function-C", enabled = true)
     public static void commandsTests() throws IOException, InterruptedException {
     	
     	/*---LoggerOn cmnd sening-------*/ 	
@@ -100,7 +100,7 @@ public class L_CommandsTest extends TestBase {
     
     
   //Commands sending Testing - Function Testing
-    @Test(priority = 3, groups = "function", enabled = true)
+    @Test(priority = 3, groups = "function-P", enabled = true)
     public static void commandsFunTests() throws IOException, InterruptedException {
     	String txt = "";
     	
@@ -123,7 +123,7 @@ public class L_CommandsTest extends TestBase {
     
     
     /*------Navigate to pravega logger page-------*/
-    @Test(priority = 4, groups = "function")
+    @Test(priority = 4, groups = "function-P")
     public static void navtoTraceViewer() throws IOException, InterruptedException  {   		
     	traceViewer();
     }
@@ -137,6 +137,8 @@ public class L_CommandsTest extends TestBase {
     
     
    /*--------Common function for both the regression and function testing-------*/
+    
+    
     static String sendCommands(String cmdOption, String intrfaceOption, String intrchngOption) throws IOException, InterruptedException {					
 		
     			pomCall();

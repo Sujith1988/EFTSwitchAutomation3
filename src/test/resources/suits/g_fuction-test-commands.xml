@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="g_fuction-test-commands">
+  <test thread-count="5" name="Function Test For Commands">
+	  <groups>
+		  <run>
+			  <include name="function-C"></include>
+		  </run>
+	  </groups>
+    <classes>
+      <class name="tests.L_CommandsTest"/>
+    </classes>
+  </test> <!-- Function Test For Commands -->
+</suite> <!-- g_fuction-test-commands -->
