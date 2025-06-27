@@ -1,6 +1,11 @@
 package pages;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import base.TestBase;
 import utils.LocatorReader;
 public class A_Login extends TestBase {
@@ -31,20 +36,25 @@ public class A_Login extends TestBase {
 	
 	
 	
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));	
 	
 	//----------Login page actions-------------
 	/* key : admin */
 	public void userNameFill(String key) {
-		driver.findElement(By.id(usr)).sendKeys(key);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(usr))).sendKeys(key);
+		//driver.findElement(By.id(usr)).sendKeys(key);
 	}
 
 	/* key : useradmin */
 	public void userPassFill(String key) {
-		driver.findElement(By.id(psw)).sendKeys(key);
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(psw))).sendKeys(key);
+		//driver.findElement(By.id(psw)).sendKeys(key);
 	}
-
+	
+	
 	public void loginbtnClick() {
-		driver.findElement(By.className(btn)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(btn))).click();
+		//driver.findElement(By.className(btn)).click();
 	}
 
 }

@@ -3,7 +3,6 @@ package pages;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import base.TestBase;
 import utils.LocatorReader;
 import utils.ScrollUtil;
@@ -47,8 +46,8 @@ public class A_Home extends TestBase{
 	
 	
 /*- - - - - - - - -Logout and Home button click action -  - - - - -  - - -*/  
-	public void clickButton() {
-		getElement("logout_btn").click();
+	public void clickLogoutButton() {
+		getElement("logout_btn").click();		
     }
 	public void clickHome() {
 		getElement("home_btn").click();

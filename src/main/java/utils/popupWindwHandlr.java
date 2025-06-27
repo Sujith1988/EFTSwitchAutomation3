@@ -10,9 +10,9 @@ public class popupWindwHandlr extends TestBase {
 			Alert alert = driver.switchTo().alert();
 			System.out.println("Alert found: " + alert.getText());
 			alert.accept();
-			System.out.println("Alert accepted successfully.");
+//			System.out.println("Alert accepted successfully.");
 		} catch (org.openqa.selenium.NoAlertPresentException e) {
-			System.out.println("No alert found");
+//			System.out.println("No alert found");
 			return 0;
 		}
 		return 1;
