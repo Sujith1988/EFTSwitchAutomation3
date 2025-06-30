@@ -62,16 +62,17 @@ public class A_LoginTest extends TestBase {
 		login.userNameFill(usrN);
 		login.userPassFill(passW);							
 		login.loginbtnClick();
-												
+					
+		
 		 // ✅ Wait for alert to be present before calling handler
 	    try {
 	        wait.until(ExpectedConditions.alertIsPresent()); // wait up to 2 seconds
 	        popupWindwHandlr.alertHandler();
 	        
-	        System.out.println("Login test-negative success : Alert within 2s, Accepted.");
+	        System.out.println("Login test-negative success : Alert appeared within 2s, Accepted.");
 	    
 	    } catch (TimeoutException e) {
-	        System.out.println("Login test-positive success : No alert, Timeout of 2s elapsed.");
+	        System.out.println("Login test-positive success : No alert found, Timeout of 2s elapsed.");
 	        
 	     // After enter into Home page, Logout button clicking 
 			String LogoutText = home.getButtonText();
@@ -83,13 +84,15 @@ public class A_LoginTest extends TestBase {
 			// printing the test status
 			if (LogoutText.equals(actual)) 
 			System.out.println("Clicked :" + LogoutText + " button");
-	    }														 
+	    }
+	    
+	    
 	}
 
 	
 	
 	
-	@Test(groups = "login", priority = 3)
+	@Test(groups = "login", priority = 3, enabled = true)
 	static void failit() {
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals("one", "two", "LoginTest Failing Forcefully using soft-assertEquals");

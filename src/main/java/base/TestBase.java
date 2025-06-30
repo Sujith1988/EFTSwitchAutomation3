@@ -53,7 +53,7 @@ public class TestBase {
 	
 	
 	//@AfterTest ->for non datadriven testing only
-		@AfterTest(groups = {"reggrsn1", "conf", "function", "login"})
+		@AfterTest(groups = {"reggrsn1", "conf", "function-P", "function-C", "login"})
 		public void tearDown() throws InterruptedException {
 			driver.quit();
 			driver=null;  

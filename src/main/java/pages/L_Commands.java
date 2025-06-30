@@ -1,9 +1,12 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -12,6 +15,7 @@ public class L_Commands extends TestBase {
 
 	public L_Commands() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -19,11 +23,26 @@ public class L_Commands extends TestBase {
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
 
+	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	L_Commands.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	  
+	  
+	  
+	  
 // -----------Commands page actions---------------
 	public String pageHeader_applicationCommands() {
 		return getElement("pag_header_appl_cmmnds").getText();
@@ -60,8 +79,67 @@ public class L_Commands extends TestBase {
 		getElement("cmd_send_btn").click();
 	}
 	
-	//get the success text msg
-	public String successTxtmsg() {
-		return getElement("succss_txt_msg").getText();
+	
+	
+	//----------get the success text msg-----------------
+	public WebElement waitForTextToBePresent(String locatorKey) {
+	    By locator = By.xpath(getLocator(locatorKey));
+	    
+	    return wait.until(driver -> {
+	        WebElement el = driver.findElement(locator);
+	        String text = el.getText();
+	        if (text.contains("Something went wrong") || text.contains("success")) {
+	            return el;
+	        }
+	        return null; // keep waiting
+	    });
 	}
+
+	public String successTxtmsg() {
+	    return waitForTextToBePresent("succss_txt_msg").getText();
+	}	//-------------------------------------------------------------	
+							/*OR*/
+	
+	//------------------------------------------------------------
+//	public String successTxtmsg() {
+//	    return waitForTextToBePresent("succss_txt_msg").getText();
+//	}
+//	public WebElement waitForTextToBePresent(String locatorKey) {
+//	    By locator = By.xpath(getLocator(locatorKey));
+//	    
+//	    // Wait for text to be present (returns Boolean)
+//	    wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, "Something went wrong"));
+//
+//	    // Then return the actual WebElement
+//	    return driver.findElement(locator);
+//	}
+	//--------------------------------------------------------		
+						/*OR*/
+	
+	//------------------------------------------------------------
+//	public String successTxtmsg() {
+////return getElement("succss_txt_msg").getText();
+// WebElement elem = wait.until(driver ->
+//    !getElement("succss_txt_msg").getText().trim().isEmpty() ? getElement("succss_txt_msg") : null
+//);
+//return elem.getText();
+//}
+	//--------------------------------------------------------------		
+						/*OR*/
+	
+	//---------------------------------------------------------
+//	public WebElement waitForTextToBePresent(String locatorKey) {
+//	    By locator = By.xpath(getLocator(locatorKey));
+//	    return wait.until(driver -> {
+//	        WebElement el = driver.findElement(locator);
+//	        return !el.getText().trim().isEmpty() ? el : null;
+//	    });
+//	}
+//
+//	public String successTxtmsg() {
+//	    return waitForTextToBePresent("succss_txt_msg").getText();
+//	}
+//---------------------------------------------------------------
+	
+	
 }

@@ -41,8 +41,7 @@ public class K_RoutesTest extends TestBase {
     	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
     }
     
-    
-    
+      
     
     
     // Add Route:-  add new Routes for configuration as well as for Regression testing
@@ -51,9 +50,8 @@ public class K_RoutesTest extends TestBase {
 		//add route	
     	addRouteCommon(option_routes_dg, option_routes_cg,option_routes_omega, option_routes_rc);    	   	
 	}
-    
-    
-    
+          
+  
     
     
     // View Route:-  Update, Delete Routes for Regressin testing and then re-add
@@ -82,13 +80,9 @@ public class K_RoutesTest extends TestBase {
     	pomCall();
 		        		        			        		        		            	
 		home.clickHome();
-		Thread.sleep(login.slp_2);
 		rout.scrollToRoutConf();
-		Thread.sleep(login.slp_2);
-		home.clickRouting();	    
-		Thread.sleep(login.slp_2);			
-		home.clickAddRoute();     
-		Thread.sleep(login.slp_2);	
+		home.clickRouting();	    		
+		home.clickAddRoute();     	
 		String pagHeadr = rout.pageHeader_addRoutes();
 		String actualPageHeader = rout.actPagHeader_addRoutes();
 		if (pagHeadr.equals(actualPageHeader)) {	
@@ -97,11 +91,11 @@ public class K_RoutesTest extends TestBase {
 			rout.selectparamsAddRoute("dropdown_route_dg", option_routes_dg);
 			rout.selectparamsAddRoute("dropdown_route_cg", option_routes_cg);
 			rout.selectparamsAddRoute("dropdown_route_omega", option_routes_omega);
-			rout.selectparamsAddRoute("dropdown_route_rc", option_routes_rc);
+			String routingCat = rout.selectparamsAddRoute("dropdown_route_rc", option_routes_rc);
 					
 					rout.routeConfSavBtn();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
+
+					popupWindwHandlr.popupHandler(routingCat, "Route added : ", "error in adding Route : ");
 		}
     }
     
@@ -114,34 +108,27 @@ public class K_RoutesTest extends TestBase {
     	pomCall();
 		        		        			        		        		            	
     	home.clickHome();
-    	Thread.sleep(login.slp_2);
     	rout.scrollToRoutConf(); 
-    	home.clickRouting();	    
-    	Thread.sleep(login.slp_2);			
+    	home.clickRouting();	    		
     	home.clickViewEditRoute();     
-    	Thread.sleep(login.slp_2);	
     	String pagHeadr = rout.pageHeader_viewRoutes();
     	String actualPageHeader = rout.actPagHeader_viewRoutes();
     	if (pagHeadr.equals(actualPageHeader)) {
     		System.out.println("Entered the Page : " +pagHeadr);	
     		
     		//update
-    		rout.editRoutebtn(paramName, tr, td, tdbtn);
-    		Thread.sleep(2000);    		
+    		rout.editRoutebtn(paramName, tr, td, tdbtn);  		
     		rout.updateRoute();
-    		Thread.sleep(2000);
-    		popupWindwHandlr.alertHandler();
-    		Thread.sleep(2000);
+
+    		popupWindwHandlr.popupHandler(paramName, "Route updated : ", "error in updating Route : ");
+
     	
     		//delete
-    		rout.editRoutebtn(paramName, tr, td, tdbtn);
-    		Thread.sleep(2000);   		
+    		rout.editRoutebtn(paramName, tr, td, tdbtn); 		
     		rout.deleteRoute();
-    		Thread.sleep(2000);
-    		popupWindwHandlr.alertHandler();
-    		Thread.sleep(2000);																	
-    		
-    							
+
+    		popupWindwHandlr.popupHandler(paramName, "Route deleted : ", "error in deleting Route : ");															
+    		    							
     	}	
     }
     

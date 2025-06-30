@@ -1,5 +1,10 @@
 package tests;
 import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -16,7 +21,7 @@ public class B_UserRegistrationTest extends TestBase {
     public static A_Home home;
     public static B_UserRegistration userReg;
     public static A_Login login;
-
+    
     // Function to call in your method:
     public static void pomCall() throws IOException {
     	A_Home home = new A_Home();
@@ -51,7 +56,7 @@ public class B_UserRegistrationTest extends TestBase {
 		       
 		// add user fuction testing
 		home.clickHome();
-		home.clickUserLink();	   Thread.sleep(login.slp_2);		
+		home.clickUserLink();	   		
 		home.clickAddUserLink();
 		String pagHeadr = userReg.pageHeader_addUser();
 		String actualPageHeader = userReg.actPagHeader_addUser();
@@ -66,25 +71,21 @@ public class B_UserRegistrationTest extends TestBase {
 			userReg.roleOption();
 			userReg.userName(usrName);
 			userReg.pass(paswd);
-			userReg.confirmPass(cnfrmpaswd);	   Thread.sleep(login.slp_2);				
-			userReg.saveUserConf();              Thread.sleep(login.slp_2);
+			userReg.confirmPass(cnfrmpaswd);	   			
+			userReg.saveUserConf();              
 			
-		//handling the alert window popup 💡	
-		int alert_active = popupWindwHandlr.alertHandler();	
-		System.out.println("users added as per the exel data :"+alert_active);
-			
-		}
-		else {
-			System.out.println("error in loading add user page");
-		}
+		    popupWindwHandlr.popupHandler(fName, "Users added as per the exel data : ", "Error in loading add user page : ");
+		}	
+	}	
 		
-	}  
+		
+	  
 	
 	
 	
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = true)
 	static void failit() {
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals("haia", "hai", "Soft assert failed");
@@ -102,17 +103,15 @@ public class B_UserRegistrationTest extends TestBase {
 	// verify user fuction testing
 	home.clickHome();  	
 	home.clickUserLink();    
-	Thread.sleep(login.slp_2);
 	home.clickViewUserLink();
 	String pagHeadr = userReg.pageHeader_viewUser();
 	String actualPageHeader = userReg.actPagHeader_viewUser();
 	if (pagHeadr.equals(actualPageHeader)) {	
-			userReg.deletUser(usrName);	     Thread.sleep(login.slp_2);		
-			String alert_active = popupWindwHandlr.alertHandler1();	
-			System.out.println("users treated as per the exel data :"+alert_active);
-			
-			
-										
+		   System.out.println("Entered the Page : " +pagHeadr);
+		   
+			userReg.deletUser(usrName);	
+				
+		    popupWindwHandlr.popupHandler(usrName, "Users treated as per the exel data : ", "Error in loading view user page : ");
 	}
   }	
 	
@@ -121,7 +120,7 @@ public class B_UserRegistrationTest extends TestBase {
 	
 	
 	 //manually failing the test to check onfailure listener
-	 @Test(priority = 5)
+	 @Test(priority = 5, enabled = true)
 	 static void failTest() {
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals("mla", "hik", "Soft assert failed");

@@ -1,7 +1,6 @@
 package tests;
 
 import java.io.IOException;
-
 import org.testng.annotations.Test;
 
 import base.TestBase;
@@ -9,7 +8,6 @@ import dataprovider.ArrayDataProvider;
 import dataprovider.ExcelDataProvider;
 import pages.A_Home;
 import pages.A_Login;
-import pages.C_SystemConfig;
 import pages.D_RoutingCatagory;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
@@ -25,11 +23,11 @@ public class D_RCTest extends TestBase{
     public static void pomCall() throws IOException {
     	A_Home home = new A_Home();
     	D_RoutingCatagory rc = new D_RoutingCatagory();
-    	A_Login login = new A_Login();
+    	A_Login login = new A_Login();    	
     	
     	D_RCTest.home = home;
     	D_RCTest.rc = rc;
-    	D_RCTest.login = login;
+    	D_RCTest.login = login;   	
     }  
   /*--------------------------------------------------------------------------*/
     
@@ -53,31 +51,24 @@ public class D_RCTest extends TestBase{
 		       
 		// View Sys. Conf:-  Edit/Delete configurations testing
 		home.clickHome();
-		Thread.sleep(login.slp_2);
-		home.clickonRoutingCatagory();
-		Thread.sleep(login.slp_2);			
-		home.clickonViewRoutingCatagory();     
-		Thread.sleep(login.slp_2);	
+		home.clickonRoutingCatagory();		
+		home.clickonViewRoutingCatagory();     	
 		String pagHeadr = rc.pageHeader_viewRC();
 		String actualPageHeader = rc.actPagHeader_viewRC();
 		if (pagHeadr.equals(actualPageHeader)) {
+			System.out.println("Entered the Page : " +pagHeadr);
 			
 			//Edit button click and update
 			rc.clickonViewRCEditbtn(paramName,tr,td,tdEditbtn);
-			Thread.sleep(login.slp_2);
-			rc.clickonRCUpdatebtn();
-			Thread.sleep(login.slp_2);
-			popupWindwHandlr.alertHandler();     
-			Thread.sleep(login.slp_2);
+			rc.clickonRCUpdatebtn();			
+			popupWindwHandlr.popupHandler(paramName, "Routing Catagory updated : ", "error in updating Routing Catagory : ");     
 			
 			//Delete
 			rc.clickonViewRCEditbtn(paramName,tr,td,tdEditbtn);Thread.sleep(login.slp_2);	
-			rc.clickonRCDeletebtn();              Thread.sleep(login.slp_2);			
-			popupWindwHandlr.alertHandler();     Thread.sleep(login.slp_2);
-			
+			rc.clickonRCDeletebtn();              			
+			popupWindwHandlr.popupHandler(paramName, "Routing Catagory deleted : ", "error in deleting Routing Catagory : ");		
 		}
-		else {  System.out.println("error in loading View Sys Conf page");   }
-				
+		else {  System.out.println("error in loading View Sys Conf page");   }				
 	}
 	
 	
@@ -92,16 +83,12 @@ public class D_RCTest extends TestBase{
 		pomCall();
 		
 		home.clickHome();
-		Thread.sleep(login.slp_2);
-		home.clickonRoutingCatagory();	   
-		Thread.sleep(login.slp_2);			
+		home.clickonRoutingCatagory();	   		
 		home.clickonAddRoutingCatagory();     
-		Thread.sleep(login.slp_2);
 		rc.routingCatagory(rcName);
-		Thread.sleep(login.slp_2);
-		rc.clickonroutingCatagorySavebtn();
-		popupWindwHandlr.alertHandler();     
-		Thread.sleep(login.slp_2);
-	}
-
+		rc.clickonroutingCatagorySavebtn();		
+		popupWindwHandlr.popupHandler(rcName, "Routing Catagory added : ", "error in adding Routing Catagory : ");
+	}	
+	
+	
 }

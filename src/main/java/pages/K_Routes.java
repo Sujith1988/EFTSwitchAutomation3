@@ -1,11 +1,14 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -16,6 +19,7 @@ public class K_Routes extends TestBase	{
 
 	public K_Routes() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -23,9 +27,26 @@ public class K_Routes extends TestBase	{
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
+	  
+	  
+	  
+	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	K_Routes.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	    
+	    
+	  
 	  
 	  
 //-----------View Route page actions---------------
@@ -79,19 +100,23 @@ public class K_Routes extends TestBase	{
 			
 			
 			
-			public void selectparamsAddRoute(String dropdown_selector_addRoute, String option_selector_addRoute) {
+			public String selectparamsAddRoute(String dropdown_selector_addRoute, String option_selector_addRoute) {
 				getElement(dropdown_selector_addRoute).click();
+				String txt = getElement(option_selector_addRoute).getText();
 				getElement(option_selector_addRoute).click();
+				return txt;
 			}
-			public void enterCG(String CG) {			
-				getElement("input_cg_routes").sendKeys(CG);
-			}
-			public void enterOmegaNd(String Omeganode) {			
-				getElement("input_omega_routes").sendKeys(Omeganode);
-			}
-			public void enterRC(String RC) {			
-				getElement("input_rc_routes").sendKeys(RC);
-			}
+//			public void enterCG(String CG) {			
+//				getElement("input_cg_routes").sendKeys(CG);
+//			}
+//			public void enterOmegaNd(String Omeganode) {			
+//				getElement("input_omega_routes").sendKeys(Omeganode);
+//			}
+//			public void enterRC(String RC) {			
+//				getElement("input_rc_routes").sendKeys(RC);
+//			}
+			
+			
 			
 			public void routeConfSavBtn() {			
 				getElement("rout_conf_sav_btn").click();

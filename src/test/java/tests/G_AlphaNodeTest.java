@@ -95,11 +95,8 @@ public class G_AlphaNodeTest extends TestBase {
 	
 	     // Add Alpha node:-
 			home.clickHome();
-			Thread.sleep(login.slp_2);
 			home.clickAlphaConf();
-			Thread.sleep(login.slp_2);
 			home.clickAddAlphaNod();
-			Thread.sleep(login.slp_2);
 			String pagHeadr = alphaNode.pageHeader_addAlphaNode();
 			String actualPageHeader = alphaNode.actPagHeader_addAlphaNode();
 			if (pagHeadr.equals(actualPageHeader)) {	
@@ -108,91 +105,73 @@ public class G_AlphaNodeTest extends TestBase {
 				/*----------Form for Alpha Node Creation---------*/
 				
 				//enter alpha node name
-				alphaNode.enterAlphaNodeinputValues("alphaNode_name_input", alphaName);//alphaNode_name  a
-				Thread.sleep(login.slp_2);
+				alphaNode.enterAlphaNodeinputValues("alphaNode_name_input", alphaName);//alphaNode_name  a				
 				
 				//select channel type 
-				alphaNode.selectInputAlphaAddForm("alph_chnel_typ_selct");
-				Thread.sleep(login.slp_2);
+				alphaNode.selectInputAlphaAddForm("alph_chnel_typ_selct");				
 				alphaNode.optionInputAlphaAddForm(chnl_typ_alpha);//alphaNodeh_chnel_typ_option_POS  b
 				
 				
 				//select connection type
 				alphaNode.selectInputAlphaAddForm("alph_conect_typ_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm("alph_conect_typ_option_tcp");
 				
 				//enter alpha node ip
 				alphaNode.enterAlphaNodeinputValues("alphaNode_ip_input", alpha_IP);//alphaNode_ip  c
-				Thread.sleep(login.slp_2);
 				
 				
 				//enter alpha node port
 				alphaNode.enterAlphaNodeinputValues("alphaNode_port_input", alpha_port);//alphaNode_port  d
-				Thread.sleep(login.slp_2);
 				
 				//enter alpha node advice time
 				alphaNode.enterAlphaNodeinputValues("alphaNode_adv_timout_input", alpha_ad_tmout);//alphaNode_adv_timout  e
-				Thread.sleep(login.slp_2);
 				
 				
 					//scroll upto the element
 					alphaNode.scrollToElement("alph_routper_selct");					
-					Thread.sleep(2000);
 				
 				
 				//select Route per
 				alphaNode.selectInputAlphaAddForm("alph_routper_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm("alph_routper_option_node");
 																											
 				//select Busns Calndr
 				alphaNode.selectInputAlphaAddForm("alph_busi_clndr_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm("alph_busi_clndr_option_default");
 				
 				//select Extnl Cuover Enable
 				alphaNode.selectInputAlphaAddForm("alph_ext_cut_ovr_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(ext_cutovr_sts);//alph_ext_cut_ovr_option_disable  f			
 				
 				//select TLS enable
 				alphaNode.selectInputAlphaAddForm("alph_tls_sts_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(tls_sts);//alph_tls_sts_option_disable  g
 				
 				
 					//scroll upto the element
 					alphaNode.scrollToElement("alph_curncy_selct");					
-					Thread.sleep(2000);
 				
 				
 				//select Currency
 				alphaNode.selectInputAlphaAddForm("alph_curncy_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(alph_crncy_optn);//alph_curncy_option_INR  h
 				
 				//select CardGroup
 				alphaNode.selectInputAlphaAddForm("alph_card_grup_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(alph_CG_optn);//alph_card_grup_option_mds i
 				
 				//select Dest group
 				alphaNode.selectInputAlphaAddForm("alph_dest_grup_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(alph_DG_optn);//alph_dest_grup_option_posdg  j
 				
 				//select PIN key
 				alphaNode.selectInputAlphaAddForm("alph_pin_selct");
-				Thread.sleep(login.slp_2);
 				alphaNode.optionInputAlphaAddForm(alph_pin_key);//alph_pin_option_Pravega_KWP  k
 				
 				
 				//save button add alpha node configuration
 				alphaNode.saveNewaddAlphaNode();
-				Thread.sleep(2000);
-				popupWindwHandlr.alertHandler();
-				Thread.sleep(2000);
+				popupWindwHandlr.popupHandler(alphaName, "AlphaNode added : ", "error in adding AlphaNode : ");
 		
 			}
 									
@@ -211,13 +190,9 @@ public class G_AlphaNodeTest extends TestBase {
         
         
     	// Edit ->update and Delete Alpha node
-        Thread.sleep(login.slp_2);
         home.clickHome();
-		Thread.sleep(login.slp_2);
 		home.clickAlphaConf();
-		Thread.sleep(login.slp_2);
 		home.clickViewEditAlphaNod();
-		Thread.sleep(login.slp_2);
 		String pagHeadr1 = alphaNode.pag_header_viewAlphaNode();
 		String actualPageHeader1 = alphaNode.actPagHeader_viewAlphaNode();
 		if (pagHeadr1.equals(actualPageHeader1)) {	
@@ -229,44 +204,32 @@ public class G_AlphaNodeTest extends TestBase {
 			
 				//zoomout to 70%
 				alphaNode.zoomOutAndScrollRightE();					
-				Thread.sleep(2000);
 												
 					
 			//cick on the edit btn of the selected alpha node
-			alphaNode.editAlphabtn(alphaNodeName,"tr111","td111","alp_td_Edit_btn");//sample_alp
-			Thread.sleep(2000);			
+			alphaNode.editAlphabtn(alphaNodeName,"tr111","td111","alp_td_Edit_btn");//sample_alp		
 			
 			//scroll upto the element
 			alphaNode.scrollToElement("alp_update_btn");					
-			Thread.sleep(2000);
 			
 			//update after edit
 			alphaNode.clickonUpdatbtnAlphaEdit();
-			Thread.sleep(2000);
-			popupWindwHandlr.alertHandler();
-			Thread.sleep(2000);
+			popupWindwHandlr.popupHandler(alphaNodeName, "AlphaNode updated : ", "error in updating AlphaNode : ");
 			
 				//zoomout and scroll to right
 				alphaNode.zoomOutAndScrollRightW();					
-				Thread.sleep(2000);
 			
 					
 			//cick on the edit btn of the selected alpha node
 			alphaNode.editAlphabtn(alphaNodeName,"tr111","td111","alp_td_Edit_btn");
-			Thread.sleep(2000);
 			
 			//scroll upto the element
 			alphaNode.scrollToElement("alp_delete_btn");					
-			Thread.sleep(2000);
 			
 			//clickon delete btn after edit
 			alphaNode.clickonDelbtnAlphaEdit();
-			Thread.sleep(2000);
-			popupWindwHandlr.alertHandler();
-			Thread.sleep(2000);
-			
-			
-			
+			popupWindwHandlr.popupHandler(alphaNodeName, "AlphaNode deleted : ", "error in deleting AlphaNode : ");
+									
 	   }
    	}
     /*--------------------------------------------------------------------*/
