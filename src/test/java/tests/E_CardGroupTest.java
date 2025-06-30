@@ -110,23 +110,20 @@ public class E_CardGroupTest extends TestBase {
 	public static void addCGCommon(String CGname) throws IOException, InterruptedException {							
         pomCall();		        	        		             
 		home.clickHome();
-		home.clickonCardGrpAndBin();	    
-		Thread.sleep(login.slp_2);			
+		home.clickonCardGrpAndBin();	    			
 		home.clickonAddCardGrp();     
-		Thread.sleep(login.slp_2);	
 		String pagHeadr = cg.pageHeader_addCG();
 		String actualPageHeader = cg.actPagHeader_addCG();
-		if (pagHeadr.equals(actualPageHeader)) {			
+		if (pagHeadr.equals(actualPageHeader)) {	
+			System.out.println("Entered the Page : " +pagHeadr);
+			
 			cg.addNewCG(CGname);
 			cg.saveNewCG();
-			Thread.sleep(2000);
-			popupWindwHandlr.alertHandler();
-			Thread.sleep(2000);
+			popupWindwHandlr.popupHandler(CGname, "Card Group added : ", "error in adding Card Group : ");
 				
 			String pagHeadr2 = cg.pageHeader_addCG();
 			if(pagHeadr2.equals(actualPageHeader)) {
-				cg.continuetoViewCGpage();	
-				Thread.sleep(2000);
+				cg.continuetoViewCGpage();				
 			}
 		}
 	
@@ -139,30 +136,24 @@ public class E_CardGroupTest extends TestBase {
 		public static void viewCGCommon(int upd, int del, String param, String tr, String td, String tdName) throws IOException, InterruptedException {							
 	        pomCall();		        	        		        	     
 			home.clickHome();
-			home.clickonCardGrpAndBin();
-			Thread.sleep(login.slp_2);			
+			home.clickonCardGrpAndBin();		
 			home.clickonViewCardGrpAndBin();     
-			Thread.sleep(login.slp_2);	
 			String pagHeadr = cg.pageHeader_viewCG();
 			String actualPageHeader = cg.actPagHeader_viewCG();	
 			if (pagHeadr.equals(actualPageHeader)) {
+				System.out.println("Entered the Page : " +pagHeadr);
 				
 				//click on 'Edit CG' on the selected 'CG'
 				cg.editCGbtn(param, tr, td, tdName); 
-				Thread.sleep(2000);	
 				
 				if(upd==1) {
 					//update the CG
 					cg.updateCG();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(param, "Card Group updated : ", "error in updating Card Group : ");
 				}else if(del==1) {
 					//delete the CG
 					cg.delEmptyCG();
-					Thread.sleep(2000);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(param, "Card Group deleted : ", "error in deleting Card Group : ");
 				}
 		
 				
@@ -177,25 +168,20 @@ public class E_CardGroupTest extends TestBase {
 			pomCall();                              
 			// Navigate to view CG page		
      		home.clickHome();
-     		home.clickonCardGrpAndBin();	    
-     		Thread.sleep(login.slp_2);			
-     		home.clickonViewCardGrpAndBin();     
-     		Thread.sleep(login.slp_2);	
+     		home.clickonCardGrpAndBin();	    		
+     		home.clickonViewCardGrpAndBin();     	
      		String pagHeadr = cg.pageHeader_viewCG();
      		String actualPageHeader = cg.actPagHeader_viewCG();
      		if (pagHeadr.equals(actualPageHeader)) {
+     			System.out.println("Entered the Page : " +pagHeadr);
      			     			
      			//click on table1-'view BIN' on the selected 'CG' and scroll down upto bin-button
-     			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
-     			Thread.sleep(login.slp_2);	
+     			cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);	
      			cg.scrollToBinBtn("addBinbtn");         
-     			Thread.sleep(login.slp_2);	
      			
      			//add a BIN using the binConfFun
-     			cg.binConfFun1(bin, bin_descr, pan_len, bin_len, RC);   
-     			Thread.sleep(2000);			     			
-     			popupWindwHandlr.alertHandler();
-     			Thread.sleep(2000);       
+     			cg.binConfFun1(bin, bin_descr, pan_len, bin_len, RC);   		     			
+     			popupWindwHandlr.popupHandler(bin, "BIN added : ", "error in adding BIN : ");      
      		}                                                                                      		
 	}
 		
@@ -207,41 +193,33 @@ public class E_CardGroupTest extends TestBase {
 		public static void viewCG1Common(int upd, int del, String paramName1, String tr1, String td1, String tdViewbtnCG, String paramName2, String tr2, String td2, String tdEditbtnBIN, String tdDeletebtnBIN) throws IOException, InterruptedException {							
 			pomCall();		        	        		        	     
 			home.clickHome();
-			home.clickonCardGrpAndBin();
-			Thread.sleep(login.slp_2);			
+			home.clickonCardGrpAndBin();			
 			home.clickonViewCardGrpAndBin();     
-			Thread.sleep(login.slp_2);	
 			String pagHeadr = cg.pageHeader_viewCG();
 			String actualPageHeader = cg.actPagHeader_viewCG();	
 			if (pagHeadr.equals(actualPageHeader)) {
+				System.out.println("Entered the Page : " +pagHeadr);
 						
-				driver.manage().window().maximize();
-				Thread.sleep(login.slp_2);						  
+				driver.manage().window().maximize();					  
 						
 					//click on table1-'view BIN' on the selected 'CG'
-					cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);
-					Thread.sleep(login.slp_2);							
+					cg.editCGbtn(paramName1,tr1,td1,tdViewbtnCG);							
 					cg.scrollToBinBtn("addBinbtn");      
-					Thread.sleep(login.slp_2);
 						
 					if(upd == 1) {
 						//click on the table2-'Edit BIN' button and update
-						cg.editBINbtn(paramName2,tr2,td2,tdEditbtnBIN);
-						Thread.sleep(2000);					
+						cg.editBINbtn(paramName2,tr2,td2,tdEditbtnBIN);				
 						  cg.scrollbotom();
-						  Thread.sleep(2000);
+
 							//update
 							cg.updateBin();
-							Thread.sleep(2000);
-							popupWindwHandlr.alertHandler();
-							Thread.sleep(2000);
+							popupWindwHandlr.popupHandler(paramName2, "BIN updated : ", "error in updating BIN : ");
+
 					}
 					else if(del == 1) {
 						//click on the table2-'Delete BIN' button
 						cg.editBINbtn(paramName2,tr2,td2,tdDeletebtnBIN);
-						Thread.sleep(2000);			
-						popupWindwHandlr.alertHandler();
-						Thread.sleep(2000);
+						popupWindwHandlr.popupHandler(paramName2, "BIN deleted : ", "error in deleting BIN : ");
 					}	
 																																						
 			}

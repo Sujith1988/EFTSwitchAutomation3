@@ -1,10 +1,13 @@
 package utils;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 
@@ -26,13 +29,17 @@ public WebElement getElement(String loctr) {
 
 
 	public static void editDeleteTableRowElements(String key, String tr, String td, String tdbtn) {						
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+		
 		// Target value to match
-//     String targetValue = getLocator(key);
-		String targetValue = key;
-     boolean isMatchFound = false;
+//          String targetValue = getLocator(key);
+		String targetValue  = key;
+       boolean isMatchFound = false;
 //     System.out.println("what to search!!!!!!!!! : " +targetValue);
      
      // Get all rows in the tbody of the table
+       wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(getLocator(tr)))));
      List<WebElement> rows = driver.findElements(By.xpath(getLocator(tr)));//tbody/tr -> similar to View User page
 
      // Loop through each row
@@ -44,15 +51,17 @@ public WebElement getElement(String loctr) {
          
          // Check if it matches the target value
          if (cellText.equalsIgnoreCase(targetValue)) {
-             System.out.println("Match found--> ExelData= "+targetValue +", td-cellText= "+cellText);
+             System.out.println("Table Column search, Match found for ExelData: "+targetValue +", in the 'td-cellText' : "+cellText);
              isMatchFound = true;
-             row.findElement(By.xpath(getLocator(tdbtn))).click(); //td[x]/button             
+             
+             	wait.until(ExpectedConditions.visibilityOf(row.findElement(By.xpath(getLocator(tdbtn))))).click();
+             //row.findElement(By.xpath(getLocator(tdbtn))).click(); //td[x]/button               	
              break;
          }
      }
 
      if (!isMatchFound) {
-         System.out.println("No match found for: " + targetValue);
+         System.out.println("No match found for ExcelData : " + targetValue);
      }		
 	}
 

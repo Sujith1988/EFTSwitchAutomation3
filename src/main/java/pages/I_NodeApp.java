@@ -1,9 +1,12 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -13,6 +16,7 @@ public class I_NodeApp extends TestBase{
 	
 	public I_NodeApp() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -20,11 +24,24 @@ public class I_NodeApp extends TestBase{
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
 	  
+	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	I_NodeApp.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	    
+	    
 	
 	  
 	  		//-----------Add node app page actions---------------
@@ -49,11 +66,21 @@ public class I_NodeApp extends TestBase{
 			//input-selects of the form nodeapp add			
 			public void selectInputNodeappAddForm(String node_form_input_selct){
 				getElement(node_form_input_selct).click();
-			}
+			}			
 			//input-options of the  form nodeapp select	
-			public void optionInputNodAppAddForm(String nodApp_form_input_option){
+			public void optionInputNodAppAddForm(String nodApp_form_input_option){			
 				getElement(nodApp_form_input_option).click();
 			}//-----------------------------------------------------------
+						
+			//input-options text-field of the  form add nodeapp select-nodeapp-option
+			public String optionTextInputNodAppAddForm(String nodApp_form_input_option){
+				return getElement(nodApp_form_input_option).getText();				
+			}
+			//input-options text-field of the  form add nodeapp connection select-nodeapp-option
+			public String optionTextInputNodAppConnAdd(String nodApp_form_input_option) {
+				return getElement(nodApp_form_input_option).getText();
+			}
+			
 			
 			
 					
@@ -86,6 +113,14 @@ public class I_NodeApp extends TestBase{
 			public void viewNodeConnctnbtn(){
 				getElement("view_btn_nodConnctn").click();
 			}
+			
+		
+			//text-field of the  table first row Node App Connections	
+			public String textInputNodAppConn(){
+				return getElement("nodeAppConn_name_toact").getText();				
+			}
+			
+
 			
 			//Eidt btn the Nodeapp connections	
 			public void eidtNodeConnctnbtn(){
@@ -169,6 +204,13 @@ public class I_NodeApp extends TestBase{
 			public void eidtNodeAppbtn(){
 				getElement("edit_btn_nodAppConf").click();
 			}
+			
+			
+			//text-field of the  table first row	
+			public String textInputNodAppEditbtnrow(){
+				return getElement("nodeApp_name_toact").getText();				
+			}
+			
 			
 			//Update btn Nodeapp conf		
 			public void updateNodeAppbtn(){

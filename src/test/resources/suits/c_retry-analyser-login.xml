@@ -3,8 +3,10 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="listeners.RetryAnalyser"></listener>
+		<listener class-name="listeners.screenShotCapturing"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	</listeners>
-  <test thread-count="5" name="reggression">	
+  <test thread-count="5" name="Retry-Login">	
 	  <groups>
 		  <run>
 			  <include name="login"></include>

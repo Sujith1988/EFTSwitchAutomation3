@@ -1,11 +1,13 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import base.TestBase;
 import utils.LocatorReader;
 import utils.ScrollUtil;
@@ -15,6 +17,7 @@ public class E_CardGroup extends TestBase {
 
 	public E_CardGroup() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -22,11 +25,23 @@ public class E_CardGroup extends TestBase {
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		    return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
 
+	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	E_CardGroup.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	    	    
 
 	
 	  
@@ -105,7 +120,7 @@ public class E_CardGroup extends TestBase {
 										
 	
 			// scroll upto the element of the page
-			public  void scrollToBinBtn(String key) {
+			public  void scrollToBinBtn(String key) {				
 				ScrollUtil.scrollToAnElement(driver, getElement(key));
 			}
 	
@@ -122,13 +137,21 @@ public class E_CardGroup extends TestBase {
 			//add new BIN configuration
 			public void binConfFun1(String bin, String bin_descr, String pan_len, String bin_len, String RC) {
 				String binStr = bin.toString().replace(".0", "");
+
 			getElement("addBinbtn").click();
+
 			getElement("input_Bin").sendKeys(binStr);
+
 			getElement("input_Descript").sendKeys(bin_descr);
+
 			getElement("input_PanLen").sendKeys(pan_len);
+
 			getElement("input_BinLen").sendKeys(bin_len);	
+
 			getElement("input_RC").click();
+
 			getElement(RC).click();
+
 			getElement("saveBinbtn").click();		
 			}
 			/*----------------------------------*/	
@@ -136,7 +159,7 @@ public class E_CardGroup extends TestBase {
 									
 	
 		//update the BIN-Configuration 
-		public void updateBin() {		
+		public void updateBin() {	
 			getElement("bin_form_update_btn").click();		
 		}
 									

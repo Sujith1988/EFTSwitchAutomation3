@@ -8,9 +8,7 @@ import base.TestBase;
 import dataprovider.ExcelDataProvider;
 import pages.A_Home;
 import pages.A_Login;
-import pages.D_RoutingCatagory;
 import pages.F_DestinationGroup;
-import pages.G_AlphaNode;
 import utils.adminLoginCommon;
 import utils.popupWindwHandlr;
 
@@ -55,8 +53,8 @@ public class F_DGTest extends TestBase{
 		       
 		// View Sys. Conf:-  Edit/Delete configurations testing
 		home.clickHome();
-		home.clickonDestinationGrp();	    Thread.sleep(login.slp_2);			
-		home.clickonViewDestinationGrp();     Thread.sleep(login.slp_2);	
+		home.clickonDestinationGrp();	    			
+		home.clickonViewDestinationGrp();     
 		String pagHeadr = dg.pageHeader_viewDG();
 		String actualPageHeader = dg.actPagHeader_viewDG();
 		if (pagHeadr.equals(actualPageHeader)) {
@@ -64,16 +62,14 @@ public class F_DGTest extends TestBase{
 			//Edit
 			dg.clickonViewDGEditbtn(paramName,tr,td,tdEditbtn);   
 			dg.clickonDGUpdatebtn();              
-			Thread.sleep(login.slp_2);			
-			popupWindwHandlr.alertHandler();     
-			Thread.sleep(login.slp_2);
+			popupWindwHandlr.popupHandler(paramName, "Destination Group Updated : ", "error in updating Destination Group : ");
+
 			
 			//Delete
 			dg.clickonViewDGEditbtn(paramName,tr,td,tdEditbtn); 
 			dg.clickonDGDeletebtn();              
-			Thread.sleep(login.slp_2);			
-			popupWindwHandlr.alertHandler();     
-			Thread.sleep(login.slp_2);
+			popupWindwHandlr.popupHandler(paramName, "Destination Group deleted : ", "error in deleting Destination Group : ");
+
 			
 		}
 		else {  System.out.println("error in loading View Sys Conf page");   }
@@ -81,17 +77,15 @@ public class F_DGTest extends TestBase{
 		
 		
 		// Add DG:-  Add DG Configurations testing
-				home.clickonAddDestinationGrp();                   Thread.sleep(login.slp_2);	
+				home.clickonAddDestinationGrp();                   	
 				String pagHeadr1 = dg.pageHeader_addDG();
 				String actualPageHeader1 = dg.actPagHeader_addDG();
 				if (pagHeadr1.equals(actualPageHeader1)) {
 					
 					//Add
 					dg.destnatinGruop(DGName);        
-					Thread.sleep(login.slp_2);
 					dg.clickonDestinationGroupSavebtn();      
-					Thread.sleep(login.slp_2);					             		
-					popupWindwHandlr.alertHandler();
+					popupWindwHandlr.popupHandler(DGName, "Destination Group added : ", "error in adding Destination Group : ");
 				}
 				else  System.out.println("error in loading add Add Sys Conf page");   
 							

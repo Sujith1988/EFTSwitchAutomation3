@@ -1,13 +1,21 @@
 package utils;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ScrollUtil {
 
 	            // scroll upto the element of the page
-				public static  void scrollToAnElement(WebDriver driver, WebElement obj) {
+				public static  void scrollToAnElement(WebDriver driver, WebElement obj) {				 
+//					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));				
+//						// Wait until the element is visible
+//						wait.until(ExpectedConditions.visibilityOf(obj));
+				    
 						JavascriptExecutor js = (JavascriptExecutor) driver;
 						js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", obj);                            
 				}

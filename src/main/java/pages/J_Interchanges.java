@@ -1,9 +1,12 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -14,6 +17,7 @@ public class J_Interchanges extends TestBase{
 
 	public J_Interchanges() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -21,11 +25,25 @@ public class J_Interchanges extends TestBase{
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
+
 	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	J_Interchanges.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	    
+	    
+	    
 	
 	  
 	  		//-----------Add node app page actions---------------
@@ -41,8 +59,9 @@ public class J_Interchanges extends TestBase{
 						
 			
 			//---------General Method for all the enter-inputs-----------
-			public void enterinputVlaueInterchange(String input_field, String input_value){
-				getElement(input_field).sendKeys(getLocator(input_value));
+			public String enterinputVlaueInterchange(String input_field, String input_value){
+				 getElement(input_field).sendKeys(getLocator(input_value));
+				 return getLocator(input_value);
 			}
 											
 			
@@ -55,7 +74,7 @@ public class J_Interchanges extends TestBase{
 			public void selectFieldOptionInterchange(String select_field_option){
 				getElement(select_field_option).click();
 			}//-----------------------------------------------------------
-			
+
 			
 					
 			//Save the new Interchange conf	

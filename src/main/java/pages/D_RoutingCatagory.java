@@ -1,10 +1,13 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -14,6 +17,7 @@ public class D_RoutingCatagory extends TestBase{
 
 	public D_RoutingCatagory() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
 	  
 	  //-------------------common-------------------------
@@ -21,18 +25,31 @@ public class D_RoutingCatagory extends TestBase{
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//			 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
 	
+	  
+	  /*---------------WebDriver wait definition-------------*/
+	  public static WebDriverWait wait;
+	  
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	D_RoutingCatagory.wait = wait;
+	    }
+	   /*-----------------------------------------------------*/
+	    
+	    
 	
 
 	
 	//-----------View Routing Catagory page actions---------------
 	  
 	  
-	  public String pageHeader_viewRC() {
+	  public String pageHeader_viewRC() {		  
 			return getElement("pag_header_viewRC").getText();
 		}	
 		public String actPagHeader_viewRC() {
@@ -58,13 +75,13 @@ public class D_RoutingCatagory extends TestBase{
 		   
 	
 	// update the RC after clicking on the Edit button
-		public void clickonRCUpdatebtn() {
+		public void clickonRCUpdatebtn() {			
 			getElement("rout_cat_updatebtn").click();  
 		}
 				
 
 	// delete the RC after clicking on the Edit button
-		public void clickonRCDeletebtn() {
+		public void clickonRCDeletebtn() {			
 			getElement("rout_cat_delbtn").click();  
 		}
 	
@@ -75,7 +92,7 @@ public class D_RoutingCatagory extends TestBase{
 	
 	//-----------Add Routing Catagory page actions---------------
 	
-	public String pageHeader_addRC() {
+	public String pageHeader_addRC() {		
 		return getElement("pag_header_addRC").getText();
 	}	
 	public String actPagHeader_addRC() {
@@ -85,12 +102,12 @@ public class D_RoutingCatagory extends TestBase{
 	
 	
 	/*  key : provide the name for the routing catagory  */	
-	public void routingCatagory(String rcName) {
+	public void routingCatagory(String rcName) {		
 		getElement("rout_catagry").sendKeys(rcName);
 	}
 	
 	
-	public void clickonroutingCatagorySavebtn() {
+	public void clickonroutingCatagorySavebtn() {		
 		getElement("rout_catagry_sav_btn").click();
 	}
 	

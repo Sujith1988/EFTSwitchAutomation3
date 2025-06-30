@@ -111,40 +111,28 @@ public class I_NodeAppTest extends TestBase {
  // Add Node App:-  add new Node App
     public static void addNodeAppCommon(String nodAppNameSelct, String alphaNodSelct) throws IOException, InterruptedException {					   	
 		pomCall();        	        		        	    
-        Thread.sleep(login.slp_2);
         home.clickHome();
-        Thread.sleep(login.slp_2);
         home.scrollToanElementInHome("Nodeapp_nav");
-        Thread.sleep(login.slp_2);
 		driver.manage().window().maximize();
-		Thread.sleep(login.slp_2);
-		Thread.sleep(login.slp_2);
 		home.clickNodeapp();
-		Thread.sleep(login.slp_2);
 		home.clickAddNodeapp();
-		Thread.sleep(login.slp_2);
 		String pagHeadr = na.pageHeader_addnodeApp();
 		String actualPageHeader = na.actPagHeader_addnodeApp();
 		if (pagHeadr.equals(actualPageHeader)) {						
 			System.out.println("Entered the Page : " +pagHeadr);										
-			
+									
 			//select nodeapp name for the node app
-			na.selectInputNodeappAddForm("node_form_input_selct_nodapp");
-			Thread.sleep(login.slp_2);
-			na.optionInputNodAppAddForm(nodAppNameSelct);
-			Thread.sleep(login.slp_2);			
+			na.selectInputNodeappAddForm("node_form_input_selct_nodapp");			
+				String nodeAppName = na.optionTextInputNodAppAddForm(nodAppNameSelct);			
+			na.optionInputNodAppAddForm(nodAppNameSelct);			
 		   	
 			//select alpha node for the node app
 			na.selectInputNodeappAddForm("node_form_input_selct_nodapp_alphanod");
-			Thread.sleep(login.slp_2);
 			na.optionInputNodAppAddForm(alphaNodSelct);
-			Thread.sleep(login.slp_2);
 			
 			//save the conf btn
 			na.saveNewaddNodeApp();
-			Thread.sleep(login.slp_2);
-			popupWindwHandlr.alertHandler();
-			Thread.sleep(2000);							
+			popupWindwHandlr.popupHandler(nodeAppName, "NodeApp added : ", "error in adding NodeApp : ");						
 		}			
     }
     
@@ -153,38 +141,29 @@ public class I_NodeAppTest extends TestBase {
  // View/Edit Node App:-  Update and delete the node app
     public static void viewNodeAppCommon(int upd, int del) throws IOException, InterruptedException {					   	
 			pomCall();        	        		        	           			
-			Thread.sleep(login.slp_2);
 			home.clickHome();
-			Thread.sleep(login.slp_2);
 			home.scrollToanElementInHome("Nodeapp_nav");		        
-			Thread.sleep(login.slp_2);
 			home.clickNodeapp();
-			Thread.sleep(login.slp_2);
 			home.clickViewEditNodeapp();
-			Thread.sleep(login.slp_2);
 			String pagHeadr = na.pageHeader_viewnodeApp();
-			String actualPageHeader = na.actPagHeader_viewnodeApp();
-			System.out.println(pagHeadr+" = "+actualPageHeader);
+			String actualPageHeader = na.actPagHeader_viewnodeApp();			
 			if (pagHeadr.equals(actualPageHeader)) {	
 				System.out.println("Entered the Page : " +pagHeadr);		
 		
+					String nodeAppName = na.textInputNodAppEditbtnrow();				
+				
 				//edit node app conf btn click
 				na.eidtNodeAppbtn();
-				Thread.sleep(login.slp_2);
 		
 				if ( upd == 1) {
 					//update btn click 
 					na.updateNodeAppbtn();
-					Thread.sleep(login.slp_2);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(nodeAppName, "NodeApp updated : ", "error in updating NodeApp : ");
 					upd = 0;
 				}else if (del ==1) {
 					//delete btn click
 					na.deleteNodeAppbtn();
-					Thread.sleep(login.slp_2);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(nodeAppName, "NodeApp deleted : ", "error in deleting NodeApp : ");
 					del = 0;
 				}
 																	
@@ -198,86 +177,65 @@ public class I_NodeAppTest extends TestBase {
     
   //add node connections:- add new node connection under the selected node app
     public static void addNodeAppConnectionCommon(String nodAppSelct, String sapName, String conTyp, String sapIP, String sapPort, String mxNoCon, String tlsMod) throws IOException, InterruptedException {					   	
-				pomCall();
-			Thread.sleep(login.slp_2);
+				pomCall();			
 			home.clickHome();
-			Thread.sleep(login.slp_2);
 			home.scrollToanElementInHome("Nodeapp_nav");
-			Thread.sleep(login.slp_2);
 			driver.manage().window().maximize();
-			Thread.sleep(login.slp_2);
 			home.clickNodeapp();
-			Thread.sleep(login.slp_2);
 			home.clickViewNodeConnections();
-			Thread.sleep(login.slp_2);
 			String pagHeadr1 = na.pageHeader_viewnodeConnction();
-			String actualPageHeader1 = na.actPagHeader_viewnodeConnction();
-			System.out.println(pagHeadr1+" = "+actualPageHeader1);
+			String actualPageHeader1 = na.actPagHeader_viewnodeConnction();			
 			if (pagHeadr1.equals(actualPageHeader1)) {
 				System.out.println("Entered the Page : " +pagHeadr1);
 						
 				//select the nodeApp for connection creation
 				na.selectInputNodeappAddForm("node_form_input_selct_nod_conction");
-				Thread.sleep(login.slp_2);
+					String nodeConnName = na.optionTextInputNodAppConnAdd(nodAppSelct);
 				na.optionInputNodAppAddForm(nodAppSelct);
-				Thread.sleep(login.slp_2);
+
 				
 				//click on the view button
 				na.viewNodeConnctnbtn();
-				Thread.sleep(login.slp_2);
 		
 				//click on the add button
 				na.clickonaddNodeConnctnbtn();
-				Thread.sleep(login.slp_2);
 		
 				//enter sap name
-				na.enterSapNameNodeConnctn(sapName);//""
-				Thread.sleep(login.slp_2);
+				na.enterSapNameNodeConnctn(sapName);
 		
 		
 				//select connection type
 				na.selectInputNodeappAddForm("selct_nod_sap_conction_type");
-				Thread.sleep(login.slp_2);
-				na.optionInputNodAppAddForm(conTyp);//""
-				Thread.sleep(login.slp_2);
+				na.optionInputNodAppAddForm(conTyp);
 		
 		
 				//select protocol
 				na.selectInputNodeappAddForm("selct_nod_sap_conction_protocol");
-				Thread.sleep(login.slp_2);
-				na.optionInputNodAppAddForm("selct_option_sap_conction_type_Server");
-				Thread.sleep(login.slp_2);										
+				na.optionInputNodAppAddForm("selct_option_sap_conction_type_Server");								
 		
 				//ip address
-				na.enterSapIPNodeConnctn(sapIP);//""
-				Thread.sleep(login.slp_2);
+				na.enterSapIPNodeConnctn(sapIP);
 
 		
 					//scroll up to the input 'port'
 					na.scrollToanElementMehod("sap_port_nodConnctn");
 				
 				//port
-				na.enterSapPortNodeConnctn(sapPort);//""
-				Thread.sleep(login.slp_2);
+				na.enterSapPortNodeConnctn(sapPort);
 						
 		
 				//max no of connctn
-				na.enterSapMaxNoOfNodeConnctn(mxNoCon);//""
-				Thread.sleep(login.slp_2);
+				na.enterSapMaxNoOfNodeConnctn(mxNoCon);
 				
 		
 				//select tls enable/disable
 				na.selectInputNodeappAddForm("selct_nod_sap_conction_tls_sts");
-				Thread.sleep(login.slp_2);
-				na.optionInputNodAppAddForm(tlsMod);//""
-				Thread.sleep(login.slp_2);
+				na.optionInputNodAppAddForm(tlsMod);
 		
 		
 				//click on save btn
 				na.clickonsaveNodeConnctnbtn();
-				Thread.sleep(login.slp_2);
-				popupWindwHandlr.alertHandler();
-				Thread.sleep(2000);
+				popupWindwHandlr.popupHandler(nodeConnName, "NodeApp Connection added : ", "error in adding NodeApp connection : ");
 			}
     }
     
@@ -289,48 +247,36 @@ public class I_NodeAppTest extends TestBase {
     public static void viewNodeAppConnectionCommon(String nodAppSelct, int upd, int del) throws IOException, InterruptedException {					   	
 				pomCall(); 
 			
-			Thread.sleep(login.slp_2);
 			home.clickHome();
-			Thread.sleep(login.slp_2);
 			home.scrollToanElementInHome("Nodeapp_nav");		        
-			Thread.sleep(login.slp_2);
 			home.clickNodeapp();
-			Thread.sleep(login.slp_2);
 			home.clickViewNodeConnections();
-			Thread.sleep(login.slp_2);
 			String pagHeadr2 = na.pageHeader_viewnodeConnction();
-			String actualPageHeader2 = na.actPagHeader_viewnodeConnction();
-			System.out.println(pagHeadr2+" = "+actualPageHeader2);
+			String actualPageHeader2 = na.actPagHeader_viewnodeConnction();			
 			if (pagHeadr2.equals(actualPageHeader2)) {	
-				System.out.println("Testing the loop entry page header");
-		
-		
+				System.out.println("Entered the Page : " +pagHeadr2);	
+				
 				//select the nodeApp for connection creation
 				na.selectInputNodeappAddForm("node_form_input_selct_nod_conction");
-				Thread.sleep(login.slp_2);
-				na.optionInputNodAppAddForm(nodAppSelct);//""
-				Thread.sleep(login.slp_2);					
+				na.optionInputNodAppAddForm(nodAppSelct);			
 		
 				//click on the view button
 				na.viewNodeConnctnbtn();
-				Thread.sleep(login.slp_2);
 		
+					String nodeAppConnName = na.textInputNodAppConn();
+				
 				//edit node app connction conf btn click
 				na.eidtNodeConnctnbtn();
-				Thread.sleep(login.slp_2);
 		
 				if(upd==1) {
 					//update btn click 
 					na.updateNodeAppbtn();
-					Thread.sleep(login.slp_2);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(nodeAppConnName, "NodeApp Connection updated : ", "error in updating NodeApp connection : ");
 				}else if(del==1) {
 					//delete btn click
 					na.deleteNodeAppbtn();
-					Thread.sleep(login.slp_2);
-					popupWindwHandlr.alertHandler();
-					Thread.sleep(2000);
+					popupWindwHandlr.popupHandler(nodeAppConnName, "NodeApp Connection deleted : ", "error in deleting NodeApp connection : ");
+
 				}	
 				
 			}

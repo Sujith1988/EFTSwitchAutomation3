@@ -1,9 +1,12 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
@@ -13,20 +16,38 @@ public class C_SystemConfig extends TestBase{
 	
 	  public C_SystemConfig() throws IOException {
 			 LocatorReader loc =new LocatorReader();
+			 wbWaitCall();
 		   }
-		  
+	  	  
+	  	    	    	    		  
 		  //-------------------common-------------------------
 		  public String getLocator(String loctr) {
 			  return LocatorReader.props.getProperty(loctr);
 		  }
 		  public WebElement getElement(String loctr) {
-			 return driver.findElement(By.xpath(getLocator(loctr)));
+			  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//				 return driver.findElement(By.xpath(getLocator(loctr)));
 		  }
 		//--------------------------------------------------------
 		  
 
+		  
+		  
+		 /*---------------WebDriver wait definition-------------*/
+		  public static WebDriverWait wait;
+		  
+		    // Function to call in your method:
+		    public void wbWaitCall() throws IOException {   	    	
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+		    	C_SystemConfig.wait = wait;
+		    }
+		 /*-----------------------------------------------------*/
+		    
+		    
+		    
+		  
 	// -----------Add System config page actions---------------
-		public String pageHeader_addsysConf() {
+		public String pageHeader_addsysConf() {			
 			return getElement("pag_header_add_sysconf").getText();
 		}	
 		public String actPagHeader_addsysConf() {
@@ -36,7 +57,7 @@ public class C_SystemConfig extends TestBase{
 		
 		
 		
-		public void clickonSelectParam() {
+		public void clickonSelectParam() {			
 			getElement("select_param").click();
 		}	
 		
@@ -44,7 +65,7 @@ public class C_SystemConfig extends TestBase{
 		/*  key : parm_hostName, param_ipaddress, param_tracefilepath,
 		 		  param_sslfilelocation, param_apiport, param_html_tracepath,
 		 		  param_max_trace_files, param_trace_file_size	 */		 	
-		public void selectParam(String paramKey) {
+		public void selectParam(String paramKey) {			
 			getElement(paramKey).click();
 		}	
 		
@@ -96,7 +117,7 @@ public class C_SystemConfig extends TestBase{
 		 		         td  : sysconf_table_firstcolumn     
 		 		       tdbtn : sysconf_edit_btn-colmn_on_pickedRow, sysconf_del_btn-colmn_on_pickedRow   */ 		        	
 			   public void clickonViewSysConfEditbtn(String paramName, String tr, String td, String tdbtn) {
-//				   System.out.println("This to search : "+paramName);
+//				   System.out.println("This to search : "+paramName);				   
 					SortingRowOfTable.editDeleteTableRowElements(paramName, tr,  td,  tdbtn);
 				}
 			   

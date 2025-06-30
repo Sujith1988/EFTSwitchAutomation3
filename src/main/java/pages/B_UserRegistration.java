@@ -1,25 +1,47 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.TestBase;
 import utils.LocatorReader;
 
 public class B_UserRegistration extends TestBase{
+		//constructor
 	  public B_UserRegistration() throws IOException {
 		 LocatorReader loc =new LocatorReader();
+		 wbWaitCall();
 	   }
+	  
+	  
+	  /*---------------WebDriver wait definition-------------*/
+		public static WebDriverWait wait;
+
+	    // Function to call in your method:
+	    public void wbWaitCall() throws IOException {   	    	
+	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));    	    
+	    	B_UserRegistration.wait = wait;
+	    }
+	    /*-----------------------------------------------------*/
+	    
+	    
+	    
 	  
 	  //-------------------common-------------------------
 	  public String getLocator(String loctr) {
 		  return LocatorReader.props.getProperty(loctr);
 	  }
 	  public WebElement getElement(String loctr) {
-		 return driver.findElement(By.xpath(getLocator(loctr)));
+		  return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator(loctr))));
+//		  return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(getLocator(loctr)))));
+//		  return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(getLocator(loctr))));
+//		 return driver.findElement(By.xpath(getLocator(loctr)));
 	  }
 	//--------------------------------------------------------
 	  
@@ -44,7 +66,8 @@ public class B_UserRegistration extends TestBase{
 		driver.findElement(By.xpath(getLocator("user_email"))).sendKeys(key);
 	}	
 	public void phonNum(String key) {
-		getElement("ph_no").sendKeys(key);
+		String key1 = key.toString().replace(".0", "");;
+		getElement("ph_no").sendKeys(key1);
 	}	
 	public void userRole() {
 		getElement("usr_rol").click();

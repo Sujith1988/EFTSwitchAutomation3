@@ -143,16 +143,11 @@ public class L_CommandsTest extends TestBase {
 		
     			pomCall();
 			        
-		        // Send Commands:-  
-		        Thread.sleep(login.slp_2);
-		        home.clickHome();
-		        Thread.sleep(login.slp_2);		   								
-				home.clickonBasicConf();
-				Thread.sleep(login.slp_2);
-				home.cickonCommandCenter();
-				Thread.sleep(login.slp_2);
-				home.cickonApplicationCommands();
-				Thread.sleep(login.slp_2);
+		        // Send Commands:-  		        
+		        home.clickHome();		           								
+				home.clickonBasicConf();				
+				home.cickonCommandCenter();				
+				home.cickonApplicationCommands();				
 				String pagHeadr = cmd.pageHeader_applicationCommands();
 				String actualPageHeader = cmd.actPagHeader_applicationCommands();
 				String txt = "cmnd page not accessible";
@@ -161,32 +156,23 @@ public class L_CommandsTest extends TestBase {
 					
 					
 					//select command
-					cmd.selectFieldCommand("select_cmd_cmd");
-					Thread.sleep(login.slp_2);
-					cmd.selectFieldOptionCommand(cmdOption);//
-					Thread.sleep(login.slp_2);
+					cmd.selectFieldCommand("select_cmd_cmd");					
+					cmd.selectFieldOptionCommand(cmdOption);//					
 					
 					//select interface
-					cmd.selectFieldCommand("select_cmd_interface");
-					Thread.sleep(login.slp_2);
-					cmd.selectFieldOptionCommand(intrfaceOption);//
-					Thread.sleep(login.slp_2);
+					cmd.selectFieldCommand("select_cmd_interface");					
+					cmd.selectFieldOptionCommand(intrfaceOption);//					
 					
 					//select interchange
-					cmd.selectFieldCommand("select_cmd_interchange");
-					Thread.sleep(login.slp_2);
-					cmd.selectFieldOptionCommand(intrchngOption);//
-					Thread.sleep(login.slp_2);
+					cmd.selectFieldCommand("select_cmd_interchange");					
+					cmd.selectFieldOptionCommand(intrchngOption);//					
 					
 					//send command button
-					cmd.sendCommandbtn();
-					Thread.sleep(login.slp_2);
+					cmd.sendCommandbtn();					
 					
 					//console the cmd status
-					txt = cmd.successTxtmsg();
-					Thread.sleep(login.slp_2);
-					System.out.println("cmd sts :" +txt);
-					Thread.sleep(login.slp_2);	
+					txt = cmd.successTxtmsg();					
+					System.out.println("cmd sts :" +txt);					
 //					return txt;
 					
 				}return txt;
@@ -202,26 +188,20 @@ public class L_CommandsTest extends TestBase {
 		
     			pomCall();
     			
-    			// Send Commands:-  
-		        Thread.sleep(login.slp_2);
-		        home.clickHome();
-		        Thread.sleep(login.slp_2);		   								
-				home.clickTraceViewer();
-				Thread.sleep(login.slp_2);
-				home.clickViewTrace();
-				Thread.sleep(login.slp_2);				
+    			// Send Commands:-  		       
+		        home.clickHome();		        	   								
+				home.clickTraceViewer();				
+				home.clickViewTrace();						
 				String pagHeadr = trace.pageHeader_traceViewer();
 				String actualPageHeader = trace.actPagHeader_traceViewer();
 				
 				if (pagHeadr.equals(actualPageHeader)) {	
 					System.out.println("Entered the Page : " +pagHeadr);
 					
-					trace.clickonPravegaLogger();
-					Thread.sleep(2000);
+					trace.clickonPravegaLogger();					
 					
 					//maximize window
-				 	driver.manage().window().maximize();
-				 	Thread.sleep(2000);
+				 	driver.manage().window().maximize();				 	
 				}
     }
     
