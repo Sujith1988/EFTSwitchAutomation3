@@ -88,7 +88,7 @@ public class L_Commands extends TestBase {
 	    return wait.until(driver -> {
 	        WebElement el = driver.findElement(locator);
 	        String text = el.getText();
-	        if (text.contains("Something went wrong") || text.contains("success")) {
+	        if (text.contains("Something went wrong") || text.contains("OK") || text.contains("CONNECTED") || text.contains("RESYNCED")) {
 	            return el;
 	        }
 	        return null; // keep waiting
