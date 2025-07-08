@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -70,13 +71,16 @@ public class A_LoginTest extends TestBase {
 	        popupWindwHandlr.alertHandler();
 	        
 	        System.out.println("Login test-negative success : Alert appeared within 2s, Accepted.");
-	    
+	        Reporter.log("Login test-negative success : Alert appeared within 2s, Accepted.");	
+	        
 	    } catch (TimeoutException e) {
 	        System.out.println("Login test-positive success : No alert found, Timeout of 2s elapsed.");
+	        Reporter.log("Login test-positive success : No alert found, Timeout of 2s elapsed.");
 	        
 	     // After enter into Home page, Logout button clicking 
 			String LogoutText = home.getButtonText();
 			System.out.println(LogoutText);
+			Reporter.log(LogoutText);
 			
 			home.clickLogoutButton(); 
 			
@@ -84,6 +88,7 @@ public class A_LoginTest extends TestBase {
 			// printing the test status
 			if (LogoutText.equals(actual)) 
 			System.out.println("Clicked :" + LogoutText + " button");
+			Reporter.log("Clicked :" + LogoutText + " button");
 	    }
 	    
 	    
