@@ -1,0 +1,52 @@
+HOW TO CONVERT CLASS FILES FROM A ZIP FILE INTO JAR FILE
+Step 1: Unzip the File
+Extract Realtime5.5.zip into a folder:
+
+Step 2: Create a .jar File from These Classes
+cd "F:\eclipse workspaces\New folder\EFTSwitchAutomation2\lib\Realtime5.5"
+jar cf realtime-sdk.jar postilion
+
+This creates realtime-sdk.jar from the extracted class files inside the postilion folder.
+
+ Step 3: Install This JAR to Local Maven Repository
+mvn install:install-file ^
+ -Dfile="F:\eclipse workspaces\New folder\EFTSwitchAutomation2\lib\Realtime5.5\realtime-sdk.jar" ^
+ -DgroupId=postilion.sdk ^
+ -DartifactId=realtime-sdk ^
+ -Dversion=5.5 ^
+ -Dpackaging=jar
+
+This installs the jar into your local .m2 Maven repository.
+
+Step 4: Add Dependency to pom.xml
+<dependency>
+    <groupId>postilion.sdk</groupId>
+    <artifactId>realtime-sdk</artifactId>
+    <version>5.5</version>
+</dependency>
+
+Now your Maven build will work with these Postilion classes, and you no longer need to manually add them via “Build Path”.
+
+
+
+
+
+If you install a JAR manually into your local Maven repo (~/.m2/repository), then:
+
+✅ It will work only on that machine
+✅ Best Solutions for Sharing the Project
+Include the JAR in Your Project + Use systemPath
+
+Place the JAR inside your project, e.g.:EFTSwitchAutomation2/lib/realtime-sdk.jar
+
+Add this to your pom.xml:
+<dependency>
+    <groupId>postilion.sdk</groupId>
+    <artifactId>realtime-sdk</artifactId>
+    <version>5.5</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/realtime-sdk.jar</systemPath>
+</dependency>
+
+systemPath dependencies are deprecated in Maven (still works, but not best practice)
+The JAR increases repo size slightly

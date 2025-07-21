@@ -1,2 +1,34 @@
-test-output/
+# 🔧 Maven build output
 /target/
+
+# 🧪 Test reports (e.g., from TestNG)
+/test-output/
+
+# 📸 Screenshots directory (e.g., Selenium)
+/screenshot/
+
+# 🌐 Eclipse project files
+.classpath
+.project
+.settings/
+
+# 💻 IDE-specific (optional)
+*.iml
+.idea/
+.vscode/
+
+# 🧹 System files (macOS, Windows)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 📄 Log and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# 🔐 Environment/local config (if any)
+.env
+*.local
