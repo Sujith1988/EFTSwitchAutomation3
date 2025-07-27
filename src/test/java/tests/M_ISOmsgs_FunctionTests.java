@@ -3,6 +3,8 @@ package tests;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import base.TestBase;
@@ -11,6 +13,9 @@ import utils.MDS_ISOMsgs_ToSendToServerSocket;
 import utils.ScrollUtil;
 
 public class M_ISOmsgs_FunctionTests extends TestBase {
+	/*---log4j object creation*/
+	public static Logger loger = LogManager.getLogger(M_ISOmsgs_FunctionTests.class.getName());
+	
 	
 	//End to end transaction testing for the module MDS-interface
 	 @Test(priority = 1, groups = "function-P", enabled = true)
@@ -22,7 +27,8 @@ public class M_ISOmsgs_FunctionTests extends TestBase {
 	    			 		    		    	
 	    	//-------------------------------------------------------------
 		 	//0200  message firing to the ISOAdapter-interchange port 4002
-	    	MDS_ISOMsgs_ToSendToServerSocket.sendMsg(4002, 200);
+	    	
+	    	MDS_ISOMsgs_ToSendToServerSocket.sendMsg(4002, 200);							    	
 	    	Thread.sleep(5000);  
 	    	
 	    	//refresh screen and scroll to bottom of the page	    	

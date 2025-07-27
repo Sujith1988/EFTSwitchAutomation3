@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import base.TestBase;
 
 public class SortingRowOfTable extends TestBase {
+	/*---log4j object creation*/
+	public static Logger loger = LogManager.getLogger(SortingRowOfTable.class.getName());
 	
 	public SortingRowOfTable() throws IOException {
 		 LocatorReader loc =new LocatorReader();
@@ -51,7 +55,9 @@ public WebElement getElement(String loctr) {
          
          // Check if it matches the target value
          if (cellText.equalsIgnoreCase(targetValue)) {
-             System.out.println("Table Column search, Match found for ExelData: "+targetValue +", in the 'td-cellText' : "+cellText);
+        	 
+        	 loger.info("Table Column search, Match found for ExelData: "+targetValue +", in the 'td-cellText' : "+cellText);
+           
              isMatchFound = true;
              
              	wait.until(ExpectedConditions.visibilityOf(row.findElement(By.xpath(getLocator(tdbtn))))).click();
@@ -61,7 +67,7 @@ public WebElement getElement(String loctr) {
      }
 
      if (!isMatchFound) {
-         System.out.println("No match found for ExcelData : " + targetValue);
+         loger.info("No match found for ExcelData : " + targetValue);
      }		
 	}
 
