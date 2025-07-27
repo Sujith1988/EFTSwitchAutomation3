@@ -1,17 +1,23 @@
 package tests;
 
 import java.io.IOException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestBase;
 import pages.A_Login;
-import pages.G_AlphaNode;
 import pages.A_Home;
 import pages.L_Commands;
 import pages.M_TraceViewer;
 import utils.adminLoginCommon;
 
 public class L_CommandsTest extends TestBase {
+	/*---log4j object creation*/
+	public static Logger loger = LogManager.getLogger(L_CommandsTest.class.getName());
+	
 	
 	/*------page objcts creating from POM-class using function call-----------*/
     public static A_Home home;
@@ -44,6 +50,8 @@ public class L_CommandsTest extends TestBase {
     public static void adminlogin() throws IOException, InterruptedException {
     	pomCall();	
     	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
+    	
+    	loger.info("Login success using admin credentials for function-C/P test");
     }
     
     
@@ -54,6 +62,8 @@ public class L_CommandsTest extends TestBase {
     @Test(priority = 2, groups = "function-C", enabled = true)
     public static void commandsTests() throws IOException, InterruptedException {
     	
+    	try {
+					
     	/*---LoggerOn cmnd sening-------*/ 	
     	sendCommands("option_cmd_cmd_loggerOn", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");
     	sendCommands("option_cmd_cmd_loggerOn", "option_cmd_interface_all", "option_cmd_interchange_all");
@@ -90,7 +100,12 @@ public class L_CommandsTest extends TestBase {
     	
     	/* TraceClean cmnd sending to an interchange*/
     	sendCommands("option_cmd_cmd_traceClean", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");
-    
+    	
+    	} catch (Exception e) {
+			// TODO: handle exception
+    		loger.error("The server is not active, pls verify", e);
+    		Assert.assertEquals(true,false);
+		}
     }
     
               
@@ -108,10 +123,14 @@ public class L_CommandsTest extends TestBase {
     	sendCommands("option_cmd_cmd_loggerOn", "option_cmd_interface_all", "option_cmd_interchange_all");
     	String txt1 = sendCommands("option_cmd_cmd_loggerOn", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");  	
     	txt = txt1;
+    	
     	if(txt.equalsIgnoreCase("MDS :: LOGGERON IS OK")) {
     		/* Connect interchange cmnd sending*/
         	txt1 = sendCommands("option_cmd_cmd_connect", "option_cmd_interface_mds", "option_cmd_interchange_mdsInterchange");
         	txt = txt1;
+    	}else {
+    		loger.info("The server is not active, pls verify");
+    		Assert.assertEquals(txt,"MDS :: LOGGERON IS OK");
     	}
     	   	
     	   	   	
@@ -125,7 +144,9 @@ public class L_CommandsTest extends TestBase {
     /*------Navigate to pravega logger page-------*/
     @Test(priority = 4, groups = "function-P")
     public static void navtoTraceViewer() throws IOException, InterruptedException  {   		
-    	traceViewer();
+    	
+    		traceViewer();
+    				  	   	
     }
     
     
@@ -144,17 +165,27 @@ public class L_CommandsTest extends TestBase {
     			pomCall();
 			        
 		        // Send Commands:-  		        
-		        home.clickHome();		           								
-				home.clickonBasicConf();				
-				home.cickonCommandCenter();				
-				home.cickonApplicationCommands();				
+		        home.clickHome();
+		        loger.info("clicked on Home button, success");
+		        
+				home.clickonBasicConf();
+				 loger.info("clicked on Basic conf link, success");
+				 
+				home.cickonCommandCenter();	
+				 loger.info("clicked on CommandCenter link, success");
+				 
+				home.cickonApplicationCommands();
+				 loger.info("clicked on ApplicationCommand link, success");
+				 
 				String pagHeadr = cmd.pageHeader_applicationCommands();
 				String actualPageHeader = cmd.actPagHeader_applicationCommands();
 				String txt = "cmnd page not accessible";
-				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Entered the Page : " +pagHeadr);
+				if (pagHeadr.equals(actualPageHeader)) {
+					 loger.info("Page verification success, Entered the Page : " +pagHeadr);					
 					
 					
+					 try {
+						 
 					//select command
 					cmd.selectFieldCommand("select_cmd_cmd");					
 					cmd.selectFieldOptionCommand(cmdOption);//					
@@ -166,13 +197,20 @@ public class L_CommandsTest extends TestBase {
 					//select interchange
 					cmd.selectFieldCommand("select_cmd_interchange");					
 					cmd.selectFieldOptionCommand(intrchngOption);//					
-					
-					//send command button
-					cmd.sendCommandbtn();					
+										
+						//send command button
+						cmd.sendCommandbtn();
+						loger.info("command sent to server");
+						
+					} catch (Exception e) {
+						// TODO: handle exception						
+						loger.error(e);
+					}
+										
 					
 					//console the cmd status
-					txt = cmd.successTxtmsg();					
-					System.out.println("cmd sts :" +txt);					
+					txt = cmd.successTxtmsg();		
+					loger.info("cmd sts :" +txt);				
 //					return txt;
 					
 				}return txt;
@@ -189,16 +227,29 @@ public class L_CommandsTest extends TestBase {
     			pomCall();
     			
     			// Send Commands:-  		       
-		        home.clickHome();		        	   								
-				home.clickTraceViewer();				
-				home.clickViewTrace();						
+		        home.clickHome();
+		        loger.info("clicked on Home button, success");
+		        
+				home.clickTraceViewer();	
+				 loger.info("clicked on Trace Viewer link, success");
+				 
+				home.clickViewTrace();
+				loger.info("clicked on View Trace link, success");
+				
 				String pagHeadr = trace.pageHeader_traceViewer();
 				String actualPageHeader = trace.actPagHeader_traceViewer();
 				
 				if (pagHeadr.equals(actualPageHeader)) {	
-					System.out.println("Entered the Page : " +pagHeadr);
+					loger.info("Page verification success, Entered the Page : " +pagHeadr);				
 					
-					trace.clickonPravegaLogger();					
+					try {
+						trace.clickonPravegaLogger();					
+						loger.info("Navigate to page Pravega logger, success");
+					} catch (Exception e) {
+						// TODO: handle exception
+						loger.error("Navigate to page Pravega logger, failed", e);
+						Assert.assertEquals(true, false);
+					}
 					
 					//maximize window
 				 	driver.manage().window().maximize();				 	

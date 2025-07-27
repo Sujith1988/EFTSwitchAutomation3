@@ -1,4 +1,4 @@
-package utils;
+package templates;
 
 import java.io.File;
 import java.io.FileInputStream;

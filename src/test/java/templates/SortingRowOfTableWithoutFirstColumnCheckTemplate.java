@@ -1,4 +1,4 @@
-package utils;
+package templates;
 
 import java.io.IOException;
 import java.util.List;
@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import base.TestBase;
+import utils.LocatorReader;
+import utils.popupWindwHandlr;
 
 public class SortingRowOfTableWithoutFirstColumnCheckTemplate extends TestBase {
 

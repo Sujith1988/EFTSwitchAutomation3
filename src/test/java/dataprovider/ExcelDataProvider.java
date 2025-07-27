@@ -46,10 +46,10 @@ public class ExcelDataProvider {
 
     @DataProvider(name = "loginData")
     public Object[][] getLoginData() {
-   System.out.println("xcelFileLocation : "+path +" & shtName :"+sheet1);
+//   System.out.println("xcelFileLocation : "+path +" & shtName :"+sheet1);
         ExcelUtils excel = new ExcelUtils(path, sheet1);
         int rows = excel.getRowCount();
-        System.out.println(rows);
+//        System.out.println(rows);
         Object[][] data = new Object[rows][2]; // Skipping header
 
         for (int i = 1; i <= rows; i++) {
@@ -64,12 +64,12 @@ public class ExcelDataProvider {
     
     @DataProvider(name = "usersData")
     public Object[][] getusersDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet2);
+//    	System.out.println(path);
+//    	System.out.println(sheet2);
         ExcelUtils excel = new ExcelUtils(path, sheet2);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][9]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // first name
@@ -91,12 +91,12 @@ System.out.println(rows);
     
     @DataProvider(name = "sysConfData")
     public Object[][] getsysConfDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet3);
+//    	System.out.println(path);
+//    	System.out.println(sheet3);
         ExcelUtils excel = new ExcelUtils(path, sheet3);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][8]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName
@@ -120,12 +120,12 @@ System.out.println(rows);
     
     @DataProvider(name = "RCData")
     public Object[][] getRCDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet4);
+//    	System.out.println(path);
+//    	System.out.println(sheet4);
         ExcelUtils excel = new ExcelUtils(path, sheet4);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][4]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName
@@ -143,12 +143,12 @@ System.out.println(rows);
     
     @DataProvider(name = "DGData")
     public Object[][] getDGDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet5);
+//    	System.out.println(path);
+//    	System.out.println(sheet5);
         ExcelUtils excel = new ExcelUtils(path, sheet5);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][5]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName
@@ -197,12 +197,12 @@ System.out.println(rows);
     
     @DataProvider(name = "CGBinData")
     public Object[][] getCGDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet6);
+//    	System.out.println(path);
+//    	System.out.println(sheet6);
         ExcelUtils excel = new ExcelUtils(path, sheet6);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][14]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName1
@@ -231,12 +231,12 @@ System.out.println(rows);
     
     @DataProvider(name = "BINData")
     public Object[][] getBINDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet7);
+//    	System.out.println(path);
+//    	System.out.println(sheet7);
         ExcelUtils excel = new ExcelUtils(path, sheet7);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][9]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName1
@@ -260,12 +260,12 @@ System.out.println(rows);
     
     @DataProvider(name = "RouteData")
     public Object[][] getRouteDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet8);
+//    	System.out.println(path);
+//    	System.out.println(sheet8);
         ExcelUtils excel = new ExcelUtils(path, sheet8);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][8]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // paramName1
@@ -286,12 +286,12 @@ System.out.println(rows);
     
     @DataProvider(name = "alphaData")
     public Object[][] getAlphaDetails() {
-    	System.out.println(path);
-    	System.out.println(sheet9);
+//    	System.out.println(path);
+//    	System.out.println(sheet9);
         ExcelUtils excel = new ExcelUtils(path, sheet9);
         int rows = excel.getRowCount();
         Object[][] data = new Object[rows][2]; // Skipping header
-System.out.println(rows);
+//System.out.println(rows);
         if (rows != 0) {        	        
         for (int i = 1; i <= rows; i++) {
             data[i - 1][0] = excel.getCellData(i, 0); // alphanode name

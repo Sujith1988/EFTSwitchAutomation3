@@ -10,12 +10,19 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
+
 import postilion.realtime.sdk.message.bitmap.Iso8583Post;
 import postilion.realtime.sdk.util.XPostilion;
 import postilion.realtime.sdk.util.convert.Transform;
+import tests.B_UserRegistrationTest;
 
 public class MDS_ISOMsgs_ToSendToServerSocket{
-
+	/*---log4j object creation*/
+	public static Logger loger = LogManager.getLogger(MDS_ISOMsgs_ToSendToServerSocket.class.getName());
+	
 	
 	public static void sendMsg(int prt, int msgType) throws UnknownHostException, IOException, XPostilion {
 
@@ -226,7 +233,9 @@ public class MDS_ISOMsgs_ToSendToServerSocket{
 		
 		 BufferedOutputStream outStream = null;
  		
-		 Socket connection = new Socket("192.168.52.207",portNo);
+try {
+			 Socket connection = new Socket("192.168.52.207",portNo);
+				 
 	
  		if (connection.isConnected()) {
 			outStream = new BufferedOutputStream(
@@ -240,8 +249,10 @@ public class MDS_ISOMsgs_ToSendToServerSocket{
 //		POSAPP_0420_MDS_180323
 
 	
-			System.out.println("ISO8583Post Byte is sent");
-			System.out.println("message sent is message is"+formatData(byteMsgName));
+		loger.info("ISO8583Post Byte is sent");
+		loger.info("message sent is message is"+formatData(byteMsgName));
+//			System.out.println("ISO8583Post Byte is sent");
+//			System.out.println("message sent is message is"+formatData(byteMsgName));
 			
 
 			outStream.flush();
@@ -264,17 +275,32 @@ public class MDS_ISOMsgs_ToSendToServerSocket{
 					
 					//System.out.println(respo);
 					String response =  new String(resp);
-					System.out.println(response);
+					loger.info(response);
+//					System.out.println(response);
 					dis.readFully(resp, 0, rsp_len);
 				} else {
 					resp = null;
 				}
-				System.out.println("--- RESPONSE recieved ---");
-				System.out.println("Buffer message is "+resp);
-				System.out.println("Formatted message is"+formatData(resp));
+				
+				
+				loger.info("--- RESPONSE recieved ---");
+				loger.info("Buffer message is "+resp);
+				loger.info("Formatted message is"+formatData(resp));
+//				System.out.println("--- RESPONSE recieved ---");
+//				System.out.println("Buffer message is "+resp);
+//				System.out.println("Formatted message is"+formatData(resp));
 				
 			}
  		}
+} catch (Exception e) {
+				// TODO: handle exception
+				loger.error("Socket connection error at {}. Msg1: {}, SendData: {}",
+					    localTime,
+					    ISONODE_MDS_0200_07000038_180323,					    
+					    sendData,
+					    e);	
+				Assert.assertEquals(false, true);
+			}
  		
  		
 	}
