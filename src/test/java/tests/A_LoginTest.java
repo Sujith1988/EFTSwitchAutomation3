@@ -46,7 +46,7 @@ public class A_LoginTest extends TestBase {
     
 	
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(groups = {"reggrsn1","conf"}, priority = 1, enabled = false)
+    @Test(groups = {"reggrsn1","conf"}, priority = 1, enabled = true)
     public static void adminlogin() throws IOException, InterruptedException {
     	pomCall();	
     	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
