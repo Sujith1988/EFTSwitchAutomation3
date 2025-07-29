@@ -9,6 +9,7 @@
 	  <groups>
 		  <run>
 			  <include name="login"></include>
+			  <include name="reggrsn1"></include>
 		  </run>
 	  </groups>
     <classes>

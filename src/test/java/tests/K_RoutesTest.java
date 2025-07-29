@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
 import pages.A_Login;
@@ -37,8 +39,11 @@ public class K_RoutesTest extends TestBase {
 	/*------Login as Admin user(credential from locator.props)--------*/
     @Test(priority = 1)
     public static void adminlogin() throws IOException, InterruptedException {
+    	extent.attachReporter(spark);
+    	ExtentTest test1 = extent.createTest("adminlogin");
+    	
     	pomCall();	
-    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
+    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login, test1);
     }
     
       
