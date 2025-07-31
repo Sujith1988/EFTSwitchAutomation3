@@ -3,9 +3,12 @@
 
 # 🧪 Test reports (e.g., from TestNG)
 /test-output/
+/reports/
+/logs/
 
 # 📸 Screenshots directory (e.g., Selenium)
 /screenshot/
+/screenshots/
 
 # 🌐 Eclipse project files
 .classpath

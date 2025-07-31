@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -29,12 +30,17 @@ public class TestBase {
 	public static ExtentSparkReporter spark;
 	public static ExtentSparkReporter regression;
 	public static ExtentSparkReporter function1;
-    public static ExtentReports extent;	
+    public static ExtentReports extent;
+    
+    public static String listener;
     
 	// @BeforeTest ->for non datadriven testing only
+    @Parameters({ "listener"})
 	@BeforeTest(groups = { "reggrsn1", "conf", "function-P", "function-C", "login" })
-	public void setUp() throws IOException, InterruptedException {
+	public void setUp(String listener) throws IOException, InterruptedException {
 
+    	this.listener=listener;
+    	
 		if (driver == null) {
 
 			// chromedriver system property setting and new driver obj instantiation
@@ -65,10 +71,11 @@ public class TestBase {
 			}
 		}
 
-		// Extent Reporter refernce setup
-		spark = new ExtentSparkReporter("./reports/login-test-report.html");
-		regression = new ExtentSparkReporter("./reports/regression-test-report.html");
-		extent = new ExtentReports();
+//		// Extent Reporter refernce setup
+//		spark = new ExtentSparkReporter("./reports/login-test-report.html");
+//		regression = new ExtentSparkReporter("./reports/regression-test-report.html");
+//		extent = new ExtentReports();
+				
 
 	}
 	
@@ -82,9 +89,9 @@ public class TestBase {
 		driver.quit();
 		driver = null;
 		
-		extent.flush();
+//		extent.flush();		
+//		loger.info("Extent Report flushin over");
 		
-		loger.info("Extent Report flushin over");
 		loger.info("Tear down successful");
 	}
 		
