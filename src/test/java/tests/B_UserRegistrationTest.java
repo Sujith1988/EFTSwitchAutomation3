@@ -12,8 +12,11 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import base.TestBase;
 import dataprovider.ExcelDataProvider;
+import listeners.ExtentReportScreenshotCombo;
 import pages.A_Home;
 import pages.A_Login;
 import pages.B_UserRegistration;
@@ -47,38 +50,51 @@ public class B_UserRegistrationTest extends TestBase {
     
     
 	/*------Login as Admin user(credential from locator.props)--------*/
-    @Test(priority = 1)
-    public static void adminlogin() throws IOException, InterruptedException {   	
-    	pomCall();    		
-    	adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login);
-    	
-    	loger.info("Login success using admin credentials for local-test(class-level-test)");
-    	Reporter.log("Login success using admin credentials for local-test(class-level-test)");
-    }
+	@Test(priority = 1)
+	public static void adminlogin() throws IOException, InterruptedException {
+		
+
+		pomCall();
+		adminLoginCommon.adminLogin(login.admnUser, login.admnPass, login, ExtentReportScreenshotCombo.eTest);
+
+		loger.info("Login success using admin credentials for local-test(class-level-test)");
+		Reporter.log("Login success using admin credentials for local-test(class-level-test)");
+		ExtentReportScreenshotCombo.eTest.pass("Login success using admin credentials, (Login test)");
+		
+	}
 	
     
     
     
     
-    /*--------New users adding as per the data from xcelSheet--------*/
-	@Test(groups = "reggrsn1", priority = 2, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, retryAnalyzer = utils.Retry.class) //dependsOnMethods = "adminlogin",
-	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {					
+	/*--------New users adding as per the data from xcelSheet--------*/
+	@Test(groups = "reggrsn1", priority = 2, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class, retryAnalyzer = utils.Retry.class) // dependsOnMethods
+																																							// =
+																																							// "adminlogin",
+	public static void adduser(String fName, String lName, String eMail, String phNum, String usrName, String paswd,
+			String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {				
+
 		pomCall();
-		       
+
 		// add user fuction testing
 		home.clickHome();
 		loger.info("Home Button click, success");
+		ExtentReportScreenshotCombo.eTest.pass("Home Button click, success");
 
-		home.clickUserLink();	
+		home.clickUserLink();
 		loger.info("User link click, success");
-		
+		ExtentReportScreenshotCombo.eTest.pass("User link click, success");
+
 		home.clickAddUserLink();
 		loger.info("Add user link click, success");
-		
+		ExtentReportScreenshotCombo.eTest.pass("Add user link click, success");
+
 		String pagHeadr = userReg.pageHeader_addUser();
 		String actualPageHeader = userReg.actPagHeader_addUser();
 		if (pagHeadr.equals(actualPageHeader)) {
-			loger.info("Page Verification success and Entered the Page : " +pagHeadr);
+			loger.info("Page Verification success and Entered the Page : " + pagHeadr);
+			ExtentReportScreenshotCombo.eTest.pass("Page Verification, success : " + pagHeadr);
+
 			try {
 				userReg.firstName(fName);
 				userReg.lastName(lName);
@@ -88,27 +104,35 @@ public class B_UserRegistrationTest extends TestBase {
 				userReg.roleOption();
 				userReg.userName(usrName);
 				userReg.pass(paswd);
-				userReg.confirmPass(cnfrmpaswd);	   			
-				userReg.saveUserConf();  
-				
-				loger.info("User registration foarm submitting, success for user:" +fName +" " +lName);
-				
+				userReg.confirmPass(cnfrmpaswd);
+				userReg.saveUserConf();
+
+				loger.info("User registration foarm submitting, success for user:" + fName + " " + lName);
+				ExtentReportScreenshotCombo.eTest.pass("User registration foarm submitting, success for user:" + fName + " " + lName);
+
 			} catch (Exception e) {
-				// TODO: handle exception
-				loger.info("User registration foarm submitting, failed for user:" +fName +" " +lName);
+				loger.info("User registration foarm submitting, failed for user:" + fName + " " + lName);
 				loger.info(e);
+				ExtentReportScreenshotCombo.eTest.fail("User registration foarm submitting, failed for user :" + fName + " " + lName);
 			}
+
 			
-			String msg=popupWindwHandlr.popupHandler(fName, "Users added as per the exel data : ", "Error in loading add user page : ");
-			try {				
-				Assert.assertEquals(msg,"Added Successfully");				
-			} catch (AssertionError ae) {
-				// TODO: handle exception.				
+			
+			String msg = popupWindwHandlr.popupHandler(fName, "Users added as per the exel data : ",
+					"Error in loading add user page : ");
+			
+			try {
+				Assert.assertEquals(msg, "Added Successfully");
+				ExtentReportScreenshotCombo.eTest.pass("assert success, User added successfully");
+				
+			} catch (AssertionError ae) {	
+				ExtentReportScreenshotCombo.eTest.fail("assert failed to meet the expected : 'Added Successfully' , with the actual : " +msg);
 				loger.error("Assertion failed: Expected message 'Added Successfully' but got '{}'", msg, ae);
 				throw ae;
 			}
-		    
-		}	
+
+		}
+				
 	}	
 		
 		
@@ -130,39 +154,49 @@ public class B_UserRegistrationTest extends TestBase {
 	
 	
 	/*--------Users deleting as per the data from the xcelSheet--------*/
-	@Test(groups = "reggrsn1", priority = 4, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class) 
-	static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd, String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
-			
-	// verify user fuction testing
-	home.clickHome(); 
-	loger.info("Home Button click, success");
-	
-	home.clickUserLink();
-	loger.info("User link click, success");
-	
-	home.clickViewUserLink();
-	loger.info("View user link click, success");
-	
-	String pagHeadr = userReg.pageHeader_viewUser();
-	String actualPageHeader = userReg.actPagHeader_viewUser();
-	if (pagHeadr.equals(actualPageHeader)) {
-		loger.info("Page Verification success and Entered the Page : " +pagHeadr);
-		   		   
-			userReg.deletUser(usrName);	
-			loger.info("User(" +fName +" " +lName +") deleting..");
-			
+	@Test(groups = "reggrsn1", priority = 4, dataProvider = "usersData", dataProviderClass = ExcelDataProvider.class)
+	static void verifyUser(String fName, String lName, String eMail, String phNum, String usrName, String paswd,
+			String cnfrmpaswd, String loginUser, String loginPass) throws IOException, InterruptedException {
+				
+
+		// verify user fuction testing
+		home.clickHome();
+		loger.info("Home Button click, success");
+		ExtentReportScreenshotCombo.eTest.pass("Home button click, success");
+
+		home.clickUserLink();
+		loger.info("User link click, success");
+		ExtentReportScreenshotCombo.eTest.pass("User link click, success");
+
+		home.clickViewUserLink();
+		loger.info("View user link click, success");
+		ExtentReportScreenshotCombo.eTest.pass("View user link click, success");
+
+		String pagHeadr = userReg.pageHeader_viewUser();
+		String actualPageHeader = userReg.actPagHeader_viewUser();
+		if (pagHeadr.equals(actualPageHeader)) {
+			loger.info("Page Verification success and Entered the Page : " + pagHeadr);
+			ExtentReportScreenshotCombo.eTest.pass("Page Verification, success : " + pagHeadr);
+
+			userReg.deletUser(usrName);
+			loger.info("User(" + fName + " " + lName + ") deleting..");
+			ExtentReportScreenshotCombo.eTest.info("User(" + fName + " " + lName + ") deleting..");
+
+			String msg = popupWindwHandlr.popupHandler(usrName, "Users deleted as per the exel data : ",
+					"Error in loading view user page : ");
 			try {
-				String msg=popupWindwHandlr.popupHandler(usrName, "Users deleted as per the exel data : ", "Error in loading view user page : ");
-				Assert.assertEquals(msg,"Deleted!!");
-			} catch (Exception e) {
-				// TODO: handle exception
+				Assert.assertEquals(msg, "Deleted!!");
+				ExtentReportScreenshotCombo.eTest.pass("assert success, Deleted!!");
+
+			} catch (AssertionError ae) {
+				ExtentReportScreenshotCombo.eTest.fail("assert failed to meet the expected : ' Deleted!!' , with the actual : " + msg);
 				loger.error("popupWindwHandlr.popupHandler did not executed");
+				throw ae;
 			}
-		    
+
+		}
+		
 	}
-  }	
-	
-	
 		
 	
 	
