@@ -40,7 +40,7 @@ public class Common extends TestBase {
 		String screenShotFileName = currentDate.toString().replace(" ", ".").replace(":", ".");
 		File sourceScreenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destinationFile = new File(
-				System.getProperty("user.dir") + "./sreenshots/" + testName + screenShotFileName + ".png");
+				System.getProperty("user.dir") + "./screenshots/" + testName + screenShotFileName + ".png");
 		try {
 			FileUtils.copyFile(sourceScreenshotFile, destinationFile);
 		} catch (IOException e) {
