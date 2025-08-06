@@ -16,7 +16,7 @@ import utils.Common;
 
 public class ExtentReportScreenshotCombo extends Common implements ITestListener {
 
-	/*Calling the function getExtentReport() from the class utils.Common*/ 	
+	/* Calling the function getExtentReport() from the class utils.Common */ 	
 	public static ExtentReports report = getExtentReport();
 	public static ExtentReports report1 = getExtentReport1();
 	public static ExtentTest eTest;
